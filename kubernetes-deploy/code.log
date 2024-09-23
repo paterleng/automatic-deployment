@@ -1,0 +1,2 @@
+{"level":"INFO","time":"2024-09-23T15:35:46.920+0800","caller":"utils/init.go:117","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-23T15:35:46.971+0800","caller":"code-package/main.go:6","msg":"初始化成功"}

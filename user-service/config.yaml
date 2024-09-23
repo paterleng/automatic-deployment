@@ -1,0 +1,25 @@
+project:
+  name: "bug-notify"
+  mode: "dev"
+  address: "127.0.0.1"
+  port: "9990"
+  starttime: "2024-09-23"
+  machineid: 1
+log:
+  level: "debug"
+  filename: "code.log"
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+mysql:
+  host: "192.168.10.8"
+  port: 3306
+  user: "root"
+  password: "123456"
+  dbname: "redmine"
+  max_open_conns: 200
+  max_idle_conns: 50
+
+etcd:
+  host: "127.0.0.1"
+  port: "2379"
