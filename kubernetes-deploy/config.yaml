@@ -2,12 +2,12 @@ project:
   name: "bug-notify"
   mode: "dev"
   address: "127.0.0.1"
-  port: "9990"
+  port: "9991"
   starttime: "2024-09-23"
   machineid: 1
 log:
   level: "debug"
-  filename: "code.log"
+  filename: "kubernetes-deploy.log"
   max_size: 200
   max_age: 30
   max_backups: 7
