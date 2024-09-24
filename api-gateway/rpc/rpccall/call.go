@@ -1,0 +1,5 @@
+package rpccall
+
+func Call() {
+
+}

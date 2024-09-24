@@ -1,6 +1,13 @@
 package main
 
+import (
+	"api-gateway/api"
+	"github.com/gin-gonic/gin"
+)
+
 func main() {
-	//注册rpc服务
+	engine := gin.Default()
+	api.ApiRoutes(engine)
+	engine.Run(":8080")
 
 }
