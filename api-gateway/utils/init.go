@@ -16,6 +16,7 @@ import (
 type Utils struct {
 	LG *zap.Logger
 	DB *gorm.DB
+	PB *Pb
 }
 
 type Config struct {
@@ -77,7 +78,7 @@ func init() {
 		return
 	}
 	Tools.LG.Info("初始化mysql成功")
-
+	DiscoveryService()
 }
 
 func MysqlInit() (err error) {

@@ -1,0 +1,16 @@
+syntax = "proto3";
+package rpc;
+option go_package="/rpc";
+
+service UserService {
+  rpc CheckStatus(Request) returns (Response) {}
+}
+
+
+message Request {
+
+}
+
+message Response {
+  string msg = 1;
+}
