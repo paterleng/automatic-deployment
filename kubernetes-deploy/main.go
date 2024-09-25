@@ -10,16 +10,12 @@ import (
 )
 
 func main() {
-	//注册rpc服务
 	reg := etcd.NewRegistry(registry.Addrs("127.0.0.1:2379"))
-	//向etcd注册一个新的服务
 	service := micro.NewService(
 		micro.Name("kubernetes-deploy"),
 		micro.Version("latest"),
-		// 使用服务注册插件
 		micro.Registry(reg),
 	)
-	//初始化服务
 	service.Init()
 	if err := handle.Register(service); err != nil {
 		utils.Tools.LG.Error("服务注册失败：", zap.Error(err))

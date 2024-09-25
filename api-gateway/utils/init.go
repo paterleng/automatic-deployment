@@ -58,7 +58,7 @@ type LogConfig struct {
 	MaxBackups int    `mapstructure:"max_backups"`
 }
 
-var Tools = new(Utils)
+var Tools Utils
 var Conf = new(Config)
 
 func init() {
@@ -73,16 +73,15 @@ func init() {
 	}
 	Tools.LG.Info("初始化logger成功")
 
-	if err := MysqlInit(); err != nil {
-		Tools.LG.Error("初始化MySQL失败：", zap.Error(err))
-		return
-	}
+	//if err := MysqlInit(); err != nil {
+	//	Tools.LG.Error("初始化MySQL失败：", zap.Error(err))
+	//	return
+	//}
 	Tools.LG.Info("初始化mysql成功")
 	DiscoveryService()
 }
 
 func MysqlInit() (err error) {
-	// "user:password@tcp(host:port)/dbname"
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?parseTime=true&loc=Local", Conf.MySQLConfig.User, Conf.MySQLConfig.Password, Conf.MySQLConfig.Host, Conf.MySQLConfig.Port, Conf.MySQLConfig.DB)
 	mysqlConfig := mysql.Config{
 		DSN:                       dsn,
@@ -102,7 +101,6 @@ func MysqlInit() (err error) {
 	return
 }
 
-// 初始化viper，用于解析配置文件
 func ViperInit() error {
 	viper.SetConfigFile("./config.yaml")
 	viper.WatchConfig()
@@ -133,7 +131,6 @@ func LoggerInit() (err error) {
 	}
 	var core zapcore.Core
 	if Conf.ProjectConfig.Mode == "dev" {
-		// 进入开发模式，日志输出到终端
 		consoleEncoder := zapcore.NewConsoleEncoder(zap.NewDevelopmentEncoderConfig())
 		core = zapcore.NewTee(
 			zapcore.NewCore(encoder, writeSyncer, l),
