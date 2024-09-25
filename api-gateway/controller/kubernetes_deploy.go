@@ -17,20 +17,23 @@ type KubernetesController struct{}
 func (p *KubernetesController) GetConfig(c *gin.Context) {
 	//获取证书，并存入数据库中
 	//判断系统中是否有.kube/config文件，如果有就使用这个
-	resp, err := utils.Tools.PB.KubernetesService.GetKubernetesConfig(context.Background(), &rpc.ConfigRequest{})
+	_, err := utils.Tools.PB.KubernetesService.GetKubernetesConfig(context.Background(), &rpc.ConfigRequest{})
 	if err != nil {
 		utils.Tools.LG.Error("调用k8s服务获取config失败", zap.Error(err))
 		return
 	}
-	kubeConfig, err := clientcmd.BuildConfigFromFlags("", resp.Config)
+	path := "D:\\GoCode\\automatic-deployment\\api-gateway\\controller\\config"
+	kubeConfig, err := clientcmd.BuildConfigFromFlags("", path)
 	if err != nil {
 		utils.Tools.LG.Error("kubeConfig转换失败", zap.Error(err))
+		utils.ResponseErrorWithMsg(c, utils.CodeServerBusy, err)
 		return
 	}
-	//    调用k8s api看是否可行
+
 	clientset, err := kubernetes.NewForConfig(kubeConfig)
 	if err != nil {
 		utils.Tools.LG.Error("集群连接失败", zap.Error(err))
+		utils.ResponseErrorWithMsg(c, utils.CodeServerBusy, err)
 		return
 	}
 	podList, err := clientset.CoreV1().Pods("").List(context.TODO(), v1.ListOptions{})
