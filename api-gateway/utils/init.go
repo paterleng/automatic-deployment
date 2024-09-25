@@ -62,6 +62,7 @@ var Tools Utils
 var Conf = new(Config)
 
 func init() {
+	NewTools()
 	if err := ViperInit(); err != nil {
 		fmt.Errorf("初始化viper失败：", err)
 		return
@@ -79,6 +80,9 @@ func init() {
 	//}
 	Tools.LG.Info("初始化mysql成功")
 	DiscoveryService()
+}
+func NewTools() {
+	Tools.PB = &Pb{}
 }
 
 func MysqlInit() (err error) {

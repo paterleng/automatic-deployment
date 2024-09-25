@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ac29538-e467-4f74-a26b-fb916aa09c6a" name="更改" comment="fix:go mod 版本问题">
-      <change afterPath="$PROJECT_DIR$/code-package/pkg/github/github.go" afterDir="false" />
+    <list default="true" id="3ac29538-e467-4f74-a26b-fb916aa09c6a" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/code.log" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/code.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/utils/discovery.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/discovery.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/utils/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/init.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/utils/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/response.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/kubernetes-deploy.log" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/kubernetes-deploy.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,27 +50,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;Go 构建.go build api-gateway.executor&quot;: &quot;Run&quot;,
-    &quot;Go 构建.go build automatic.executor&quot;: &quot;Run&quot;,
-    &quot;Go 构建.go build code-package.executor&quot;: &quot;Run&quot;,
-    &quot;Go 构建.go build kubernetes-deploy.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/GoCode/automatic-deployment/kubernetes-deploy&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.goide.configuration.GoLibrariesConfigurableProvider&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "Go 构建.go build api-gateway.executor": "Run",
+    "Go 构建.go build automatic.executor": "Run",
+    "Go 构建.go build code-package.executor": "Run",
+    "Go 构建.go build kubernetes-deploy.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "D:/GoCode/automatic-deployment/kubernetes-deploy",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.goide.configuration.GoLibrariesConfigurableProvider"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\GoCode\automatic-deployment\api-gateway\rpcservice\code-service" />
@@ -78,12 +80,11 @@
       <recent name="D:\GoCode\automatic-deployment\api-gateway\rpc\code-service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\桌面\project\automatic-deployment\code-package\pkg\github" />
       <recent name="D:\GoCode\automatic-deployment\api-gateway\utils" />
       <recent name="D:\GoCode\automatic-deployment\hello" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 构建.go build code-package">
+  <component name="RunManager" selected="Go 构建.go build api-gateway">
     <configuration name="go build api-gateway" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="automatic-deployment" />
       <working_directory value="$PROJECT_DIR$/api-gateway" />
@@ -122,11 +123,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go 构建.go build code-package" />
-        <item itemvalue="Go 构建.go build kubernetes-deploy" />
-        <item itemvalue="Go 构建.go build automatic" />
         <item itemvalue="Go 构建.go build api-gateway" />
         <item itemvalue="Go 构建.go build kubernetes-deploy" />
+        <item itemvalue="Go 构建.go build code-package" />
+        <item itemvalue="Go 构建.go build automatic" />
       </list>
     </recent_temporary>
   </component>
@@ -163,12 +163,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="add:github config" />
-    <MESSAGE value="add:code的接口" />
-    <MESSAGE value="fix:go mod 版本问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix:go mod 版本问题" />
   </component>
   <component name="VgoProject">
     <environment>
