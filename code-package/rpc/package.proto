@@ -3,14 +3,14 @@ package rpc;
 option go_package="/rpc";
 
 service CodePackage {
-  rpc CheckStatus(Request) returns (Response) {}
+  rpc CheckStatus(CpRequest) returns (CpResponse) {}
 }
 
 
-message Request {
+message CpRequest {
 
 }
 
-message Response {
+message CpResponse {
   string msg = 1;
 }
