@@ -180,7 +180,8 @@ func uploadFile(client *github.Client, owner, repo, filePath, commitMessage, fil
 		Committer: &github.CommitAuthor{
 			Name:  github.String("Your Name"),
 			Email: github.String("your-email@example.com"),
-			Date:  &github.Timestamp{Time: time.Now()},
+			// 使用 github.Timestamp 的 New 函数创建时间
+			Date: &github.Timestamp{Time: time.Now()},
 		},
 	}
 
