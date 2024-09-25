@@ -1,9 +1,9 @@
 syntax = "proto3";
 package rpc;
-option go_package="/rpcKs";
+option go_package="/rpc";
 
 service KubernetesDeploy {
-  rpc CheckStatus(Request) returns (Response) {}
+  rpc CheckStatus(KsRequest) returns (KsResponse) {}
   rpc GetKubernetesConfig(ConfigRequest) returns (ConfigResponse) {}
 }
 
@@ -14,10 +14,10 @@ message ConfigResponse{
 }
 
 
-message Request {
+message KsRequest {
 
 }
 
-message Response {
+message KsResponse {
   string msg = 1;
 }

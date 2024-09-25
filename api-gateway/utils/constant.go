@@ -1,4 +1,4 @@
-package controller
+package utils
 
 const (
 	CLOSEDSTATUS = iota + 1 //已关闭
