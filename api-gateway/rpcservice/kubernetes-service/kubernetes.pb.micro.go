@@ -43,6 +43,7 @@ func NewKubernetesDeployEndpoints() []*api.Endpoint {
 
 type KubernetesDeployService interface {
 	CheckStatus(ctx context.Context, in *Request, opts ...client.CallOption) (*Response, error)
+	GetKubernetesConfig(ctx context.Context, in *ConfigRequest, opts ...client.CallOption) (*ConfigResponse, error)
 }
 
 type kubernetesDeployService struct {
@@ -67,15 +68,27 @@ func (c *kubernetesDeployService) CheckStatus(ctx context.Context, in *Request, 
 	return out, nil
 }
 
+func (c *kubernetesDeployService) GetKubernetesConfig(ctx context.Context, in *ConfigRequest, opts ...client.CallOption) (*ConfigResponse, error) {
+	req := c.c.NewRequest(c.name, "KubernetesDeploy.GetKubernetesConfig", in)
+	out := new(ConfigResponse)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // Server API for KubernetesDeploy service
 
 type KubernetesDeployHandler interface {
 	CheckStatus(context.Context, *Request, *Response) error
+	GetKubernetesConfig(context.Context, *ConfigRequest, *ConfigResponse) error
 }
 
 func RegisterKubernetesDeployHandler(s server.Server, hdlr KubernetesDeployHandler, opts ...server.HandlerOption) error {
 	type kubernetesDeploy interface {
 		CheckStatus(ctx context.Context, in *Request, out *Response) error
+		GetKubernetesConfig(ctx context.Context, in *ConfigRequest, out *ConfigResponse) error
 	}
 	type KubernetesDeploy struct {
 		kubernetesDeploy
@@ -90,4 +103,8 @@ type kubernetesDeployHandler struct {
 
 func (h *kubernetesDeployHandler) CheckStatus(ctx context.Context, in *Request, out *Response) error {
 	return h.KubernetesDeployHandler.CheckStatus(ctx, in, out)
+}
+
+func (h *kubernetesDeployHandler) GetKubernetesConfig(ctx context.Context, in *ConfigRequest, out *ConfigResponse) error {
+	return h.KubernetesDeployHandler.GetKubernetesConfig(ctx, in, out)
 }
