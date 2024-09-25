@@ -13,6 +13,6 @@ func Register(service micro.Service) error {
 	return err
 }
 
-func (h *CodePackage) CheckStatus(ctx context.Context, req *rpc.Request, rsp *rpc.Response) error {
+func (h *CodePackage) CheckStatus(ctx context.Context, req *rpc.CpRequest, rsp *rpc.CpResponse) error {
 	return nil
 }
