@@ -23,3 +23,11 @@ mysql:
 etcd:
   host: "127.0.0.1"
   port: "2379"
+github:
+  auth: ""
+  user_name: ""
+  repository: ""
+
+dockerhub:
+  user_name: ""
+  password: ""

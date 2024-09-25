@@ -1,2 +1,46 @@
 {"level":"INFO","time":"2024-09-23T15:35:46.920+0800","caller":"utils/init.go:117","msg":"init logger success"}
 {"level":"INFO","time":"2024-09-23T15:35:46.971+0800","caller":"code-package/main.go:6","msg":"初始化成功"}
+{"level":"INFO","time":"2024-09-23T20:55:22.672+0800","caller":"utils/init.go:147","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-23T20:55:22.673+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-09-23T20:55:24.730+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2024-09-23T20:55:52.677+0800","caller":"code-package/main.go:32","msg":"服务启动成功"}
+{"level":"INFO","time":"2024-09-24T22:18:06.638+0800","caller":"utils/init.go:147","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-24T22:18:06.640+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-09-24T22:18:08.767+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2024-09-25T16:11:37.792+0800","caller":"utils/init.go:147","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-25T16:11:37.793+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-09-25T16:11:39.877+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2024-09-25T16:41:57.248+0800","caller":"utils/init.go:147","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-25T16:41:57.248+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-09-25T16:41:59.592+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2024-09-25T16:43:21.617+0800","caller":"code-package/main.go:34","msg":"服务启动成功"}
+{"level":"INFO","time":"2024-09-25T16:43:28.506+0800","caller":"utils/init.go:147","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-25T16:43:28.507+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-09-25T16:43:30.754+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2024-09-25T16:45:24.318+0800","caller":"utils/init.go:153","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-25T16:45:24.319+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-09-25T16:45:26.388+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2024-09-25T16:45:55.082+0800","caller":"code-package/main.go:32","msg":"服务启动成功"}
+{"level":"INFO","time":"2024-09-25T16:46:01.567+0800","caller":"utils/init.go:154","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-25T16:46:01.568+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-09-25T16:46:03.670+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2024-09-25T16:47:19.620+0800","caller":"utils/init.go:155","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-25T16:47:19.620+0800","caller":"utils/init.go:76","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-09-25T16:47:21.904+0800","caller":"utils/init.go:79","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2024-09-25T16:47:41.774+0800","caller":"utils/init.go:155","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-25T16:47:41.774+0800","caller":"utils/init.go:76","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-09-25T16:47:43.911+0800","caller":"utils/init.go:79","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2024-09-25T16:48:25.530+0800","caller":"code-package/main.go:32","msg":"服务启动成功"}
+{"level":"INFO","time":"2024-09-25T16:48:31.953+0800","caller":"utils/init.go:158","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-25T16:48:31.953+0800","caller":"utils/init.go:79","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-09-25T16:48:34.053+0800","caller":"utils/init.go:82","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2024-09-25T17:09:14.936+0800","caller":"code-package/main.go:32","msg":"服务启动成功"}
+{"level":"INFO","time":"2024-09-25T17:09:23.193+0800","caller":"utils/init.go:151","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-25T17:09:23.195+0800","caller":"utils/init.go:78","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-09-25T17:09:25.418+0800","caller":"utils/init.go:81","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2024-09-25T17:10:17.470+0800","caller":"utils/init.go:151","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-25T17:10:17.470+0800","caller":"utils/init.go:78","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-09-25T17:10:19.592+0800","caller":"utils/init.go:81","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2024-09-25T17:19:43.998+0800","caller":"utils/init.go:159","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-25T17:19:43.999+0800","caller":"utils/init.go:86","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-09-25T17:19:46.130+0800","caller":"utils/init.go:89","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
