@@ -3,14 +3,21 @@ package rpc;
 option go_package="/rpc";
 
 service KubernetesDeploy {
-  rpc CheckStatus(Request) returns (Response) {}
+  rpc CheckStatus(KsRequest) returns (KsResponse) {}
+  rpc GetKubernetesConfig(ConfigRequest) returns (ConfigResponse) {}
+}
+
+message ConfigRequest{}
+
+message ConfigResponse{
+  string config = 1;
 }
 
 
-message Request {
+message KsRequest {
 
 }
 
-message Response {
+message KsResponse {
   string msg = 1;
 }

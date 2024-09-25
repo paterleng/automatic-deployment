@@ -3,14 +3,14 @@ package rpc;
 option go_package="/rpc";
 
 service UserService {
-  rpc CheckStatus(Request) returns (Response) {}
+  rpc CheckStatus(UserRequest) returns (UserResponse) {}
 }
 
 
-message Request {
+message UserRequest {
 
 }
 
-message Response {
+message UserResponse {
   string msg = 1;
 }

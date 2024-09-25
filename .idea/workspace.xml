@@ -5,42 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ac29538-e467-4f74-a26b-fb916aa09c6a" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/api-gateway/api/api_interface.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/api/api_routers.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/api/code_pacnage_api.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/api/kubernetes_api.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/api/manager.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/api/user_api.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/controller/code_package.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/controller/user_service.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/rpc/code-service/package.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/rpc/code-service/package.pb.micro.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/rpc/code-service/package.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/rpc/kubernetes-service/kubernetes.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/rpc/kubernetes-service/kubernetes.pb.micro.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/rpc/kubernetes-service/kubernetes.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/rpc/rpccall/call.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/rpc/user-service/user.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/rpc/user-service/user.pb.micro.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/rpc/user-service/user.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/utils/discovery.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kubernetes-deploy/handle/handle.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kubernetes-deploy/rpc.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kubernetes-deploy/rpc/kubernetes.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/rpc.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/rpc/user.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api/api_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/api_interface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api/kubernetes_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/kubernetes_api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api/manager.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/manager.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api/user_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/user_api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/controller/resource.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/resource.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/controller/user_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/user_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/rpcservice/kubernetes-service/kubernetes.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/rpcservice/kubernetes-service/kubernetes.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/rpcservice/kubernetes-service/kubernetes.pb.micro.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/rpcservice/kubernetes-service/kubernetes.pb.micro.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/rpcservice/kubernetes-service/kubernetes.proto" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/rpcservice/kubernetes-service/kubernetes.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/rpcservice/user-service/user.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/rpcservice/user-service/user.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/rpcservice/user-service/user.pb.micro.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/rpcservice/user-service/user.pb.micro.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/rpcservice/user-service/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/rpcservice/user-service/user.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/utils/code.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/code.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/utils/constant.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/constant.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/utils/discovery.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/discovery.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/utils/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/init.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/utils/service-register.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/code.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/utils/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/response.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/handle/handle.go" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/handle/handle.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kubernetes-deploy/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/rpc/kubernetes.proto" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/rpc/kubernetes.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/rpc/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/rpc/user.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +48,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file://$PROJECT_DIR$/../../Go/go1.21" />
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../../Go语言/gopackage/pkg/mod/golang.org/toolchain@v0.0.1-go1.22.7.windows-amd64" />
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -79,31 +72,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;Go 构建.go build automatic.executor&quot;: &quot;Run&quot;,
-    &quot;Go 构建.go build code-package.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/GoCode/automatic-deployment/api-gateway/rpc/user-service&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;go.sdk&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "Go 构建.go build api-gateway.executor": "Run",
+    "Go 构建.go build automatic.executor": "Run",
+    "Go 构建.go build code-package.executor": "Run",
+    "Go 构建.go build kubernetes-deploy.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "D:/GoCode/automatic-deployment/kubernetes-deploy",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.goide.configuration.GoLibrariesConfigurableProvider"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GoCode\automatic-deployment\api-gateway\rpcservice\code-service" />
+      <recent name="D:\GoCode\automatic-deployment\api-gateway\rpcservice\kubernetes-service" />
+      <recent name="D:\GoCode\automatic-deployment\api-gateway\rpcservice\user-service" />
       <recent name="D:\GoCode\automatic-deployment\api-gateway\rpc\user-service" />
-      <recent name="D:\GoCode\automatic-deployment\user-service" />
-      <recent name="D:\GoCode\automatic-deployment\user-service\rpc" />
-      <recent name="D:\GoCode\automatic-deployment\api-gateway\rpc\kubernetes-service" />
       <recent name="D:\GoCode\automatic-deployment\api-gateway\rpc\code-service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -111,7 +106,16 @@
       <recent name="D:\GoCode\automatic-deployment\hello" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 构建.go build code-package">
+  <component name="RunManager" selected="Go 构建.go build api-gateway">
+    <configuration name="go build api-gateway" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="automatic-deployment" />
+      <working_directory value="$PROJECT_DIR$/api-gateway" />
+      <kind value="PACKAGE" />
+      <package value="api-gateway" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/api-gateway/main.go" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build automatic" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="automatic-deployment" />
       <working_directory value="$PROJECT_DIR$" />
@@ -130,8 +134,19 @@
       <filePath value="$PROJECT_DIR$/code-package/main.go" />
       <method v="2" />
     </configuration>
+    <configuration name="go build kubernetes-deploy" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="automatic-deployment" />
+      <working_directory value="$PROJECT_DIR$/kubernetes-deploy" />
+      <kind value="PACKAGE" />
+      <package value="kubernetes-deploy" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/kubernetes-deploy/main.go" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go 构建.go build api-gateway" />
+        <item itemvalue="Go 构建.go build kubernetes-deploy" />
         <item itemvalue="Go 构建.go build code-package" />
         <item itemvalue="Go 构建.go build automatic" />
       </list>
