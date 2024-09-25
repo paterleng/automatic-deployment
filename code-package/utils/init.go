@@ -23,6 +23,19 @@ type Config struct {
 	*LogConfig     `mapstructure:"log"`
 	*MySQLConfig   `mapstructure:"mysql"`
 	*Etcd          `mapstructure:"etcd"`
+	*GitHub        `mapstructure:"github"`
+	*DockerHub     `mapstructure:"dockerhub"`
+}
+
+type DockerHub struct {
+	UserName string
+	Password string
+}
+
+type GitHub struct {
+	Auth       string `mapstructure:"auth"`
+	UserName   string
+	Repository string
 }
 
 type Etcd struct {
@@ -61,11 +74,11 @@ var Tools = new(Utils)
 var Conf = new(Config)
 
 func init() {
+
 	if err := ViperInit(); err != nil {
 		fmt.Errorf("初始化viper失败：", err)
 		return
 	}
-
 	if err := LoggerInit(); err != nil {
 		fmt.Errorf("初始化日志对象失败：", err)
 		return
@@ -77,7 +90,6 @@ func init() {
 		return
 	}
 	Tools.LG.Info("初始化mysql成功")
-
 }
 
 func MysqlInit() (err error) {
