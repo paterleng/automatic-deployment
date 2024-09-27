@@ -6,7 +6,6 @@ import (
 	"github.com/micro/go-micro/v2/registry/etcd"
 	"go.uber.org/zap"
 	"kubernetes-deploy/api"
-	"kubernetes-deploy/controller"
 	"kubernetes-deploy/utils"
 )
 
@@ -27,6 +26,5 @@ func main() {
 		utils.Tools.LG.Error("服务运行失败：", zap.Error(err))
 		return
 	}
-	controller.CreateSourceManager()
 	utils.Tools.LG.Info("kubernetes-deploy服务启动成功")
 }

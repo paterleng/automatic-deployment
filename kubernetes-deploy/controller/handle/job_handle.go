@@ -9,35 +9,32 @@ import (
 	"kubernetes-deploy/utils"
 )
 
-var deployManager DeployManager
+type JobHandle struct{}
 
-type DeployManager interface {
+var jobManager JobManager
+
+type JobInterface struct {
+	JobHandle
+}
+
+type JobManager interface {
 	CommentResource
-	ListPods() ([]corev1.Pod, error)
 }
 
-type DeployInterface struct {
-	DeployHandle
+func GetJobManager() JobManager {
+	return jobManager
 }
 
-func GetDeployManager() DeployManager {
-	//根据资源类型获取到相对应的处理函数
-	return deployManager
+func CreateJobManager() {
+	var manager JobInterface
+	jobManager = &manager
 }
 
-func CreateDeployManager() {
-	var dpmanager DeployInterface
-	deployManager = &dpmanager
-}
-
-type DeployHandle struct{}
-
-func (d *DeployHandle) Before() error {
-
+func (d *JobHandle) Before() error {
 	return nil
 }
 
-func (d *DeployHandle) CreateResources() error {
+func (d *JobHandle) CreateResources() error {
 	deployment := &appsv1.Deployment{
 		ObjectMeta: metav1.ObjectMeta{
 			Name: "my-deployment",
@@ -73,11 +70,6 @@ func (d *DeployHandle) CreateResources() error {
 	return nil
 }
 
-func (d *DeployHandle) After() error {
-
+func (d *JobHandle) After() error {
 	return nil
-}
-
-func (d *DeployHandle) ListPods() ([]corev1.Pod, error) {
-	return nil, nil
 }

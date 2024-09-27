@@ -7,7 +7,9 @@ service KubernetesDeploy {
   rpc GetKubernetesConfig(ConfigRequest) returns (ConfigResponse) {}
   rpc CreateResource(CreateResourceRequest) returns(CreateResourceResponse){}
 }
-message CreateResourceRequest{}
+message CreateResourceRequest{
+  string ResourceType = 1;
+}
 
 message CreateResourceResponse{}
 

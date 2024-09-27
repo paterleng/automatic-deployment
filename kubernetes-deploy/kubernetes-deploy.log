@@ -40,3 +40,8 @@
 {"level":"ERROR","time":"2024-09-27T09:12:11.569+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
 {"level":"INFO","time":"2024-09-27T09:12:11.573+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
 {"level":"INFO","time":"2024-09-27T09:12:22.558+0800","caller":"kubernetes-deploy/main.go:31","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-09-27T10:35:13.126+0800","caller":"utils/init.go:147","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-27T10:35:13.127+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-09-27T10:35:15.461+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2024-09-27T10:35:15.477+0800","caller":"kubernetes-deploy/main.go:24","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-09-27T10:37:09.387+0800","caller":"kubernetes-deploy/main.go:29","msg":"kubernetes-deploy服务启动成功"}
