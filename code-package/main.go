@@ -2,6 +2,7 @@ package main
 
 import (
 	"code-package/handle"
+	"code-package/pkg/github"
 	"code-package/utils"
 	"github.com/micro/go-micro/v2"
 	"github.com/micro/go-micro/v2/registry"
@@ -9,9 +10,9 @@ import (
 	"go.uber.org/zap"
 )
 
-func main() {
+func main01() {
 	//注册rpc服务
-	reg := etcd.NewRegistry(registry.Addrs("127.0.0.1:2379"))
+	reg := etcd.NewRegistry(registry.Addrs("127.168.10.9:12379"))
 	//向etcd注册一个新的服务
 	service := micro.NewService(
 		micro.Name("code-package"),
@@ -30,4 +31,8 @@ func main() {
 		return
 	}
 	utils.Tools.LG.Info("服务启动成功")
+}
+
+func main() {
+	github.Ccc()
 }
