@@ -6,10 +6,12 @@ require (
 	github.com/fsnotify/fsnotify v1.7.0
 	github.com/go-sql-driver/mysql v1.8.1
 	github.com/golang/protobuf v1.5.4
+	github.com/google/go-github/v65 v65.0.0
 	github.com/micro/go-micro/v2 v2.9.1
 	github.com/natefinch/lumberjack v2.0.0+incompatible
 	github.com/spf13/viper v1.6.3
 	go.uber.org/zap v1.27.0
+	golang.org/x/oauth2 v0.0.0-20190604053449-0f29369cfe45
 	google.golang.org/protobuf v1.34.2
 	gorm.io/driver/mysql v1.5.7
 	gorm.io/gorm v1.25.12
@@ -19,35 +21,18 @@ require (
 	dario.cat/mergo v1.0.0 // indirect
 	github.com/Microsoft/go-winio v0.6.1 // indirect
 	github.com/ProtonMail/go-crypto v1.0.0 // indirect
-	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cloudflare/circl v1.3.7 // indirect
-	github.com/coreos/bbolt v1.3.3 // indirect
 	github.com/coreos/go-semver v0.3.0 // indirect
 	github.com/cyphar/filepath-securejoin v0.2.4 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
-	github.com/google/btree v1.0.0 // indirect
-	github.com/google/go-github/v48 v48.2.0 // indirect
-	github.com/google/go-github/v65 v65.0.0 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
-	github.com/jonboulle/clockwork v0.1.0 // indirect
-	github.com/json-iterator/go v1.1.9 // indirect
-	github.com/matttproud/golang_protobuf_extensions v1.0.1 // indirect
-	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
-	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/pjbgf/sha1cd v0.3.0 // indirect
-	github.com/prometheus/client_golang v1.1.0 // indirect
-	github.com/prometheus/client_model v0.0.0-20190812154241-14fe0d1b01d4 // indirect
-	github.com/prometheus/common v0.6.0 // indirect
-	github.com/prometheus/procfs v0.0.5 // indirect
 	github.com/skeema/knownhosts v1.2.2 // indirect
-	github.com/speedata/gogit v0.0.0-20220324161608-39067087a06f // indirect
-	github.com/speedata/mmap-go v0.0.0-20141021215358-6c75090c5598 // indirect
-	github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2 // indirect
 	golang.org/x/mod v0.17.0 // indirect
 	golang.org/x/sync v0.8.0 // indirect
 	golang.org/x/tools v0.21.1-0.20240508182429-e35e4ccd0d2d // indirect
-	sigs.k8s.io/yaml v1.1.0 // indirect
+	google.golang.org/appengine v1.6.7 // indirect
 )
 
 require (
@@ -65,7 +50,6 @@ require (
 	github.com/go-git/go-billy/v5 v5.5.0 // indirect
 	github.com/go-git/go-git/v5 v5.12.0
 	github.com/gogo/protobuf v1.3.2 // indirect
-	github.com/google/go-cmp v0.6.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/hpcloud/tail v1.0.0 // indirect
@@ -78,7 +62,6 @@ require (
 	github.com/magiconair/properties v1.8.7 // indirect
 	github.com/micro/cli/v2 v2.1.2 // indirect
 	github.com/miekg/dns v1.1.27 // indirect
-	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/mitchellh/hashstructure v1.0.0 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/nats-io/nats.go v1.34.0 // indirect
@@ -95,11 +78,10 @@ require (
 	github.com/spf13/cast v1.6.0 // indirect
 	github.com/spf13/jwalterweatherman v1.0.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
-	github.com/stretchr/testify v1.9.0 // indirect
 	github.com/subosito/gotenv v1.6.0 // indirect
 	github.com/xanzy/ssh-agent v0.3.3 // indirect
 	go.uber.org/multierr v1.10.0 // indirect
-	golang.org/x/crypto v0.27.0 // indirect
+	golang.org/x/crypto v0.27.0
 	golang.org/x/net v0.29.0 // indirect
 	golang.org/x/sys v0.25.0 // indirect
 	golang.org/x/text v0.18.0 // indirect

@@ -4,10 +4,8 @@ import (
 	"context"
 	"fmt"
 	"github.com/micro/go-micro/v2"
-	appsv1 "k8s.io/api/apps/v1"
-	corev1 "k8s.io/api/core/v1"
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"kubernetes-deploy/controller"
+	"go.uber.org/zap"
+	"kubernetes-deploy/controller/handle"
 	"kubernetes-deploy/rpc"
 	"kubernetes-deploy/utils"
 )
@@ -29,41 +27,10 @@ func (h *KubernetesDeploy) CheckStatus(ctx context.Context, req *rpc.KsRequest, 
 }
 
 func (h *KubernetesDeploy) CreateResource(ctx context.Context, req *rpc.CreateResourceRequest, resp *rpc.CreateResourceResponse) error {
-
-	controller.GetManager().Resources()
-	//创建kubernetes资源
-	//定义 Deployment
-	deployment := &appsv1.Deployment{
-		ObjectMeta: metav1.ObjectMeta{
-			Name: "my-deployment",
-		},
-		Spec: appsv1.DeploymentSpec{
-			Replicas: utils.Int32Ptr(1),
-			Selector: &metav1.LabelSelector{
-				MatchLabels: map[string]string{"app": "my-app"},
-			},
-			Template: corev1.PodTemplateSpec{
-				ObjectMeta: metav1.ObjectMeta{
-					Labels: map[string]string{"app": "my-app"},
-				},
-				Spec: corev1.PodSpec{
-					Containers: []corev1.Container{{
-						Name:  "my-container",
-						Image: "docker.rainbond.cc/nginx:latest",
-					}},
-				},
-			},
-		},
-	}
-	clientset, err := utils.NewKubeConfig()
-
-	// 创建 Deployment
-	deploymentsClient := clientset.AppsV1().Deployments("default")
-	result, err := deploymentsClient.Create(context.TODO(), deployment, metav1.CreateOptions{})
+	err := handle.GetDeployManager().CreateResources()
 	if err != nil {
-		panic(err.Error())
+		utils.Tools.LG.Error(fmt.Sprintf("创建%s资源失败", req.ResourceType), zap.Error(err))
 	}
 
-	fmt.Printf("Created deployment %q.\n", result.GetObjectMeta().GetName())
 	return nil
 }

@@ -54,7 +54,9 @@ func (p *KubernetesController) GetConfig(c *gin.Context) {
 func (p *KubernetesController) CreateResource(c *gin.Context) {
 	//	参数处理
 	//调用创建的方法
-	_, err := p.PB.KubernetesService.CreateResource(c, &rpc.CreateResourceRequest{})
+	_, err := p.PB.KubernetesService.CreateResource(c, &rpc.CreateResourceRequest{
+		ResourceType: "deployment",
+	})
 	if err != nil {
 		p.LG.Error("创建资源失败", zap.Error(err))
 		utils.ResponseErrorWithMsg(c, utils.CodeServerBusy, err)
