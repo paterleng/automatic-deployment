@@ -59,3 +59,19 @@
 {"level":"INFO","time":"2024-09-25T17:05:30.891+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
 {"level":"INFO","time":"2024-09-25T17:05:30.891+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
 {"level":"ERROR","time":"2024-09-25T17:05:40.417+0800","caller":"controller/kubernetes_deploy.go:28","msg":"kubeConfig转换失败","error":"CreateFile config: The system cannot find the file specified."}
+{"level":"INFO","time":"2024-09-26T08:41:43.342+0800","caller":"utils/init.go:149","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-26T08:41:43.344+0800","caller":"utils/init.go:75","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-09-26T08:41:43.344+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-09-26T08:41:43.344+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"INFO","time":"2024-09-26T16:34:51.184+0800","caller":"utils/init.go:149","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-26T16:34:51.205+0800","caller":"utils/init.go:75","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-09-26T16:34:51.205+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-09-26T16:34:51.206+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"INFO","time":"2024-09-26T16:35:59.876+0800","caller":"utils/init.go:149","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-26T16:35:59.876+0800","caller":"utils/init.go:75","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-09-26T16:35:59.876+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-09-26T16:35:59.877+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"INFO","time":"2024-09-27T09:16:15.843+0800","caller":"utils/init.go:149","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-27T09:16:15.861+0800","caller":"utils/init.go:75","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-09-27T09:16:15.861+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-09-27T09:16:15.861+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}

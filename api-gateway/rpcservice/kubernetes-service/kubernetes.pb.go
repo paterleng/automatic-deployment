@@ -20,6 +20,82 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+type CreateResourceRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *CreateResourceRequest) Reset() {
+	*x = CreateResourceRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_rpc_kubernetes_proto_msgTypes[0]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *CreateResourceRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreateResourceRequest) ProtoMessage() {}
+
+func (x *CreateResourceRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_rpc_kubernetes_proto_msgTypes[0]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreateResourceRequest.ProtoReflect.Descriptor instead.
+func (*CreateResourceRequest) Descriptor() ([]byte, []int) {
+	return file_rpc_kubernetes_proto_rawDescGZIP(), []int{0}
+}
+
+type CreateResourceResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *CreateResourceResponse) Reset() {
+	*x = CreateResourceResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_rpc_kubernetes_proto_msgTypes[1]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *CreateResourceResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreateResourceResponse) ProtoMessage() {}
+
+func (x *CreateResourceResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_rpc_kubernetes_proto_msgTypes[1]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreateResourceResponse.ProtoReflect.Descriptor instead.
+func (*CreateResourceResponse) Descriptor() ([]byte, []int) {
+	return file_rpc_kubernetes_proto_rawDescGZIP(), []int{1}
+}
+
 type ConfigRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -29,7 +105,7 @@ type ConfigRequest struct {
 func (x *ConfigRequest) Reset() {
 	*x = ConfigRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_rpc_kubernetes_proto_msgTypes[0]
+		mi := &file_rpc_kubernetes_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -42,7 +118,7 @@ func (x *ConfigRequest) String() string {
 func (*ConfigRequest) ProtoMessage() {}
 
 func (x *ConfigRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_rpc_kubernetes_proto_msgTypes[0]
+	mi := &file_rpc_kubernetes_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -55,7 +131,7 @@ func (x *ConfigRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ConfigRequest.ProtoReflect.Descriptor instead.
 func (*ConfigRequest) Descriptor() ([]byte, []int) {
-	return file_rpc_kubernetes_proto_rawDescGZIP(), []int{0}
+	return file_rpc_kubernetes_proto_rawDescGZIP(), []int{2}
 }
 
 type ConfigResponse struct {
@@ -69,7 +145,7 @@ type ConfigResponse struct {
 func (x *ConfigResponse) Reset() {
 	*x = ConfigResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_rpc_kubernetes_proto_msgTypes[1]
+		mi := &file_rpc_kubernetes_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -82,7 +158,7 @@ func (x *ConfigResponse) String() string {
 func (*ConfigResponse) ProtoMessage() {}
 
 func (x *ConfigResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_rpc_kubernetes_proto_msgTypes[1]
+	mi := &file_rpc_kubernetes_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -95,7 +171,7 @@ func (x *ConfigResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ConfigResponse.ProtoReflect.Descriptor instead.
 func (*ConfigResponse) Descriptor() ([]byte, []int) {
-	return file_rpc_kubernetes_proto_rawDescGZIP(), []int{1}
+	return file_rpc_kubernetes_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *ConfigResponse) GetConfig() string {
@@ -114,7 +190,7 @@ type KsRequest struct {
 func (x *KsRequest) Reset() {
 	*x = KsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_rpc_kubernetes_proto_msgTypes[2]
+		mi := &file_rpc_kubernetes_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -127,7 +203,7 @@ func (x *KsRequest) String() string {
 func (*KsRequest) ProtoMessage() {}
 
 func (x *KsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_rpc_kubernetes_proto_msgTypes[2]
+	mi := &file_rpc_kubernetes_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -140,7 +216,7 @@ func (x *KsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use KsRequest.ProtoReflect.Descriptor instead.
 func (*KsRequest) Descriptor() ([]byte, []int) {
-	return file_rpc_kubernetes_proto_rawDescGZIP(), []int{2}
+	return file_rpc_kubernetes_proto_rawDescGZIP(), []int{4}
 }
 
 type KsResponse struct {
@@ -154,7 +230,7 @@ type KsResponse struct {
 func (x *KsResponse) Reset() {
 	*x = KsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_rpc_kubernetes_proto_msgTypes[3]
+		mi := &file_rpc_kubernetes_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -167,7 +243,7 @@ func (x *KsResponse) String() string {
 func (*KsResponse) ProtoMessage() {}
 
 func (x *KsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_rpc_kubernetes_proto_msgTypes[3]
+	mi := &file_rpc_kubernetes_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -180,7 +256,7 @@ func (x *KsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use KsResponse.ProtoReflect.Descriptor instead.
 func (*KsResponse) Descriptor() ([]byte, []int) {
-	return file_rpc_kubernetes_proto_rawDescGZIP(), []int{3}
+	return file_rpc_kubernetes_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *KsResponse) GetMsg() string {
@@ -194,22 +270,30 @@ var File_rpc_kubernetes_proto protoreflect.FileDescriptor
 
 var file_rpc_kubernetes_proto_rawDesc = []byte{
 	0x0a, 0x14, 0x72, 0x70, 0x63, 0x2f, 0x6b, 0x75, 0x62, 0x65, 0x72, 0x6e, 0x65, 0x74, 0x65, 0x73,
-	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x03, 0x72, 0x70, 0x63, 0x22, 0x0f, 0x0a, 0x0d, 0x43,
-	0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x22, 0x28, 0x0a, 0x0e,
-	0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x16,
-	0x0a, 0x06, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06,
-	0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x22, 0x0b, 0x0a, 0x09, 0x4b, 0x73, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x22, 0x1e, 0x0a, 0x0a, 0x4b, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x12, 0x10, 0x0a, 0x03, 0x6d, 0x73, 0x67, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03,
-	0x6d, 0x73, 0x67, 0x32, 0x86, 0x01, 0x0a, 0x10, 0x4b, 0x75, 0x62, 0x65, 0x72, 0x6e, 0x65, 0x74,
-	0x65, 0x73, 0x44, 0x65, 0x70, 0x6c, 0x6f, 0x79, 0x12, 0x30, 0x0a, 0x0b, 0x43, 0x68, 0x65, 0x63,
-	0x6b, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x12, 0x0e, 0x2e, 0x72, 0x70, 0x63, 0x2e, 0x4b, 0x73,
-	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0f, 0x2e, 0x72, 0x70, 0x63, 0x2e, 0x4b, 0x73,
-	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x40, 0x0a, 0x13, 0x47, 0x65,
-	0x74, 0x4b, 0x75, 0x62, 0x65, 0x72, 0x6e, 0x65, 0x74, 0x65, 0x73, 0x43, 0x6f, 0x6e, 0x66, 0x69,
-	0x67, 0x12, 0x12, 0x2e, 0x72, 0x70, 0x63, 0x2e, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65,
-	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x13, 0x2e, 0x72, 0x70, 0x63, 0x2e, 0x43, 0x6f, 0x6e, 0x66,
-	0x69, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x06, 0x5a, 0x04,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x03, 0x72, 0x70, 0x63, 0x22, 0x17, 0x0a, 0x15, 0x43,
+	0x72, 0x65, 0x61, 0x74, 0x65, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x52, 0x65, 0x71,
+	0x75, 0x65, 0x73, 0x74, 0x22, 0x18, 0x0a, 0x16, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x52, 0x65,
+	0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x0f,
+	0x0a, 0x0d, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x22,
+	0x28, 0x0a, 0x0e, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x12, 0x16, 0x0a, 0x06, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x06, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x22, 0x0b, 0x0a, 0x09, 0x4b, 0x73, 0x52,
+	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x22, 0x1e, 0x0a, 0x0a, 0x4b, 0x73, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x6d, 0x73, 0x67, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x03, 0x6d, 0x73, 0x67, 0x32, 0xd3, 0x01, 0x0a, 0x10, 0x4b, 0x75, 0x62, 0x65, 0x72,
+	0x6e, 0x65, 0x74, 0x65, 0x73, 0x44, 0x65, 0x70, 0x6c, 0x6f, 0x79, 0x12, 0x30, 0x0a, 0x0b, 0x43,
+	0x68, 0x65, 0x63, 0x6b, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x12, 0x0e, 0x2e, 0x72, 0x70, 0x63,
+	0x2e, 0x4b, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0f, 0x2e, 0x72, 0x70, 0x63,
+	0x2e, 0x4b, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x40, 0x0a,
+	0x13, 0x47, 0x65, 0x74, 0x4b, 0x75, 0x62, 0x65, 0x72, 0x6e, 0x65, 0x74, 0x65, 0x73, 0x43, 0x6f,
+	0x6e, 0x66, 0x69, 0x67, 0x12, 0x12, 0x2e, 0x72, 0x70, 0x63, 0x2e, 0x43, 0x6f, 0x6e, 0x66, 0x69,
+	0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x13, 0x2e, 0x72, 0x70, 0x63, 0x2e, 0x43,
+	0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12,
+	0x4b, 0x0a, 0x0e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63,
+	0x65, 0x12, 0x1a, 0x2e, 0x72, 0x70, 0x63, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x52, 0x65,
+	0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1b, 0x2e,
+	0x72, 0x70, 0x63, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72,
+	0x63, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x06, 0x5a, 0x04,
 	0x2f, 0x72, 0x70, 0x63, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
@@ -225,20 +309,24 @@ func file_rpc_kubernetes_proto_rawDescGZIP() []byte {
 	return file_rpc_kubernetes_proto_rawDescData
 }
 
-var file_rpc_kubernetes_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_rpc_kubernetes_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_rpc_kubernetes_proto_goTypes = []interface{}{
-	(*ConfigRequest)(nil),  // 0: rpc.ConfigRequest
-	(*ConfigResponse)(nil), // 1: rpc.ConfigResponse
-	(*KsRequest)(nil),      // 2: rpc.KsRequest
-	(*KsResponse)(nil),     // 3: rpc.KsResponse
+	(*CreateResourceRequest)(nil),  // 0: rpc.CreateResourceRequest
+	(*CreateResourceResponse)(nil), // 1: rpc.CreateResourceResponse
+	(*ConfigRequest)(nil),          // 2: rpc.ConfigRequest
+	(*ConfigResponse)(nil),         // 3: rpc.ConfigResponse
+	(*KsRequest)(nil),              // 4: rpc.KsRequest
+	(*KsResponse)(nil),             // 5: rpc.KsResponse
 }
 var file_rpc_kubernetes_proto_depIdxs = []int32{
-	2, // 0: rpc.KubernetesDeploy.CheckStatus:input_type -> rpc.KsRequest
-	0, // 1: rpc.KubernetesDeploy.GetKubernetesConfig:input_type -> rpc.ConfigRequest
-	3, // 2: rpc.KubernetesDeploy.CheckStatus:output_type -> rpc.KsResponse
-	1, // 3: rpc.KubernetesDeploy.GetKubernetesConfig:output_type -> rpc.ConfigResponse
-	2, // [2:4] is the sub-list for method output_type
-	0, // [0:2] is the sub-list for method input_type
+	4, // 0: rpc.KubernetesDeploy.CheckStatus:input_type -> rpc.KsRequest
+	2, // 1: rpc.KubernetesDeploy.GetKubernetesConfig:input_type -> rpc.ConfigRequest
+	0, // 2: rpc.KubernetesDeploy.CreateResource:input_type -> rpc.CreateResourceRequest
+	5, // 3: rpc.KubernetesDeploy.CheckStatus:output_type -> rpc.KsResponse
+	3, // 4: rpc.KubernetesDeploy.GetKubernetesConfig:output_type -> rpc.ConfigResponse
+	1, // 5: rpc.KubernetesDeploy.CreateResource:output_type -> rpc.CreateResourceResponse
+	3, // [3:6] is the sub-list for method output_type
+	0, // [0:3] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
 	0, // [0:0] is the sub-list for extension extendee
 	0, // [0:0] is the sub-list for field type_name
@@ -251,7 +339,7 @@ func file_rpc_kubernetes_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_rpc_kubernetes_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ConfigRequest); i {
+			switch v := v.(*CreateResourceRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -263,7 +351,7 @@ func file_rpc_kubernetes_proto_init() {
 			}
 		}
 		file_rpc_kubernetes_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ConfigResponse); i {
+			switch v := v.(*CreateResourceResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -275,7 +363,7 @@ func file_rpc_kubernetes_proto_init() {
 			}
 		}
 		file_rpc_kubernetes_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*KsRequest); i {
+			switch v := v.(*ConfigRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -287,6 +375,30 @@ func file_rpc_kubernetes_proto_init() {
 			}
 		}
 		file_rpc_kubernetes_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ConfigResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_rpc_kubernetes_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*KsRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_rpc_kubernetes_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*KsResponse); i {
 			case 0:
 				return &v.state
@@ -305,7 +417,7 @@ func file_rpc_kubernetes_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_rpc_kubernetes_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   4,
+			NumMessages:   6,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

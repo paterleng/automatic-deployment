@@ -1,4 +1,4 @@
-package handle
+package api
 
 import (
 	"context"
@@ -7,6 +7,7 @@ import (
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"kubernetes-deploy/controller"
 	"kubernetes-deploy/rpc"
 	"kubernetes-deploy/utils"
 )
@@ -28,6 +29,8 @@ func (h *KubernetesDeploy) CheckStatus(ctx context.Context, req *rpc.KsRequest, 
 }
 
 func (h *KubernetesDeploy) CreateResource(ctx context.Context, req *rpc.CreateResourceRequest, resp *rpc.CreateResourceResponse) error {
+
+	controller.GetManager().Resources()
 	//创建kubernetes资源
 	//定义 Deployment
 	deployment := &appsv1.Deployment{

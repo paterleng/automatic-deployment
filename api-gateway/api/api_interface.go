@@ -8,5 +8,5 @@ type UserInterface interface {
 
 type KubernetesApiInterface interface {
 	GetConfig(c *gin.Context)
-	Create(c *gin.Context)
+	CreateResource(c *gin.Context)
 }
