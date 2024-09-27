@@ -5,7 +5,11 @@ option go_package="/rpc";
 service KubernetesDeploy {
   rpc CheckStatus(KsRequest) returns (KsResponse) {}
   rpc GetKubernetesConfig(ConfigRequest) returns (ConfigResponse) {}
+  rpc CreateResource(CreateResourceRequest) returns(CreateResourceResponse){}
 }
+message CreateResourceRequest{}
+
+message CreateResourceResponse{}
 
 message ConfigRequest{}
 
