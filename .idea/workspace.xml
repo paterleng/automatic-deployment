@@ -5,13 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ac29538-e467-4f74-a26b-fb916aa09c6a" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/api-gateway/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kubernetes-deploy/api/rpc_realize.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/deploy.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kubernetes-deploy/controller/manager.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kubernetes-deploy/controller/resource_interface.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api/api_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/api_interface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api/kubernetes_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/kubernetes_api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api/manager.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/manager.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/utils/discovery.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/discovery.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/utils/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/init.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/utils/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/response.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/controller/user_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/user_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/handle/handle_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/handle/handle_interface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/rpcservice/kubernetes-service/kubernetes.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/rpcservice/kubernetes-service/kubernetes.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/rpcservice/kubernetes-service/kubernetes.pb.micro.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/rpcservice/kubernetes-service/kubernetes.pb.micro.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/rpcservice/kubernetes-service/kubernetes.proto" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/rpcservice/kubernetes-service/kubernetes.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/handle/handle.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/kubernetes-deploy/kubernetes-deploy.log" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/kubernetes-deploy.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/go.sum" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +46,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,7 +80,7 @@
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "D:/GoCode/automatic-deployment/kubernetes-deploy",
+    "last_opened_file_path": "D:/GoCode/automatic-deployment/api-gateway",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -73,13 +89,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GoCode\automatic-deployment\api-gateway\rpcservice\code-service" />
+      <recent name="D:\GoCode\automatic-deployment\kubernetes-deploy" />
       <recent name="D:\GoCode\automatic-deployment\api-gateway\rpcservice\kubernetes-service" />
+      <recent name="D:\GoCode\automatic-deployment\api-gateway\rpcservice\code-service" />
       <recent name="D:\GoCode\automatic-deployment\api-gateway\rpcservice\user-service" />
       <recent name="D:\GoCode\automatic-deployment\api-gateway\rpc\user-service" />
-      <recent name="D:\GoCode\automatic-deployment\api-gateway\rpc\code-service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GoCode\automatic-deployment\kubernetes-deploy\controller" />
       <recent name="D:\GoCode\automatic-deployment\api-gateway\utils" />
       <recent name="D:\GoCode\automatic-deployment\hello" />
     </key>
@@ -127,6 +144,7 @@
         <item itemvalue="Go 构建.go build kubernetes-deploy" />
         <item itemvalue="Go 构建.go build code-package" />
         <item itemvalue="Go 构建.go build automatic" />
+        <item itemvalue="Go 构建.go build api-gateway" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +170,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="dev" />
+                        <option value="liangjunhao" />
                       </list>
                     </value>
                   </entry>
