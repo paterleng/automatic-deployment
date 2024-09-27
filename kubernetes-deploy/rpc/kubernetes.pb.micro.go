@@ -44,6 +44,7 @@ func NewKubernetesDeployEndpoints() []*api.Endpoint {
 type KubernetesDeployService interface {
 	CheckStatus(ctx context.Context, in *KsRequest, opts ...client.CallOption) (*KsResponse, error)
 	GetKubernetesConfig(ctx context.Context, in *ConfigRequest, opts ...client.CallOption) (*ConfigResponse, error)
+	CreateResource(ctx context.Context, in *CreateResourceRequest, opts ...client.CallOption) (*CreateResourceResponse, error)
 }
 
 type kubernetesDeployService struct {
@@ -78,17 +79,29 @@ func (c *kubernetesDeployService) GetKubernetesConfig(ctx context.Context, in *C
 	return out, nil
 }
 
+func (c *kubernetesDeployService) CreateResource(ctx context.Context, in *CreateResourceRequest, opts ...client.CallOption) (*CreateResourceResponse, error) {
+	req := c.c.NewRequest(c.name, "KubernetesDeploy.CreateResource", in)
+	out := new(CreateResourceResponse)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // Server API for KubernetesDeploy service
 
 type KubernetesDeployHandler interface {
 	CheckStatus(context.Context, *KsRequest, *KsResponse) error
 	GetKubernetesConfig(context.Context, *ConfigRequest, *ConfigResponse) error
+	CreateResource(context.Context, *CreateResourceRequest, *CreateResourceResponse) error
 }
 
 func RegisterKubernetesDeployHandler(s server.Server, hdlr KubernetesDeployHandler, opts ...server.HandlerOption) error {
 	type kubernetesDeploy interface {
 		CheckStatus(ctx context.Context, in *KsRequest, out *KsResponse) error
 		GetKubernetesConfig(ctx context.Context, in *ConfigRequest, out *ConfigResponse) error
+		CreateResource(ctx context.Context, in *CreateResourceRequest, out *CreateResourceResponse) error
 	}
 	type KubernetesDeploy struct {
 		kubernetesDeploy
@@ -107,4 +120,8 @@ func (h *kubernetesDeployHandler) CheckStatus(ctx context.Context, in *KsRequest
 
 func (h *kubernetesDeployHandler) GetKubernetesConfig(ctx context.Context, in *ConfigRequest, out *ConfigResponse) error {
 	return h.KubernetesDeployHandler.GetKubernetesConfig(ctx, in, out)
+}
+
+func (h *kubernetesDeployHandler) CreateResource(ctx context.Context, in *CreateResourceRequest, out *CreateResourceResponse) error {
+	return h.KubernetesDeployHandler.CreateResource(ctx, in, out)
 }
