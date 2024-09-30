@@ -45,3 +45,21 @@
 {"level":"ERROR","time":"2024-09-27T10:35:15.461+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
 {"level":"INFO","time":"2024-09-27T10:35:15.477+0800","caller":"kubernetes-deploy/main.go:24","msg":"kubernetes-deploy服务注册成功"}
 {"level":"INFO","time":"2024-09-27T10:37:09.387+0800","caller":"kubernetes-deploy/main.go:29","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-09-29T10:39:05.749+0800","caller":"utils/init.go:147","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-29T10:39:05.750+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-09-29T10:39:07.960+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2024-09-29T10:39:07.965+0800","caller":"kubernetes-deploy/main.go:24","msg":"kubernetes-deploy服务注册成功"}
+{"level":"ERROR","time":"2024-09-29T10:49:51.286+0800","caller":"api/rpc_realize.go:43","msg":"创建deploy资源失败","error":"namespaces \"myapp\" not found"}
+{"level":"INFO","time":"2024-09-29T11:12:53.264+0800","caller":"kubernetes-deploy/main.go:29","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-09-29T11:13:09.084+0800","caller":"utils/init.go:147","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-29T11:13:09.085+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-09-29T11:13:11.160+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2024-09-29T11:13:11.167+0800","caller":"kubernetes-deploy/main.go:24","msg":"kubernetes-deploy服务注册成功"}
+{"level":"ERROR","time":"2024-09-29T11:13:33.666+0800","caller":"api/rpc_realize.go:42","msg":"创建deploy资源失败","error":"Deployment.apps \"myapp123\" is invalid: spec.selector: Invalid value: v1.LabelSelector{MatchLabels:map[string]string(nil), MatchExpressions:[]v1.LabelSelectorRequirement(nil)}: empty selector is invalid for deployment"}
+{"level":"ERROR","time":"2024-09-29T11:13:33.800+0800","caller":"api/rpc_realize.go:42","msg":"创建deploy资源失败","error":"Deployment.apps \"myapp123\" is invalid: spec.selector: Invalid value: v1.LabelSelector{MatchLabels:map[string]string(nil), MatchExpressions:[]v1.LabelSelectorRequirement(nil)}: empty selector is invalid for deployment"}
+{"level":"INFO","time":"2024-09-29T11:30:28.601+0800","caller":"kubernetes-deploy/main.go:29","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-09-30T10:05:47.550+0800","caller":"utils/init.go:147","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-30T10:05:47.552+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-09-30T10:05:49.814+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2024-09-30T10:05:49.823+0800","caller":"kubernetes-deploy/main.go:24","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-09-30T10:06:16.349+0800","caller":"kubernetes-deploy/main.go:29","msg":"kubernetes-deploy服务启动成功"}

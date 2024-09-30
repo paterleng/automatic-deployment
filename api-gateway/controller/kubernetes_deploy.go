@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"api-gateway/model"
 	"api-gateway/rpcservice/kubernetes-service"
 	"api-gateway/utils"
 	"context"
@@ -53,13 +54,28 @@ func (p *KubernetesController) GetConfig(c *gin.Context) {
 // create kubernetes resource
 func (p *KubernetesController) CreateResource(c *gin.Context) {
 	//	参数处理
-	//调用创建的方法
-	_, err := p.PB.KubernetesService.CreateResource(c, &rpc.CreateResourceRequest{
-		ResourceType: "deployment",
-	})
+	var m model.ResourceReq
+	if err := c.ShouldBindJSON(&m); err != nil {
+		p.LG.Error("参数绑定失败", zap.Error(err))
+		utils.ResponseErrorWithMsg(c, utils.CodeInvalidParam, err)
+		return
+	}
+
+	req := &rpc.CreateResourceRequest{
+		ResourceType: m.ResourceType,
+		Name:         m.Name,
+		NameSpace:    m.NameSpace,
+		ImageName:    m.ImageName,
+		Replicas:     m.Replicas,
+		Labels:       m.Labels,
+		MatchLabels:  m.MatchLabels,
+	}
+
+	_, err := p.PB.KubernetesService.CreateResource(c, req)
 	if err != nil {
 		p.LG.Error("创建资源失败", zap.Error(err))
 		utils.ResponseErrorWithMsg(c, utils.CodeServerBusy, err)
 		return
 	}
+	utils.ResponseSuccess(c, utils.CodeSuccess)
 }

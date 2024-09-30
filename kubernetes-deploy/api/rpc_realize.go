@@ -27,10 +27,26 @@ func (h *KubernetesDeploy) CheckStatus(ctx context.Context, req *rpc.KsRequest, 
 }
 
 func (h *KubernetesDeploy) CreateResource(ctx context.Context, req *rpc.CreateResourceRequest, resp *rpc.CreateResourceResponse) error {
-	err := handle.GetDeployManager().CreateResources()
+	//校验资源类型，从而对不同资源类型做不同的处理
+	var err error
+	switch req.ResourceType {
+	case utils.DeploymentResource:
+		err = handle.GetDeployManager().CreateResources(req.DeploymentResource)
+	case utils.JobResource:
+		err = handle.GetJobManager().CreateResources(req)
+	case utils.CornJobResource:
+		handle.GetCornJobManager().CreateResources(req)
+	case utils.ServiceResource:
+		handle.GetServiceManager().CreateResources(req.ServiceResource)
+	case utils.PodResource:
+
+	default:
+		utils.Tools.LG.Error("不能创建此资源", zap.Error(err))
+		return err
+	}
 	if err != nil {
 		utils.Tools.LG.Error(fmt.Sprintf("创建%s资源失败", req.ResourceType), zap.Error(err))
+		return err
 	}
-
 	return nil
 }
