@@ -75,3 +75,21 @@
 {"level":"INFO","time":"2024-09-27T09:16:15.861+0800","caller":"utils/init.go:75","msg":"初始化logger成功"}
 {"level":"INFO","time":"2024-09-27T09:16:15.861+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
 {"level":"INFO","time":"2024-09-27T09:16:15.861+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"INFO","time":"2024-09-29T10:39:24.361+0800","caller":"utils/init.go:149","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-29T10:39:24.385+0800","caller":"utils/init.go:75","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-09-29T10:39:24.385+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-09-29T10:39:24.386+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"INFO","time":"2024-09-29T10:48:56.199+0800","caller":"utils/init.go:149","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-29T10:48:56.199+0800","caller":"utils/init.go:75","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-09-29T10:48:56.199+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-09-29T10:48:56.200+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"INFO","time":"2024-09-29T11:13:29.139+0800","caller":"utils/init.go:149","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-29T11:13:29.139+0800","caller":"utils/init.go:75","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-09-29T11:13:29.139+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-09-29T11:13:29.141+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-09-29T11:13:33.801+0800","caller":"controller/kubernetes_deploy.go:67","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":500,\"detail\":\"Deployment.apps \\\"myapp123\\\" is invalid: spec.selector: Invalid value: v1.LabelSelector{MatchLabels:map[string]string(nil), MatchExpressions:[]v1.LabelSelectorRequirement(nil)}: empty selector is invalid for deployment\",\"status\":\"Internal Server Error\"}"}
+{"level":"INFO","time":"2024-09-29T16:11:22.064+0800","caller":"utils/init.go:149","msg":"init logger success"}
+{"level":"INFO","time":"2024-09-29T16:11:22.065+0800","caller":"utils/init.go:75","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-09-29T16:11:22.065+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-09-29T16:11:22.067+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-09-29T16:12:13.951+0800","caller":"controller/kubernetes_deploy.go:70","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":500,\"detail\":\"service kubernetes-deploy: not found\",\"status\":\"Internal Server Error\"}"}

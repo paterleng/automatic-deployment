@@ -3,13 +3,16 @@ package handle
 import (
 	"context"
 	"fmt"
-	appsv1 "k8s.io/api/apps/v1"
+	batchv1 "k8s.io/api/batch/v1"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"k8s.io/client-go/kubernetes"
 	"kubernetes-deploy/utils"
 )
 
-type JobHandle struct{}
+type JobHandle struct {
+	client *kubernetes.Clientset
+}
 
 var jobManager JobManager
 
@@ -25,48 +28,55 @@ func GetJobManager() JobManager {
 	return jobManager
 }
 
-func CreateJobManager() {
-	var manager JobInterface
+func CreateJobManager() error {
+	var manager JobHandle
+	client, err := utils.NewKubeConfig()
+	if err != nil {
+		return err
+	}
+	manager.client = client
 	jobManager = &manager
+	return nil
 }
 
 func (d *JobHandle) Before() error {
 	return nil
 }
 
-func (d *JobHandle) CreateResources() error {
-	deployment := &appsv1.Deployment{
+func (d *JobHandle) CreateResources(r interface{}) error {
+	// 定义 Job
+	job := &batchv1.Job{
 		ObjectMeta: metav1.ObjectMeta{
-			Name: "my-deployment",
+			Name: "example-job",
 		},
-		Spec: appsv1.DeploymentSpec{
-			Replicas: utils.Int32Ptr(1),
-			Selector: &metav1.LabelSelector{
-				MatchLabels: map[string]string{"app": "my-app"},
-			},
+		Spec: batchv1.JobSpec{
 			Template: corev1.PodTemplateSpec{
-				ObjectMeta: metav1.ObjectMeta{
-					Labels: map[string]string{"app": "my-app"},
-				},
 				Spec: corev1.PodSpec{
-					Containers: []corev1.Container{{
-						Name:  "my-container",
-						Image: "docker.rainbond.cc/nginx:latest",
-					}},
+					Containers: []corev1.Container{
+						{
+							Name:  "example-container",
+							Image: "busybox",
+							Command: []string{
+								"sh",
+								"-c",
+								"echo Hello, Kubernetes! && sleep 30",
+							},
+						},
+					},
+					RestartPolicy: corev1.RestartPolicyOnFailure,
 				},
 			},
 		},
 	}
-	clientset, err := utils.NewKubeConfig()
 
-	// 创建 Deployment
-	deploymentsClient := clientset.AppsV1().Deployments("default")
-	result, err := deploymentsClient.Create(context.TODO(), deployment, metav1.CreateOptions{})
+	// 创建 Job
+	result, err := d.client.BatchV1().Jobs("default").Create(context.TODO(), job, metav1.CreateOptions{})
 	if err != nil {
-		panic(err.Error())
+		panic(err)
 	}
 
-	fmt.Printf("Created deployment %q.\n", result.GetObjectMeta().GetName())
+	fmt.Printf("Created Job %q.\n", result.GetObjectMeta().GetName())
+
 	return nil
 }
 
