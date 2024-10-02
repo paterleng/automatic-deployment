@@ -40,15 +40,22 @@ func CreateDeployManager() error {
 
 type DeployHandle struct {
 	client *kubernetes.Clientset
+	rpc.Deployment
 }
 
 func (d *DeployHandle) Before() error {
+	//都存到对应的表中，然后在创建deployment的时候在对应的命名空间下创建出来
+
 	return nil
 }
 
 func (d *DeployHandle) CreateResources(r interface{}) error {
 	req := r.(rpc.Deployment)
-	err := CheckNameSpace(d.client, req.NameSpace)
+	//在创建资源之前先创建相对应的secret
+	d.Deployment = req
+	err := d.Before()
+
+	err = CheckNameSpace(d.client, req.NameSpace)
 	if err != nil {
 		return err
 	}
@@ -78,10 +85,12 @@ func (d *DeployHandle) CreateResources(r interface{}) error {
 						Name:  req.Name,
 						Image: "docker.rainbond.cc/" + req.ImageName,
 					}},
+					RestartPolicy: corev1.RestartPolicyOnFailure,
 				},
 			},
 		},
 	}
+
 	deploymentsClient := d.client.AppsV1().Deployments(req.NameSpace)
 	result, err := deploymentsClient.Create(context.TODO(), deployment, metav1.CreateOptions{})
 	if err != nil {

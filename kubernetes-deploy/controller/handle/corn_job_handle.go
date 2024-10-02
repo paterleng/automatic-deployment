@@ -9,6 +9,7 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
+	"kubernetes-deploy/rpc"
 	"kubernetes-deploy/utils"
 )
 
@@ -42,30 +43,32 @@ func CreateCornJobManager() error {
 }
 
 func (c *CornJobHandle) Before() error {
+	//检查命名空间是否存在，不存在则创建
 	return nil
 }
 
 func (c *CornJobHandle) CreateResources(r interface{}) error {
+	req := r.(rpc.CornJob)
 	// 定义 CronJob
 	cronJob := &v1beta1.CronJob{
 		ObjectMeta: metav1.ObjectMeta{
-			Name:      "example-cronjob",
-			Namespace: "default", // 设置命名空间
+			Name:      req.Name,
+			Namespace: req.NameSpace,
 		},
 		Spec: v1beta1.CronJobSpec{
-			Schedule: "*/5 * * * *", // 设置调度表达式
+			Schedule: req.Schedule,
 			JobTemplate: v1beta1.JobTemplateSpec{
 				Spec: batchv1.JobSpec{
 					Template: corev1.PodTemplateSpec{
 						Spec: corev1.PodSpec{
 							Containers: []corev1.Container{
 								{
-									Name:  "example-container",
-									Image: "your-image:tag",         // 替换为你的镜像
-									Args:  []string{"arg1", "arg2"}, // 可选参数
+									Name:  req.ContainerName,
+									Image: req.ImagesName,
+									Args:  req.Args,
 								},
 							},
-							RestartPolicy: corev1.RestartPolicyNever, // 设置重启策略
+							RestartPolicy: corev1.RestartPolicyNever,
 						},
 					},
 				},
@@ -73,8 +76,7 @@ func (c *CornJobHandle) CreateResources(r interface{}) error {
 		},
 	}
 
-	// 创建 CronJob
-	createdCronJob, err := c.client.BatchV1beta1().CronJobs("default").Create(context.TODO(), cronJob, metav1.CreateOptions{})
+	createdCronJob, err := c.client.BatchV1beta1().CronJobs(req.NameSpace).Create(context.TODO(), cronJob, metav1.CreateOptions{})
 	if err != nil {
 		utils.Tools.LG.Error("创建cornjob资源失败", zap.Error(err))
 		return err

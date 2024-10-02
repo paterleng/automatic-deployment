@@ -16,6 +16,7 @@ func main() {
 		micro.Version("latest"),
 		micro.Registry(reg),
 	)
+
 	service.Init()
 	if err := api.Register(service); err != nil {
 		utils.Tools.LG.Error("服务注册失败：", zap.Error(err))

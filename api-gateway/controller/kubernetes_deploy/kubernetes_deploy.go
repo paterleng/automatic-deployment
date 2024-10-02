@@ -63,12 +63,12 @@ func (p *KubernetesController) CreateResource(c *gin.Context) {
 
 	req := &rpc.CreateResourceRequest{
 		ResourceType: m.ResourceType,
-		Name:         m.Name,
-		NameSpace:    m.NameSpace,
-		ImageName:    m.ImageName,
-		Replicas:     m.Replicas,
-		Labels:       m.Labels,
-		MatchLabels:  m.MatchLabels,
+		//Name:         m.Name,
+		//NameSpace:    m.NameSpace,
+		//ImageName:    m.ImageName,
+		//Replicas:     m.Replicas,
+		//Labels:       m.Labels,
+		//MatchLabels:  m.MatchLabels,
 	}
 
 	_, err := p.PB.KubernetesService.CreateResource(c, req)

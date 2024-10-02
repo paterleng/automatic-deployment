@@ -7,6 +7,7 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
+	"kubernetes-deploy/rpc"
 	"kubernetes-deploy/utils"
 )
 
@@ -44,23 +45,20 @@ func (d *JobHandle) Before() error {
 }
 
 func (d *JobHandle) CreateResources(r interface{}) error {
+	req := r.(rpc.Job)
 	// 定义 Job
 	job := &batchv1.Job{
 		ObjectMeta: metav1.ObjectMeta{
-			Name: "example-job",
+			Name: req.Name,
 		},
 		Spec: batchv1.JobSpec{
 			Template: corev1.PodTemplateSpec{
 				Spec: corev1.PodSpec{
 					Containers: []corev1.Container{
 						{
-							Name:  "example-container",
-							Image: "busybox",
-							Command: []string{
-								"sh",
-								"-c",
-								"echo Hello, Kubernetes! && sleep 30",
-							},
+							Name:    req.ContainerName,
+							Image:   req.ImagesName,
+							Command: req.Command,
 						},
 					},
 					RestartPolicy: corev1.RestartPolicyOnFailure,
@@ -70,7 +68,7 @@ func (d *JobHandle) CreateResources(r interface{}) error {
 	}
 
 	// 创建 Job
-	result, err := d.client.BatchV1().Jobs("default").Create(context.TODO(), job, metav1.CreateOptions{})
+	result, err := d.client.BatchV1().Jobs(req.NameSpace).Create(context.TODO(), job, metav1.CreateOptions{})
 	if err != nil {
 		panic(err)
 	}
