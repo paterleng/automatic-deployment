@@ -93,3 +93,43 @@
 {"level":"INFO","time":"2024-09-29T16:11:22.065+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
 {"level":"INFO","time":"2024-09-29T16:11:22.067+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
 {"level":"ERROR","time":"2024-09-29T16:12:13.951+0800","caller":"controller/kubernetes_deploy.go:70","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":500,\"detail\":\"service kubernetes-deploy: not found\",\"status\":\"Internal Server Error\"}"}
+{"level":"INFO","time":"2024-10-01T22:19:26.184+0800","caller":"utils/init.go:149","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-01T22:19:26.207+0800","caller":"utils/init.go:75","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-01T22:19:26.207+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-01T22:19:26.208+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"INFO","time":"2024-10-01T22:22:01.720+0800","caller":"utils/init.go:149","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-01T22:22:01.753+0800","caller":"utils/init.go:75","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-01T22:22:01.754+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-01T22:22:01.755+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"INFO","time":"2024-10-02T08:14:15.088+0800","caller":"utils/init.go:149","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T08:14:15.126+0800","caller":"utils/init.go:75","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T08:14:15.127+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T08:14:15.127+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"INFO","time":"2024-10-02T08:15:38.590+0800","caller":"utils/init.go:149","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T08:15:38.626+0800","caller":"utils/init.go:75","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T08:15:38.626+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T08:15:38.628+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"INFO","time":"2024-10-02T08:17:55.968+0800","caller":"utils/init.go:149","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T08:17:56.001+0800","caller":"utils/init.go:75","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T08:17:56.001+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T08:17:56.002+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"INFO","time":"2024-10-02T08:21:21.401+0800","caller":"utils/init.go:149","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T08:21:21.439+0800","caller":"utils/init.go:75","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T08:21:21.440+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T08:21:21.441+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"INFO","time":"2024-10-02T08:24:56.416+0800","caller":"utils/init.go:149","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T08:24:56.448+0800","caller":"utils/init.go:75","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T08:24:56.449+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T08:24:56.449+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"INFO","time":"2024-10-02T08:25:26.850+0800","caller":"utils/init.go:149","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T08:25:26.850+0800","caller":"utils/init.go:75","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T08:25:26.850+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T08:25:26.850+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"INFO","time":"2024-10-02T08:27:23.259+0800","caller":"utils/init.go:149","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T08:27:23.298+0800","caller":"utils/init.go:75","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T08:27:23.299+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T08:27:23.300+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"INFO","time":"2024-10-02T08:50:24.588+0800","caller":"utils/init.go:149","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T08:50:24.610+0800","caller":"utils/init.go:75","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T08:50:24.610+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T08:50:24.611+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}

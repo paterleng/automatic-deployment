@@ -11,7 +11,6 @@ import (
 
 import (
 	context "context"
-	api "github.com/micro/go-micro/v2/api"
 	client "github.com/micro/go-micro/v2/client"
 	server "github.com/micro/go-micro/v2/server"
 )
@@ -28,21 +27,15 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 // Reference imports to suppress errors if they are not otherwise used.
-var _ api.Endpoint
 var _ context.Context
 var _ client.Option
 var _ server.Option
-
-// Api Endpoints for UserService service
-
-func NewUserServiceEndpoints() []*api.Endpoint {
-	return []*api.Endpoint{}
-}
 
 // Client API for UserService service
 
 type UserService interface {
 	CheckStatus(ctx context.Context, in *UserRequest, opts ...client.CallOption) (*UserResponse, error)
+	UserLogin(ctx context.Context, in *LoginRequest, opts ...client.CallOption) (*LoginResponse, error)
 }
 
 type userService struct {
@@ -67,15 +60,27 @@ func (c *userService) CheckStatus(ctx context.Context, in *UserRequest, opts ...
 	return out, nil
 }
 
+func (c *userService) UserLogin(ctx context.Context, in *LoginRequest, opts ...client.CallOption) (*LoginResponse, error) {
+	req := c.c.NewRequest(c.name, "UserService.UserLogin", in)
+	out := new(LoginResponse)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // Server API for UserService service
 
 type UserServiceHandler interface {
 	CheckStatus(context.Context, *UserRequest, *UserResponse) error
+	UserLogin(context.Context, *LoginRequest, *LoginResponse) error
 }
 
 func RegisterUserServiceHandler(s server.Server, hdlr UserServiceHandler, opts ...server.HandlerOption) error {
 	type userService interface {
 		CheckStatus(ctx context.Context, in *UserRequest, out *UserResponse) error
+		UserLogin(ctx context.Context, in *LoginRequest, out *LoginResponse) error
 	}
 	type UserService struct {
 		userService
@@ -90,4 +95,8 @@ type userServiceHandler struct {
 
 func (h *userServiceHandler) CheckStatus(ctx context.Context, in *UserRequest, out *UserResponse) error {
 	return h.UserServiceHandler.CheckStatus(ctx, in, out)
+}
+
+func (h *userServiceHandler) UserLogin(ctx context.Context, in *LoginRequest, out *LoginResponse) error {
+	return h.UserServiceHandler.UserLogin(ctx, in, out)
 }
