@@ -63,3 +63,55 @@
 {"level":"ERROR","time":"2024-09-30T10:05:49.814+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"dial tcp 192.168.10.8:3306: connectex: No connection could be made because the target machine actively refused it."}
 {"level":"INFO","time":"2024-09-30T10:05:49.823+0800","caller":"kubernetes-deploy/main.go:24","msg":"kubernetes-deploy服务注册成功"}
 {"level":"INFO","time":"2024-09-30T10:06:16.349+0800","caller":"kubernetes-deploy/main.go:29","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-01T09:35:30.393+0800","caller":"utils/init.go:147","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-01T09:35:30.394+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-10-01T09:35:30.427+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"Error 1045 (28000): Access denied for user 'root'@'192.168.22.39' (using password: YES)"}
+{"level":"INFO","time":"2024-10-01T09:35:30.435+0800","caller":"kubernetes-deploy/main.go:24","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-01T09:36:13.730+0800","caller":"kubernetes-deploy/main.go:29","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-01T09:36:17.691+0800","caller":"utils/init.go:147","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-01T09:36:17.692+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-01T09:36:17.713+0800","caller":"utils/init.go:79","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-01T09:36:17.722+0800","caller":"kubernetes-deploy/main.go:24","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-01T09:48:57.237+0800","caller":"kubernetes-deploy/main.go:29","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-01T09:49:01.246+0800","caller":"utils/init.go:147","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-01T09:49:01.246+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-10-01T09:49:01.260+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"Error 1049 (42000): Unknown database 'automatic_deployment'"}
+{"level":"INFO","time":"2024-10-01T09:49:01.267+0800","caller":"kubernetes-deploy/main.go:24","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-01T09:49:31.204+0800","caller":"kubernetes-deploy/main.go:29","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-01T09:49:55.952+0800","caller":"utils/init.go:147","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-01T09:49:55.952+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-10-01T09:49:55.967+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"Error 1049 (42000): Unknown database 'automatic_deployment'"}
+{"level":"INFO","time":"2024-10-01T09:49:55.981+0800","caller":"kubernetes-deploy/main.go:24","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-01T09:50:53.874+0800","caller":"kubernetes-deploy/main.go:29","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-01T09:51:03.550+0800","caller":"utils/init.go:147","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-01T09:51:03.550+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-10-01T09:51:03.577+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"Error 1049 (42000): Unknown database 'automatic_deployment'"}
+{"level":"INFO","time":"2024-10-01T09:51:59.141+0800","caller":"kubernetes-deploy/main.go:26","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-01T09:52:29.387+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-01T09:52:29.388+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-10-01T09:52:29.423+0800","caller":"utils/init.go:77","msg":"初始化MySQL失败：","error":"Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DATABASEautomatic_deployment' at line 1"}
+{"level":"INFO","time":"2024-10-01T09:52:29.430+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-01T09:53:03.091+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-01T09:53:11.382+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-01T09:53:11.383+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-10-01T09:53:11.407+0800","caller":"utils/init.go:77","msg":"初始化MySQL失败：","error":"sql: no rows in result set"}
+{"level":"INFO","time":"2024-10-01T09:53:11.414+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-01T09:54:05.547+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-01T09:54:14.506+0800","caller":"utils/init.go:171","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-01T09:54:14.506+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-01T09:54:14.535+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-01T09:54:14.545+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-01T09:55:11.006+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-01T09:55:27.983+0800","caller":"utils/init.go:171","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-01T09:55:27.984+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-10-01T09:56:14.095+0800","caller":"utils/init.go:77","msg":"初始化MySQL失败：","error":"Error 1049 (42000): Unknown database 'automatic_deployment'"}
+{"level":"INFO","time":"2024-10-01T09:56:14.113+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-01T09:56:29.032+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-01T09:56:29.033+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"ERROR","time":"2024-10-01T09:57:40.830+0800","caller":"utils/init.go:77","msg":"初始化MySQL失败：","error":"sql: no rows in result set"}
+{"level":"INFO","time":"2024-10-01T09:57:40.844+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-01T09:57:56.930+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-01T09:57:56.930+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-01T09:58:21.607+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-01T09:58:21.620+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-01T10:00:53.712+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}

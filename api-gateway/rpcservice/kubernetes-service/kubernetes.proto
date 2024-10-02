@@ -12,12 +12,14 @@ message CreateResourceRequest{
   string ResourceType = 1;
   Deployment DeploymentResource = 2;
   Service ServiceResource = 3;
-
+  Job JobResource = 4;
+  CornJob CornJobResource = 5;
 }
 
 message Deployment{
-  string NameSpace = 2;
-  string Name = 3;
+  string NameSpace = 1;
+  string Name = 2;
+  string ContainerName = 3;
   string ImageName = 4;
   map<string,string> Labels = 5;
   map<string,string>  MatchLabels = 6;
@@ -34,7 +36,24 @@ message Service{
   int32 NodePort = 7;
 }
 
+message Job{
+  string NameSpace = 1;
+  string Name = 2;
+  string ContainerName = 3;
+  string  ImagesName = 4;
+  repeated string Command = 5;
+}
 
+message CornJob{
+  string NameSpace = 1;
+  string Name = 2;
+  string ContainerName = 3;
+  string ImagesName = 4;
+  string RestartPolicy= 5;
+  string Schedule = 6;
+  repeated string Args = 7;
+
+}
 
 
 message CreateResourceResponse{
