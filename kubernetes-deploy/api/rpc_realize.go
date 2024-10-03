@@ -50,3 +50,9 @@ func (h *KubernetesDeploy) CreateResource(ctx context.Context, req *rpc.CreateRe
 	}
 	return nil
 }
+
+func (h *KubernetesDeploy) CreateSecret(ctx context.Context, req *rpc.SecretRequest, resp *rpc.SecretResponse) error {
+
+	return nil
+
+}

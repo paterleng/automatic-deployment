@@ -96,7 +96,7 @@ func MysqlInit() (err error) {
 		if err == sql.ErrNoRows {
 			//数据库不存在创建数据库
 			err = nil
-			_, err := db.Exec("CREATE DATABASE " + Conf.MySQLConfig.DB)
+			_, err = db.Exec("CREATE DATABASE " + Conf.MySQLConfig.DB)
 			if err != nil {
 				return err
 			}

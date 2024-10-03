@@ -115,3 +115,181 @@
 {"level":"INFO","time":"2024-10-01T09:58:21.607+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
 {"level":"INFO","time":"2024-10-01T09:58:21.620+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
 {"level":"INFO","time":"2024-10-01T10:00:53.712+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-02T17:00:04.464+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T17:00:04.487+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T17:00:04.530+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T17:00:04.537+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-02T17:16:08.312+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-02T17:16:21.205+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T17:16:21.206+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T17:16:21.240+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T17:16:21.254+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-02T17:18:08.120+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-02T17:18:17.475+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T17:18:17.476+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T17:18:17.541+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T17:18:17.552+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-02T17:22:37.973+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-02T17:24:04.508+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T17:24:04.509+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T17:24:04.634+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T17:24:04.668+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-02T17:25:12.588+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-02T17:25:22.630+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T17:25:22.630+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T17:25:22.697+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T17:25:22.706+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-02T17:26:13.624+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-02T17:26:27.366+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T17:26:27.367+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T17:26:27.429+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T17:26:27.442+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-02T17:27:52.991+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-02T17:28:03.164+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T17:28:03.165+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T17:28:03.255+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T17:28:03.266+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-02T17:39:28.560+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T08:30:47.072+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T08:30:47.073+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T08:30:47.116+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T08:30:47.135+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-03T08:35:56.583+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T08:36:03.164+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T08:36:03.165+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T08:39:36.643+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T08:39:50.786+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-03T08:40:04.030+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T08:40:04.031+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T08:40:04.070+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T08:40:32.952+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-03T08:40:56.502+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T08:41:46.756+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T08:41:46.756+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T08:41:46.815+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T08:41:46.829+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-03T08:45:00.311+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T08:45:32.282+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T08:45:32.282+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T08:45:32.327+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T08:45:32.339+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-03T08:51:13.553+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T08:51:20.311+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T08:51:20.312+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T08:51:20.335+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T08:51:20.345+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-03T10:44:16.604+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T15:41:32.237+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T15:41:32.238+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T15:41:32.299+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T15:41:32.307+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-03T15:41:57.409+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T15:42:13.257+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T15:42:13.258+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T15:42:13.296+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T15:42:13.332+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-03T15:44:45.219+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T15:44:54.353+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T15:44:54.354+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T15:44:54.386+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T15:44:54.399+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-03T15:45:26.889+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T15:45:33.858+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T15:45:33.858+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T15:45:33.888+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T15:46:01.195+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-03T15:47:27.538+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T15:47:38.638+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T15:47:38.638+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T15:47:38.685+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T15:47:38.699+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-03T15:47:46.805+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T15:47:59.151+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T15:47:59.152+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T15:47:59.184+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T15:48:12.864+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-03T15:49:28.746+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T15:49:39.977+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T15:49:39.978+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T15:49:40.039+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T15:49:40.059+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"ERROR","time":"2024-10-03T15:50:59.954+0800","caller":"handle/secret.go:28","msg":"创建secret测试失败","error":"Secret \"测试\" is invalid: metadata.name: Invalid value: \"测试\": a lowercase RFC 1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')"}
+{"level":"ERROR","time":"2024-10-03T15:50:59.958+0800","caller":"handle/secret.go:28","msg":"创建secret测试失败","error":"Secret \"测试\" is invalid: metadata.name: Invalid value: \"测试\": a lowercase RFC 1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')"}
+{"level":"INFO","time":"2024-10-03T15:51:27.762+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T19:59:57.913+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T19:59:57.913+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T19:59:57.942+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T19:59:57.951+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-03T20:00:24.075+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T20:02:48.598+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T20:02:48.600+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T20:02:48.644+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T20:02:48.653+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"ERROR","time":"2024-10-03T20:03:05.663+0800","caller":"handle/secret.go:28","msg":"创建secret测试失败","error":"Secret \"测试\" is invalid: metadata.name: Invalid value: \"测试\": a lowercase RFC 1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')"}
+{"level":"ERROR","time":"2024-10-03T20:03:05.663+0800","caller":"handle/secret.go:28","msg":"创建secret测试失败","error":"Secret \"测试\" is invalid: metadata.name: Invalid value: \"测试\": a lowercase RFC 1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')"}
+{"level":"INFO","time":"2024-10-03T20:03:21.472+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T20:03:29.759+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T20:03:29.760+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T20:03:29.811+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T20:03:29.821+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-03T20:04:07.062+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T20:04:15.805+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T20:04:15.806+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T20:04:15.863+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T20:04:15.870+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"ERROR","time":"2024-10-03T20:04:19.297+0800","caller":"handle/secret.go:28","msg":"创建secret测试失败","error":"Secret \"测试\" is invalid: metadata.name: Invalid value: \"测试\": a lowercase RFC 1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')"}
+{"level":"ERROR","time":"2024-10-03T20:04:19.297+0800","caller":"handle/secret.go:28","msg":"创建secret测试失败","error":"Secret \"测试\" is invalid: metadata.name: Invalid value: \"测试\": a lowercase RFC 1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')"}
+{"level":"ERROR","time":"2024-10-03T20:06:26.662+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"Namespace \"secret_test\" is invalid: metadata.name: Invalid value: \"secret_test\": a lowercase RFC 1123 label must consist of lower case alphanumeric characters or '-', and must start and end with an alphanumeric character (e.g. 'my-name',  or '123-abc', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?')"}
+{"level":"ERROR","time":"2024-10-03T20:06:26.769+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"Namespace \"secret_test\" is invalid: metadata.name: Invalid value: \"secret_test\": a lowercase RFC 1123 label must consist of lower case alphanumeric characters or '-', and must start and end with an alphanumeric character (e.g. 'my-name',  or '123-abc', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?')"}
+{"level":"INFO","time":"2024-10-03T20:06:50.539+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T20:07:10.530+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T20:07:10.530+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T20:07:10.570+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T20:07:10.582+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"ERROR","time":"2024-10-03T20:08:00.524+0800","caller":"handle/secret.go:28","msg":"创建secret测试失败","error":"Secret \"测试\" is invalid: metadata.name: Invalid value: \"测试\": a lowercase RFC 1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')"}
+{"level":"ERROR","time":"2024-10-03T20:08:00.525+0800","caller":"handle/secret.go:28","msg":"创建secret测试失败","error":"Secret \"测试\" is invalid: metadata.name: Invalid value: \"测试\": a lowercase RFC 1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')"}
+{"level":"INFO","time":"2024-10-03T20:08:01.938+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T20:08:07.541+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T20:08:07.542+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T20:08:07.578+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T20:08:07.585+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"ERROR","time":"2024-10-03T20:08:33.332+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"Deployment.apps \"testsecret\" is invalid: [spec.selector: Invalid value: v1.LabelSelector{MatchLabels:map[string]string(nil), MatchExpressions:[]v1.LabelSelectorRequirement(nil)}: empty selector is invalid for deployment, spec.template.spec.restartPolicy: Unsupported value: \"OnFailure\": supported values: \"Always\"]"}
+{"level":"ERROR","time":"2024-10-03T20:08:33.456+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"Deployment.apps \"testsecret\" is invalid: [spec.selector: Invalid value: v1.LabelSelector{MatchLabels:map[string]string(nil), MatchExpressions:[]v1.LabelSelectorRequirement(nil)}: empty selector is invalid for deployment, spec.template.spec.restartPolicy: Unsupported value: \"OnFailure\": supported values: \"Always\"]"}
+{"level":"INFO","time":"2024-10-03T20:11:15.351+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T20:11:27.567+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T20:11:27.568+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T20:11:27.604+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T20:11:27.612+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-03T20:11:44.829+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T20:11:58.615+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T20:11:58.616+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T20:11:58.663+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T20:11:58.684+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"ERROR","time":"2024-10-03T20:12:03.239+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"Deployment.apps \"testsecret\" is invalid: spec.selector: Invalid value: v1.LabelSelector{MatchLabels:map[string]string(nil), MatchExpressions:[]v1.LabelSelectorRequirement(nil)}: empty selector is invalid for deployment"}
+{"level":"ERROR","time":"2024-10-03T20:12:03.371+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"Deployment.apps \"testsecret\" is invalid: spec.selector: Invalid value: v1.LabelSelector{MatchLabels:map[string]string(nil), MatchExpressions:[]v1.LabelSelectorRequirement(nil)}: empty selector is invalid for deployment"}
+{"level":"ERROR","time":"2024-10-03T20:13:49.844+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"Deployment.apps \"testsecret\" is invalid: spec.selector: Invalid value: v1.LabelSelector{MatchLabels:map[string]string(nil), MatchExpressions:[]v1.LabelSelectorRequirement(nil)}: empty selector is invalid for deployment"}
+{"level":"INFO","time":"2024-10-03T20:17:44.271+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T20:17:54.032+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T20:17:54.033+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T20:17:54.059+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T20:17:54.066+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"ERROR","time":"2024-10-03T20:17:59.120+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"Deployment.apps \"testsecret\" is invalid: [spec.selector: Required value, spec.template.metadata.labels: Invalid value: map[string]string(nil): `selector` does not match template `labels`]"}
+{"level":"ERROR","time":"2024-10-03T20:17:59.255+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"Deployment.apps \"testsecret\" is invalid: [spec.selector: Required value, spec.template.metadata.labels: Invalid value: map[string]string(nil): `selector` does not match template `labels`]"}
+{"level":"INFO","time":"2024-10-03T20:25:22.922+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T20:25:32.731+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T20:25:32.732+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T20:25:32.762+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T20:25:32.769+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-03T20:27:56.354+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T20:28:06.269+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T20:28:06.269+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T20:28:06.314+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T20:28:06.321+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"ERROR","time":"2024-10-03T21:01:00.747+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"deployments.apps \"testsecret\" already exists"}
+{"level":"ERROR","time":"2024-10-03T21:01:00.885+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"deployments.apps \"testsecret\" already exists"}
+{"level":"INFO","time":"2024-10-03T21:38:03.781+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-03T21:38:18.998+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T21:38:18.998+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T21:38:19.030+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T21:38:19.055+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-03T22:00:42.869+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}

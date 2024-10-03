@@ -15,11 +15,6 @@ type SecretController struct {
 
 func (s *SecretController) GetSecret(c *gin.Context) {
 	var p model.Secret
-	if err := c.ShouldBindJSON(&p); err != nil {
-		s.LG.Error("参数绑定失败", zap.Error(err))
-		utils.ResponseError(c, utils.CodeInvalidParam)
-		return
-	}
 	secrets, err := dao.GetSecretManager().Get(p)
 	if err != nil {
 		s.LG.Error("创建失败", zap.Error(err))
@@ -63,18 +58,17 @@ func (s *SecretController) UpdateSecret(c *gin.Context) {
 }
 
 func (s *SecretController) DeleteSecret(c *gin.Context) {
-	var p []int
+	var p model.SecretReq
 	if err := c.ShouldBindJSON(&p); err != nil {
 		s.LG.Error("参数绑定失败", zap.Error(err))
 		utils.ResponseError(c, utils.CodeInvalidParam)
 		return
 	}
-	err := dao.GetSecretManager().Delete(p)
+	err := dao.GetSecretManager().Delete(p.Ids)
 	if err != nil {
 		s.LG.Error("创建失败", zap.Error(err))
 		utils.ResponseError(c, utils.CodeServerBusy)
 		return
 	}
 	utils.ResponseSuccess(c, utils.CodeSuccess)
-
 }

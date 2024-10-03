@@ -28,13 +28,13 @@ func GetServiceManager() ServiceManager {
 }
 
 func CreateServiceManager() error {
-	var dpmanager DeployInterface
+	var dpmanager ServiceInterface
 	client, err := utils.NewKubeConfig()
 	if err != nil {
 		return err
 	}
 	dpmanager.client = client
-	deployManager = &dpmanager
+	serviceManager = &dpmanager
 	return nil
 }
 

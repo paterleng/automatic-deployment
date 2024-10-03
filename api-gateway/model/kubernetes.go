@@ -20,3 +20,7 @@ type Secret struct {
 	PassWord string `json:"pass_word"`
 	UserId   string `json:"user_id"`
 }
+
+type SecretReq struct {
+	Ids []int `json:"ids"`
+}
