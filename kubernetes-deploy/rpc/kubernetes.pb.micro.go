@@ -45,6 +45,7 @@ type KubernetesDeployService interface {
 	CheckStatus(ctx context.Context, in *KsRequest, opts ...client.CallOption) (*KsResponse, error)
 	GetKubernetesConfig(ctx context.Context, in *ConfigRequest, opts ...client.CallOption) (*ConfigResponse, error)
 	CreateResource(ctx context.Context, in *CreateResourceRequest, opts ...client.CallOption) (*CreateResourceResponse, error)
+	CreateSecret(ctx context.Context, in *SecretRequest, opts ...client.CallOption) (*SecretResponse, error)
 }
 
 type kubernetesDeployService struct {
@@ -89,12 +90,23 @@ func (c *kubernetesDeployService) CreateResource(ctx context.Context, in *Create
 	return out, nil
 }
 
+func (c *kubernetesDeployService) CreateSecret(ctx context.Context, in *SecretRequest, opts ...client.CallOption) (*SecretResponse, error) {
+	req := c.c.NewRequest(c.name, "KubernetesDeploy.CreateSecret", in)
+	out := new(SecretResponse)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // Server API for KubernetesDeploy service
 
 type KubernetesDeployHandler interface {
 	CheckStatus(context.Context, *KsRequest, *KsResponse) error
 	GetKubernetesConfig(context.Context, *ConfigRequest, *ConfigResponse) error
 	CreateResource(context.Context, *CreateResourceRequest, *CreateResourceResponse) error
+	CreateSecret(context.Context, *SecretRequest, *SecretResponse) error
 }
 
 func RegisterKubernetesDeployHandler(s server.Server, hdlr KubernetesDeployHandler, opts ...server.HandlerOption) error {
@@ -102,6 +114,7 @@ func RegisterKubernetesDeployHandler(s server.Server, hdlr KubernetesDeployHandl
 		CheckStatus(ctx context.Context, in *KsRequest, out *KsResponse) error
 		GetKubernetesConfig(ctx context.Context, in *ConfigRequest, out *ConfigResponse) error
 		CreateResource(ctx context.Context, in *CreateResourceRequest, out *CreateResourceResponse) error
+		CreateSecret(ctx context.Context, in *SecretRequest, out *SecretResponse) error
 	}
 	type KubernetesDeploy struct {
 		kubernetesDeploy
@@ -124,4 +137,8 @@ func (h *kubernetesDeployHandler) GetKubernetesConfig(ctx context.Context, in *C
 
 func (h *kubernetesDeployHandler) CreateResource(ctx context.Context, in *CreateResourceRequest, out *CreateResourceResponse) error {
 	return h.KubernetesDeployHandler.CreateResource(ctx, in, out)
+}
+
+func (h *kubernetesDeployHandler) CreateSecret(ctx context.Context, in *SecretRequest, out *SecretResponse) error {
+	return h.KubernetesDeployHandler.CreateSecret(ctx, in, out)
 }

@@ -23,11 +23,11 @@ func (d *SecretDao) Create(p interface{}) error {
 
 func (d *SecretDao) Update(p interface{}) error {
 	secret := p.(model.Secret)
-	err := d.DB.Save(&secret).Error
+	err := d.DB.Omit("created_at").Save(&secret).Error
 	return err
 }
 
 func (d *SecretDao) Delete(p []int) error {
-	err := d.DB.Delete(model.Secret{}).Where("id in ?", p).Error
+	err := d.DB.Where("id IN ?", p).Delete(&model.Secret{}).Error
 	return err
 }

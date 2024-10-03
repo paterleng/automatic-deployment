@@ -93,3 +93,119 @@
 {"level":"INFO","time":"2024-09-29T16:11:22.065+0800","caller":"utils/init.go:81","msg":"初始化mysql成功"}
 {"level":"INFO","time":"2024-09-29T16:11:22.067+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
 {"level":"ERROR","time":"2024-09-29T16:12:13.951+0800","caller":"controller/kubernetes_deploy.go:70","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":500,\"detail\":\"service kubernetes-deploy: not found\",\"status\":\"Internal Server Error\"}"}
+{"level":"INFO","time":"2024-10-02T15:56:37.712+0800","caller":"utils/init.go:180","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T15:56:37.713+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T15:56:37.818+0800","caller":"utils/init.go:83","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T15:56:37.869+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-10-02T15:57:26.013+0800","caller":"kubernetes_deploy/secret.go:35","msg":"参数绑定失败","error":"EOF"}
+{"level":"ERROR","time":"2024-10-02T16:15:06.844+0800","caller":"kubernetes_deploy/secret.go:57","msg":"创建失败","error":"Error 1292 (22007): Incorrect datetime value: '0000-00-00' for column 'created_at' at row 1"}
+{"level":"ERROR","time":"2024-10-02T16:18:58.399+0800","caller":"kubernetes_deploy/secret.go:57","msg":"创建失败","error":"Error 1292 (22007): Incorrect datetime value: '0000-00-00' for column 'created_at' at row 1"}
+{"level":"INFO","time":"2024-10-02T16:20:02.993+0800","caller":"utils/init.go:180","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T16:20:02.994+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T16:20:03.056+0800","caller":"utils/init.go:83","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T16:20:03.117+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-10-02T16:21:08.010+0800","caller":"kubernetes_deploy/secret.go:57","msg":"创建失败","error":"Error 1292 (22007): Incorrect datetime value: '0000-00-00' for column 'created_at' at row 1"}
+{"level":"INFO","time":"2024-10-02T16:23:56.063+0800","caller":"utils/init.go:180","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T16:23:56.063+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T16:23:56.099+0800","caller":"utils/init.go:83","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T16:23:56.188+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-10-02T16:25:25.216+0800","caller":"kubernetes_deploy/secret.go:19","msg":"参数绑定失败","error":"EOF"}
+{"level":"INFO","time":"2024-10-02T16:26:23.781+0800","caller":"utils/init.go:180","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T16:26:23.781+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T16:26:23.825+0800","caller":"utils/init.go:83","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T16:26:23.899+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-10-02T16:28:49.399+0800","caller":"kubernetes_deploy/secret.go:63","msg":"参数绑定失败","error":"json: cannot unmarshal object into Go value of type []int"}
+{"level":"ERROR","time":"2024-10-02T16:29:21.315+0800","caller":"kubernetes_deploy/secret.go:63","msg":"参数绑定失败","error":"json: cannot unmarshal object into Go value of type []int"}
+{"level":"INFO","time":"2024-10-02T16:33:28.610+0800","caller":"utils/init.go:180","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T16:33:28.612+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T16:33:28.706+0800","caller":"utils/init.go:83","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T16:33:28.832+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-10-02T16:33:52.234+0800","caller":"kubernetes_deploy/secret.go:64","msg":"参数绑定失败","error":"json: cannot unmarshal object into Go value of type []int"}
+{"level":"INFO","time":"2024-10-02T16:36:12.903+0800","caller":"utils/init.go:180","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T16:36:12.903+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T16:36:12.962+0800","caller":"utils/init.go:83","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T16:36:13.027+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-10-02T16:36:29.967+0800","caller":"kubernetes_deploy/secret.go:69","msg":"创建失败","error":"invalid value, should be pointer to struct or slice"}
+{"level":"INFO","time":"2024-10-02T16:37:53.834+0800","caller":"utils/init.go:180","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T16:37:53.835+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T16:37:53.872+0800","caller":"utils/init.go:83","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T16:37:53.918+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-10-02T16:37:55.868+0800","caller":"kubernetes_deploy/secret.go:69","msg":"创建失败","error":"invalid value, should be pointer to struct or slice"}
+{"level":"ERROR","time":"2024-10-02T16:42:18.439+0800","caller":"kubernetes_deploy/secret.go:69","msg":"创建失败","error":"invalid value, should be pointer to struct or slice"}
+{"level":"INFO","time":"2024-10-02T16:42:48.246+0800","caller":"utils/init.go:180","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T16:42:48.246+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T16:42:48.300+0800","caller":"utils/init.go:83","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T16:42:48.396+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-10-02T16:42:56.399+0800","caller":"kubernetes_deploy/secret.go:69","msg":"创建失败","error":"invalid value, should be pointer to struct or slice"}
+{"level":"INFO","time":"2024-10-02T16:43:52.585+0800","caller":"utils/init.go:180","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T16:43:52.585+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T16:43:52.647+0800","caller":"utils/init.go:83","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T16:43:52.712+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-10-02T16:43:56.166+0800","caller":"kubernetes_deploy/secret.go:69","msg":"创建失败","error":"invalid value, should be pointer to struct or slice"}
+{"level":"INFO","time":"2024-10-02T16:45:19.897+0800","caller":"utils/init.go:180","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T16:45:19.898+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T16:45:19.944+0800","caller":"utils/init.go:83","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T16:45:20.002+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-10-02T16:45:22.558+0800","caller":"kubernetes_deploy/secret.go:69","msg":"创建失败","error":"WHERE conditions required"}
+{"level":"INFO","time":"2024-10-02T16:47:59.615+0800","caller":"utils/init.go:180","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T16:47:59.615+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T16:47:59.677+0800","caller":"utils/init.go:83","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T16:47:59.813+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"INFO","time":"2024-10-02T17:00:20.613+0800","caller":"utils/init.go:180","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T17:00:20.615+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T17:00:20.642+0800","caller":"utils/init.go:83","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T17:00:20.692+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-10-02T17:13:49.423+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:59","msg":"参数绑定失败","error":"json: cannot unmarshal string into Go struct field ResourceReq.labels of type map[string]string"}
+{"level":"ERROR","time":"2024-10-02T17:15:37.880+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:77","msg":"创建资源失败","error":"{\"id\":\"go.micro.server\",\"code\":500,\"detail\":\"panic recovered: interface conversion: interface {} is *rpc.Deployment, not rpc.Deployment\",\"status\":\"Internal Server Error\"}"}
+{"level":"ERROR","time":"2024-10-02T17:16:40.579+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:77","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"ERROR","time":"2024-10-02T17:17:46.168+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:77","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"ERROR","time":"2024-10-02T17:18:24.710+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:77","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"INFO","time":"2024-10-02T17:24:08.998+0800","caller":"utils/init.go:180","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T17:24:08.999+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T17:24:09.111+0800","caller":"utils/init.go:83","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T17:24:09.264+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-10-02T17:24:20.556+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.server\",\"code\":500,\"detail\":\"panic recovered: interface conversion: interface {} is *rpc.Deployment, not rpc.Deployment\",\"status\":\"Internal Server Error\"}"}
+{"level":"ERROR","time":"2024-10-02T17:25:26.097+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.server\",\"code\":500,\"detail\":\"panic recovered: runtime error: invalid memory address or nil pointer dereference\",\"status\":\"Internal Server Error\"}"}
+{"level":"ERROR","time":"2024-10-02T17:26:34.473+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"ERROR","time":"2024-10-02T17:28:14.638+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"INFO","time":"2024-10-03T08:32:05.522+0800","caller":"utils/init.go:180","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T08:32:05.531+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T08:32:05.565+0800","caller":"utils/init.go:83","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T08:32:05.648+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-10-03T08:33:11.179+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"ERROR","time":"2024-10-03T08:41:57.269+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"ERROR","time":"2024-10-03T08:50:02.340+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"INFO","time":"2024-10-03T08:50:40.563+0800","caller":"utils/init.go:180","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T08:50:40.563+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T08:50:40.585+0800","caller":"utils/init.go:83","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T08:50:40.614+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-10-03T08:50:53.034+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"ERROR","time":"2024-10-03T08:51:27.999+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"INFO","time":"2024-10-03T15:41:59.994+0800","caller":"utils/init.go:180","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T15:42:00.014+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T15:42:00.079+0800","caller":"utils/init.go:83","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T15:42:00.156+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-10-03T15:42:27.079+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"ERROR","time":"2024-10-03T15:44:06.050+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"ERROR","time":"2024-10-03T15:44:30.497+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"ERROR","time":"2024-10-03T15:45:02.669+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"ERROR","time":"2024-10-03T15:45:38.575+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":500,\"detail\":\"service kubernetes-deploy: not found\",\"status\":\"Internal Server Error\"}"}
+{"level":"ERROR","time":"2024-10-03T15:46:09.366+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"ERROR","time":"2024-10-03T15:48:20.221+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"ERROR","time":"2024-10-03T15:49:39.491+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":500,\"detail\":\"service kubernetes-deploy: not found\",\"status\":\"Internal Server Error\"}"}
+{"level":"ERROR","time":"2024-10-03T15:49:48.457+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"INFO","time":"2024-10-03T20:03:00.354+0800","caller":"utils/init.go:180","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-03T20:03:00.364+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-03T20:03:00.422+0800","caller":"utils/init.go:83","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-03T20:03:00.561+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-10-03T20:03:10.640+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"ERROR","time":"2024-10-03T20:03:33.428+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.server\",\"code\":500,\"detail\":\"panic recovered: runtime error: invalid memory address or nil pointer dereference\",\"status\":\"Internal Server Error\"}"}
+{"level":"ERROR","time":"2024-10-03T20:04:24.254+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"ERROR","time":"2024-10-03T20:06:26.769+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":500,\"detail\":\"Namespace \\\"secret_test\\\" is invalid: metadata.name: Invalid value: \\\"secret_test\\\": a lowercase RFC 1123 label must consist of lower case alphanumeric characters or '-', and must start and end with an alphanumeric character (e.g. 'my-name',  or '123-abc', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?')\",\"status\":\"Internal Server Error\"}"}
+{"level":"ERROR","time":"2024-10-03T20:07:19.775+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"ERROR","time":"2024-10-03T20:08:33.456+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":500,\"detail\":\"Deployment.apps \\\"testsecret\\\" is invalid: [spec.selector: Invalid value: v1.LabelSelector{MatchLabels:map[string]string(nil), MatchExpressions:[]v1.LabelSelectorRequirement(nil)}: empty selector is invalid for deployment, spec.template.spec.restartPolicy: Unsupported value: \\\"OnFailure\\\": supported values: \\\"Always\\\"]\",\"status\":\"Internal Server Error\"}"}
+{"level":"ERROR","time":"2024-10-03T20:12:03.372+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":500,\"detail\":\"Deployment.apps \\\"testsecret\\\" is invalid: spec.selector: Invalid value: v1.LabelSelector{MatchLabels:map[string]string(nil), MatchExpressions:[]v1.LabelSelectorRequirement(nil)}: empty selector is invalid for deployment\",\"status\":\"Internal Server Error\"}"}
+{"level":"ERROR","time":"2024-10-03T20:12:36.848+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}
+{"level":"ERROR","time":"2024-10-03T20:17:59.256+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":500,\"detail\":\"Deployment.apps \\\"testsecret\\\" is invalid: [spec.selector: Required value, spec.template.metadata.labels: Invalid value: map[string]string(nil): `selector` does not match template `labels`]\",\"status\":\"Internal Server Error\"}"}
+{"level":"ERROR","time":"2024-10-03T21:01:00.886+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":500,\"detail\":\"deployments.apps \\\"testsecret\\\" already exists\",\"status\":\"Internal Server Error\"}"}
+{"level":"ERROR","time":"2024-10-03T21:39:43.949+0800","caller":"kubernetes_deploy/kubernetes_deploy.go:84","msg":"创建资源失败","error":"{\"id\":\"go.micro.client\",\"code\":408,\"detail\":\"context deadline exceeded\",\"status\":\"Request Timeout\"}"}

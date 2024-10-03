@@ -60,18 +60,26 @@ func (p *KubernetesController) CreateResource(c *gin.Context) {
 		utils.ResponseErrorWithMsg(c, utils.CodeInvalidParam, err)
 		return
 	}
+	var req rpc.CreateResourceRequest
+	switch m.ResourceType {
+	case "deployment":
+		req = rpc.CreateResourceRequest{
+			ResourceType: m.ResourceType,
+			UserId:       "",
+			DeploymentResource: &rpc.Deployment{
+				NameSpace:     m.NameSpace,
+				Name:          m.Name,
+				ContainerName: m.ImageName,
+				ImageName:     m.ImageName,
+				Replicas:      m.Replicas,
+				Labels:        m.Labels,
+				MatchLabels:   m.MatchLabels,
+			},
+		}
 
-	req := &rpc.CreateResourceRequest{
-		ResourceType: m.ResourceType,
-		//Name:         m.Name,
-		//NameSpace:    m.NameSpace,
-		//ImageName:    m.ImageName,
-		//Replicas:     m.Replicas,
-		//Labels:       m.Labels,
-		//MatchLabels:  m.MatchLabels,
 	}
 
-	_, err := p.PB.KubernetesService.CreateResource(c, req)
+	_, err := p.PB.KubernetesService.CreateResource(c, &req)
 	if err != nil {
 		p.LG.Error("创建资源失败", zap.Error(err))
 		utils.ResponseErrorWithMsg(c, utils.CodeServerBusy, err)

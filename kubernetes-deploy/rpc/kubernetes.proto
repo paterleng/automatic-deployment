@@ -19,10 +19,11 @@ message SecretResponse{
 
 message CreateResourceRequest{
   string ResourceType = 1;
-  Deployment DeploymentResource = 2;
-  Service ServiceResource = 3;
-  Job JobResource = 4;
-  CornJob CornJobResource = 5;
+  string  UserId =2;
+  Deployment DeploymentResource = 3;
+  Service ServiceResource = 4;
+  Job JobResource = 5;
+  CornJob CornJobResource = 6;
 }
 
 message Deployment{
