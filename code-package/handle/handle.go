@@ -1,14 +1,18 @@
 package handle
 
 import (
+	"code-package/pkg/github"
 	"code-package/rpc"
+	"code-package/utils"
 	"context"
 	"fmt"
 	"github.com/go-git/go-git/v5"
 	"github.com/micro/go-micro/v2"
+	"io/ioutil"
 	"log"
 	"os"
 	"os/exec"
+	"strings"
 )
 
 type CodePackage struct{}
@@ -75,4 +79,33 @@ func (h *CodePackage) GoGitCode(ctx context.Context, req *rpc.CpRequest, rsp *rp
 	return nil
 }
 
-// 获取用户 github 添加yml
+// 用户一键配置
+func (h *CodePackage) ConfigureCI(ctx context.Context, req *rpc.ConfigureCIRequest, rsp *rpc.ConfigureCIResponse) error {
+
+	if len(req.Key) != len(req.Value) {
+		utils.Tools.LG.Error("invalid request parameter")
+		return fmt.Errorf("invalid request parameter")
+	}
+	for i, _ := range req.Key {
+		err := github.UpdateRepoSecret(req.Key[i], req.Value[i])
+		if err != nil {
+			return err
+		}
+	}
+	data, err := ioutil.ReadFile("ci.yml")
+	if err != nil {
+		log.Fatalf("error: %v", err)
+	}
+
+	// 将内容转换为字符串
+	fileContent := string(data)
+
+	// 输出文件内容
+	fmt.Println("File Content:")
+	fmt.Println(fileContent)
+	strings.ReplaceAll(fileContent, "version", req.Version)
+	fmt.Println(fileContent)
+	// 添加yml文件
+	github.UpYml(req.Repository, "./github/workflows", req.CommitMessage, fileContent)
+	return err
+}

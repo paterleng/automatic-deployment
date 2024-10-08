@@ -12,57 +12,32 @@ import (
 	"time"
 )
 
-// 获取 GitHub的令牌或者密码
-func aaa() {
+var ghClient *github.Client
+
+// 初始化Github客户端
+func init() {
 	// 使用令牌创建一个 OAuth2 客户端
 	ts := oauth2.StaticTokenSource(&oauth2.Token{AccessToken: utils.Conf.Auth})
 	tc := oauth2.NewClient(context.Background(), ts)
 
 	// 创建 GitHub 客户端
-	client := github.NewClient(tc)
-
-	// 获取用户的仓库
-	repos, _, err := client.Repositories.List(context.Background(), "", nil)
-	if err != nil {
-		fmt.Printf("Error fetching repositories: %v\n", err)
-		return
-	}
-
-	// 打印仓库名称
-	for _, repo := range repos {
-		fmt.Println(*repo.Name)
-	}
-
+	ghClient = github.NewClient(tc)
 }
 
-func Bbb() {
-	// GitHub 令牌
-	token := utils.Conf.Auth
-	owner := "GuZihang929"
-	repo := "draw-together"
+// 仓库添加关键字
+func UpdateRepoSecret(secretName, secretValue string) error {
 
-	// 要添加的 secret 名称和值
-	secretName := "MY_SECRET"
-	secretValue := "SuperSecretValue"
-
-	// 设置 OAuth2 客户端
-	ts := oauth2.StaticTokenSource(&oauth2.Token{AccessToken: token})
-	tc := oauth2.NewClient(context.Background(), ts)
-
-	// 创建 GitHub 客户端
-	client := github.NewClient(tc)
 	// 获取仓库的公钥，用于加密 Secret
-	publicKey, _, err := client.Actions.GetRepoPublicKey(context.Background(), owner, repo)
+	publicKey, _, err := ghClient.Actions.GetRepoPublicKey(context.Background(), utils.Conf.GitHub.UserName, utils.Conf.GitHub.Repository)
 	if err != nil {
-		fmt.Printf("Error fetching repository public key: %v\n", err)
-		return
+		utils.Tools.LG.Error(fmt.Sprintf("Error fetching repository public key: %v\n", err))
+		return err
 	}
-
 	// 使用仓库的公钥加密 Secret
 	encryptedSecret, err := encryptSecret(publicKey.GetKey(), secretValue)
 	if err != nil {
-		fmt.Printf("Error encrypting secret: %v\n", err)
-		return
+		utils.Tools.LG.Error(fmt.Sprintf("Error encrypting secret: %v\n", err))
+		return err
 	}
 
 	// 创建 Repository Secret 对象
@@ -73,14 +48,13 @@ func Bbb() {
 	}
 
 	// 添加或更新仓库 Secret
-	_, err = client.Actions.CreateOrUpdateRepoSecret(context.Background(), owner, repo, secret)
+	_, err = ghClient.Actions.CreateOrUpdateRepoSecret(context.Background(), utils.Conf.GitHub.UserName, utils.Conf.GitHub.Repository, secret)
 	if err != nil {
-		fmt.Printf("Error adding repository secret: %v\n", err)
-		return
+		utils.Tools.LG.Error(fmt.Sprintf("Error adding repository secret: %v\n", err))
+		return err
 	}
-
-	fmt.Printf("Secret %s successfully added to repository %s/%s\n", secretName, owner, repo)
-
+	utils.Tools.LG.Info(fmt.Sprintf("Secret %s successfully added to repository %s/%s\n", secretName, utils.Conf.GitHub.UserName, utils.Conf.GitHub.Repository))
+	return nil
 }
 
 // encryptSecret 使用仓库的公钥加密 secret
@@ -112,45 +86,17 @@ func encryptSecret(publicKey string, secretValue string) (string, error) {
 	return encryptedValue, nil
 }
 
-func Ccc() {
-	// GitHub 令牌
-	// GitHub 令牌
-	token := utils.Conf.Auth
-	owner := "GuZihang929"
-	repo := "draw-together"
-
-	// 要上传的文件路径和内容
-	filePath := ".github/workflows/your-workflow.yml"
-	commitMessage := "Add workflow file"
-	fileContent := `name: Example Workflow
-
-on: [push]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    - name: Run a one-liner
-      run: echo "Hello, World!"
-`
-
-	// 设置 OAuth2 客户端
-	ts := oauth2.StaticTokenSource(&oauth2.Token{AccessToken: token})
-	tc := oauth2.NewClient(context.Background(), ts)
-
-	// 创建 GitHub 客户端
-	client := github.NewClient(tc)
+// 上传yml文件到 github
+func UpYml(repository, filePath, commitMessage, fileContent string) {
 
 	// 上传文件
-	err := uploadFile(client, owner, repo, filePath, commitMessage, fileContent)
+	err := uploadFile(ghClient, utils.Conf.GitHub.UserName, repository, filePath, commitMessage, fileContent)
 	if err != nil {
-		fmt.Printf("Error uploading file: %v\n", err)
+		utils.Tools.LG.Error(fmt.Sprintf("Error uploading file: %v\n", err))
 		return
 	}
 
-	fmt.Println("File uploaded successfully!")
+	utils.Tools.LG.Info("File uploaded successfully!")
 }
 
 // uploadFile 上传文件到 GitHub 仓库
@@ -180,7 +126,8 @@ func uploadFile(client *github.Client, owner, repo, filePath, commitMessage, fil
 		Committer: &github.CommitAuthor{
 			Name:  github.String("Your Name"),
 			Email: github.String("your-email@example.com"),
-			Date:  &github.Timestamp{Time: time.Now()},
+			// 使用 github.Timestamp 的 New 函数创建时间
+			Date: &github.Timestamp{Time: time.Now()},
 		},
 	}
 

@@ -4,6 +4,7 @@ option go_package="/rpc";
 
 service CodePackage {
   rpc CheckStatus(CpRequest) returns (CpResponse) {}
+  rpc ConfigureCI(ConfigureCIRequest) returns (ConfigureCIResponse) {}
 }
 
 
@@ -13,4 +14,19 @@ message CpRequest {
 
 message CpResponse {
   string msg = 1;
+}
+
+message ConfigureCIRequest {
+  string repository = 1;
+  repeated string key = 2;
+  repeated string value = 3;
+  string version = 4;
+  string url = 5;
+  string branch = 6;
+  string commit_message = 7;
+}
+
+message ConfigureCIResponse {
+  int32 code  = 1;
+  string msg = 2;
 }

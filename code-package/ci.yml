@@ -1,0 +1,32 @@
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }} # GitHub Secrets 中配置的 Docker Hub 用户名
+          password: ${{ secrets.DOCKER_PASSWORD }} # GitHub Secrets 中配置的 Docker Hub 密码或令牌
+
+      - name: Build Docker image
+        run: |
+          docker build -t  version.
+
+      - name: Push Docker image
+        run: |
+          docker tag version ${{ secrets.DOCKER_USERNAME }}/version
+          docker push ${{ secrets.DOCKER_USERNAME }}/version
