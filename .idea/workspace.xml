@@ -4,24 +4,14 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ac29538-e467-4f74-a26b-fb916aa09c6a" name="更改" comment="">
+    <list default="true" id="3ac29538-e467-4f74-a26b-fb916aa09c6a" name="更改" comment="add: 为仓库添加yml文件">
       <change afterPath="$PROJECT_DIR$/api-gateway/controller/config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code-package/ci.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/code-package/rpc.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/utils/discovery.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/discovery.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/utils/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/init.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/code.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/handle/handle.go" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/handle/handle.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/pkg/github/github.go" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/pkg/github/github.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/rpc/package.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/rpc/package.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/rpc/package.pb.micro.go" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/rpc/package.pb.micro.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/rpc/package.proto" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/rpc/package.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kubernetes-deploy/kubernetes-deploy.log" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/kubernetes-deploy.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
