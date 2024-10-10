@@ -11,6 +11,7 @@ type ServiceReq struct {
 type Secret struct {
 	gorm.Model
 	Name     string `json:"name"`
+	Registry string `json:"registry"` //镜像仓库地址
 	Platform string `json:"platform"`
 	Account  string `json:"account"`
 	PassWord string `json:"pass_word"`

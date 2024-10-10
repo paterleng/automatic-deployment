@@ -139,6 +139,7 @@ func (d *DeployHandle) CreateResources(r interface{}) error {
 	if err != nil {
 		return err
 	}
+	//在创建完deployment之后，创建service，用于对外进行访问使用
 	//在创建之后，会有一个事件，去通知到对应日志处理，用于进行日志输出
 
 	fmt.Printf("Created deployment %q.\n", result.GetObjectMeta())
