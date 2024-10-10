@@ -11,7 +11,7 @@ import (
 
 func main() {
 	//注册rpc服务
-	reg := etcd.NewRegistry(registry.Addrs("127.168.10.9:12379"))
+	reg := etcd.NewRegistry(registry.Addrs("127.0.0.1:2379"))
 	//向etcd注册一个新的服务
 	service := micro.NewService(
 		micro.Name("code-package"),

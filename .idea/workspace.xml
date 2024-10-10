@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ac29538-e467-4f74-a26b-fb916aa09c6a" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/node.go" afterDir="false" />
+    <list default="true" id="3ac29538-e467-4f74-a26b-fb916aa09c6a" name="更改" comment="add: 为仓库添加yml文件">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/api/api_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/api_interface.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/controller/resource.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/resource.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/deploy.go" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/deploy.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/job_handle.go" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/job_handle.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/kubernetes-deploy.log" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/kubernetes-deploy.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +121,12 @@
       <filePath value="$PROJECT_DIR$/kubernetes-deploy/main.go" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Go 构建.go build api-gateway" />
+      <item itemvalue="Go 构建.go build automatic" />
+      <item itemvalue="Go 构建.go build code-package" />
+      <item itemvalue="Go 构建.go build kubernetes-deploy" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Go 构建.go build api-gateway" />
@@ -167,6 +170,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add: 为仓库添加yml文件" />
+    <MESSAGE value="add: 添加git操作" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: 添加git操作" />
   </component>
   <component name="VgoProject">
     <environment>

@@ -4,6 +4,8 @@ option go_package="/rpc";
 
 service CodePackage {
   rpc CheckStatus(CpRequest) returns (CpResponse) {}
+  rpc CloneCodes(CloneCodesRequest) returns (CloneCodesResponse) {}
+  rpc GoGitCode(GoGitCodeRequest) returns (GoGitCodeResponse) {}
   rpc ConfigureCI(ConfigureCIRequest) returns (ConfigureCIResponse) {}
 }
 
@@ -14,6 +16,22 @@ message CpRequest {
 
 message CpResponse {
   string msg = 1;
+}
+
+message CloneCodesRequest {
+  string url = 1;
+}
+
+message CloneCodesResponse {
+
+}
+
+message GoGitCodeRequest {
+  string url = 1;
+}
+
+message GoGitCodeResponse {
+
 }
 
 message ConfigureCIRequest {

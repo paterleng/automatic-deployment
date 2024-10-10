@@ -50,6 +50,7 @@ type ProjectConfig struct {
 	Port      string `mapstructure:"port"`
 	StartTime string `mapstructure:"start_time"`
 	MachineID int64  `mapstructure:"machine_id"`
+	Dir       string `mapstructure:"dir"`
 }
 
 type MySQLConfig struct {

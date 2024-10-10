@@ -5,6 +5,7 @@ project:
   port: "9990"
   starttime: "2024-09-23"
   machineid: 1
+  dir: "../clone_repo"
 log:
   level: "debug"
   filename: "code.log"

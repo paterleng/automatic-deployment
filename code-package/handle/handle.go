@@ -6,7 +6,6 @@ import (
 	"code-package/utils"
 	"context"
 	"fmt"
-	"github.com/go-git/go-git/v5"
 	"github.com/micro/go-micro/v2"
 	"io/ioutil"
 	"log"
@@ -27,13 +26,10 @@ func (h *CodePackage) CheckStatus(ctx context.Context, req *rpc.CpRequest, rsp *
 }
 
 // CloneCodes 获取代码 使用git clone获取
-func (h *CodePackage) CloneCodes(ctx context.Context, req *rpc.CpRequest, rsp *rpc.CpResponse) error {
-	// Git 仓库地址和目标目录
-	repoURL := "https://github.com/paterleng/evaluation-of-teaching.git"
-	//targetDir := ""
+func (h *CodePackage) CloneCodes(ctx context.Context, req *rpc.CloneCodesRequest, rsp *rpc.CloneCodesResponse) error {
 
 	// 构造 git clone 命令
-	cmd := exec.Command("git", "clone", repoURL)
+	cmd := exec.Command("git", "clone", req.GetUrl())
 
 	// 设置标准输出和标准错误到系统标准输出中
 	cmd.Stdout = os.Stdout
@@ -50,33 +46,61 @@ func (h *CodePackage) CloneCodes(ctx context.Context, req *rpc.CpRequest, rsp *r
 	return nil
 }
 
-// GoGitCode 获取代码 使用gogit库
-func (h *CodePackage) GoGitCode(ctx context.Context, req *rpc.CpRequest, rsp *rpc.CpResponse) error {
-	// 要克隆的远程仓库地址
-	repoURL := "https://github.com/paterleng/evaluation-of-teaching.git"
+// GoGitCode 获取代码 打包镜像，推送到私有镜像仓库
+func (h *CodePackage) GoGitCode(ctx context.Context, req *rpc.GoGitCodeRequest, rsp *rpc.GoGitCodeResponse) error {
 
-	// 本地目标路径
-	destinationPath := "./cloned-repo"
+	go func() {
+		// 修改任务状态为：拉代码
 
-	// 克隆仓库到本地路径
-	fmt.Println("Cloning repository...")
+		// 拉代码
+		err := github.CloneCode(req.GetUrl(), utils.Conf.ProjectConfig.Dir)
+		if err != nil {
+			utils.Tools.LG.Error("Error while cloning repository:" + err.Error())
+			return
+		}
+		// 修改任务状态为：
+	}()
 
-	// 克隆仓库
-	_, err := git.PlainClone(destinationPath, false, &git.CloneOptions{
-		URL:      repoURL,   // 仓库的URL
-		Progress: os.Stdout, // 显示克隆进度
-		// 如果需要凭据来克隆私有仓库，可以使用 Auth 来传递认证信息
-		//Auth: &http.BasicAuth{
-		//	Username: "your-username", // 用户名，这里可以使用 "any" 字符串，GitHub不使用这个字段
-		//	Password: "your-token",    // 使用 GitHub Token 作为密码，或其他凭据
-		//},
-	})
-	if err != nil {
-		log.Fatalf("Error while cloning repository: %v", err)
-	}
+	// 生成镜像
+	//imageName := "test01"
+	//cmd := exec.Command("docker", "build", "-t", imageName, destinationPath)
+	//cmd.Stdout = os.Stdout
+	//cmd.Stderr = os.Stderr
+	//err = cmd.Run()
+	//if err != nil {
+	//	utils.Tools.LG.Error("Error building Docker image: " + err.Error())
+	//	return nil
+	//}
+	//utils.Tools.LG.Info("Docker image built successfully")
 
-	fmt.Println("Repository cloned successfully!")
+	// 标记镜像
+	//cmd = exec.Command("docker", "tag", imageName, privateRepo+"/"+imageName)
+	//cmd.Stdout = os.Stdout
+	//cmd.Stderr = os.Stderr
+	//err = cmd.Run()
+	//if err != nil {
+	//	utils.Tools.LG.Error("Error tagging Docker image:" + err.Error())
+	//	return nil
+	//}
+	//utils.Tools.LG.Info("Docker image tagged successfully")
+
+	// 推送
+	//cmd = exec.Command("docker", "push", privateRepo+"/"+imageName)
+	//cmd.Stdout = os.Stdout
+	//cmd.Stderr = os.Stderr
+	//err = cmd.Run()
+	//if err != nil {
+	//	utils.Tools.LG.Error("Error pushing Docker image:" + err.Error())
+	//	return nil
+	//}
+	//utils.Tools.LG.Info("Docker image pushed to private registry successfully")
 	return nil
+
+}
+
+// 获取用户生成的dockerfile文件
+func (h *CodePackage) GetDockerFile() {
+
 }
 
 // 用户一键配置
@@ -101,10 +125,7 @@ func (h *CodePackage) ConfigureCI(ctx context.Context, req *rpc.ConfigureCIReque
 	fileContent := string(data)
 
 	// 输出文件内容
-	fmt.Println("File Content:")
-	fmt.Println(fileContent)
 	strings.ReplaceAll(fileContent, "version", req.Version)
-	fmt.Println(fileContent)
 	// 添加yml文件
 	github.UpYml(req.Repository, "./github/workflows", req.CommitMessage, fileContent)
 	return err

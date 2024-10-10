@@ -43,6 +43,8 @@ func NewCodePackageEndpoints() []*api.Endpoint {
 
 type CodePackageService interface {
 	CheckStatus(ctx context.Context, in *CpRequest, opts ...client.CallOption) (*CpResponse, error)
+	CloneCodes(ctx context.Context, in *CloneCodesRequest, opts ...client.CallOption) (*CloneCodesResponse, error)
+	GoGitCode(ctx context.Context, in *GoGitCodeRequest, opts ...client.CallOption) (*GoGitCodeResponse, error)
 	ConfigureCI(ctx context.Context, in *ConfigureCIRequest, opts ...client.CallOption) (*ConfigureCIResponse, error)
 }
 
@@ -68,6 +70,26 @@ func (c *codePackageService) CheckStatus(ctx context.Context, in *CpRequest, opt
 	return out, nil
 }
 
+func (c *codePackageService) CloneCodes(ctx context.Context, in *CloneCodesRequest, opts ...client.CallOption) (*CloneCodesResponse, error) {
+	req := c.c.NewRequest(c.name, "CodePackage.CloneCodes", in)
+	out := new(CloneCodesResponse)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *codePackageService) GoGitCode(ctx context.Context, in *GoGitCodeRequest, opts ...client.CallOption) (*GoGitCodeResponse, error) {
+	req := c.c.NewRequest(c.name, "CodePackage.GoGitCode", in)
+	out := new(GoGitCodeResponse)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *codePackageService) ConfigureCI(ctx context.Context, in *ConfigureCIRequest, opts ...client.CallOption) (*ConfigureCIResponse, error) {
 	req := c.c.NewRequest(c.name, "CodePackage.ConfigureCI", in)
 	out := new(ConfigureCIResponse)
@@ -82,12 +104,16 @@ func (c *codePackageService) ConfigureCI(ctx context.Context, in *ConfigureCIReq
 
 type CodePackageHandler interface {
 	CheckStatus(context.Context, *CpRequest, *CpResponse) error
+	CloneCodes(context.Context, *CloneCodesRequest, *CloneCodesResponse) error
+	GoGitCode(context.Context, *GoGitCodeRequest, *GoGitCodeResponse) error
 	ConfigureCI(context.Context, *ConfigureCIRequest, *ConfigureCIResponse) error
 }
 
 func RegisterCodePackageHandler(s server.Server, hdlr CodePackageHandler, opts ...server.HandlerOption) error {
 	type codePackage interface {
 		CheckStatus(ctx context.Context, in *CpRequest, out *CpResponse) error
+		CloneCodes(ctx context.Context, in *CloneCodesRequest, out *CloneCodesResponse) error
+		GoGitCode(ctx context.Context, in *GoGitCodeRequest, out *GoGitCodeResponse) error
 		ConfigureCI(ctx context.Context, in *ConfigureCIRequest, out *ConfigureCIResponse) error
 	}
 	type CodePackage struct {
@@ -103,6 +129,14 @@ type codePackageHandler struct {
 
 func (h *codePackageHandler) CheckStatus(ctx context.Context, in *CpRequest, out *CpResponse) error {
 	return h.CodePackageHandler.CheckStatus(ctx, in, out)
+}
+
+func (h *codePackageHandler) CloneCodes(ctx context.Context, in *CloneCodesRequest, out *CloneCodesResponse) error {
+	return h.CodePackageHandler.CloneCodes(ctx, in, out)
+}
+
+func (h *codePackageHandler) GoGitCode(ctx context.Context, in *GoGitCodeRequest, out *GoGitCodeResponse) error {
+	return h.CodePackageHandler.GoGitCode(ctx, in, out)
 }
 
 func (h *codePackageHandler) ConfigureCI(ctx context.Context, in *ConfigureCIRequest, out *ConfigureCIResponse) error {
