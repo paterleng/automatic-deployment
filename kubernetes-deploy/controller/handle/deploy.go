@@ -124,8 +124,7 @@ func (d *DeployHandle) CreateResources(r interface{}) error {
 				Spec: corev1.PodSpec{
 					ImagePullSecrets: imagePullSecret(d.client, d.Deployment.NameSpace),
 					Containers: []corev1.Container{{
-						Name: req.Name,
-						//"docker.rainbond.cc/" +
+						Name:  req.Name,
 						Image: req.ImageName,
 					}},
 					RestartPolicy: corev1.RestartPolicyAlways,

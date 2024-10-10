@@ -13,4 +13,5 @@ type KubernetesApiInterface interface {
 	CreateSecret(c *gin.Context)
 	UpdateSecret(c *gin.Context)
 	DeleteSecret(c *gin.Context)
+	GetNodeInfo(c *gin.Context)
 }

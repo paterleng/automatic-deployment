@@ -41,6 +41,7 @@ func CreateJobManager() error {
 }
 
 func (d *JobHandle) Before() error {
+
 	return nil
 }
 
