@@ -293,3 +293,14 @@
 {"level":"INFO","time":"2024-10-03T21:38:19.030+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
 {"level":"INFO","time":"2024-10-03T21:38:19.055+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
 {"level":"INFO","time":"2024-10-03T22:00:42.869+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-10T15:04:49.953+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-10T15:04:49.954+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-10T15:04:49.993+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-10T15:04:50.003+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"ERROR","time":"2024-10-10T15:06:13.974+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"Namespace \"secret_test\" is invalid: metadata.name: Invalid value: \"secret_test\": a lowercase RFC 1123 label must consist of lower case alphanumeric characters or '-', and must start and end with an alphanumeric character (e.g. 'my-name',  or '123-abc', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?')"}
+{"level":"ERROR","time":"2024-10-10T15:06:14.104+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"Namespace \"secret_test\" is invalid: metadata.name: Invalid value: \"secret_test\": a lowercase RFC 1123 label must consist of lower case alphanumeric characters or '-', and must start and end with an alphanumeric character (e.g. 'my-name',  or '123-abc', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?')"}
+{"level":"ERROR","time":"2024-10-10T15:07:09.529+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"deployments.apps \"testsecret\" already exists"}
+{"level":"ERROR","time":"2024-10-10T15:07:09.670+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"deployments.apps \"testsecret\" already exists"}
+{"level":"ERROR","time":"2024-10-10T15:07:17.619+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"deployments.apps \"testsecret\" already exists"}
+{"level":"ERROR","time":"2024-10-10T15:07:17.768+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"deployments.apps \"testsecret\" already exists"}
+{"level":"INFO","time":"2024-10-10T15:28:16.485+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}

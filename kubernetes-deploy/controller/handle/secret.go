@@ -13,12 +13,9 @@ import (
 )
 
 func CreateSecret(client *kubernetes.Clientset, nameSpace string, item model.Secret) error {
-	registry := "registry.example.com"
-	username := ""
-	password := "your-password"
+	//registry是镜像仓库地址，不是镜像地址
 	// 4. 创建 base64(username:password) 格式的认证信息
-	auth := base64.StdEncoding.EncodeToString([]byte(fmt.Sprintf("%s:%s", username, password)))
-
+	auth := base64.StdEncoding.EncodeToString([]byte(fmt.Sprintf("%s:%s", item.Account, item.PassWord)))
 	// 5. 创建 Docker config JSON 内容
 	dockerConfigJSON := fmt.Sprintf(`{
       "auths": {
@@ -26,7 +23,7 @@ func CreateSecret(client *kubernetes.Clientset, nameSpace string, item model.Sec
           "auth": "%s"
         }
       }
-    }`, registry, auth)
+    }`, item.Registry, auth)
 	secret := &v1.Secret{
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      item.Name,
@@ -45,9 +42,4 @@ func CreateSecret(client *kubernetes.Clientset, nameSpace string, item model.Sec
 		return err
 	}
 	return nil
-}
-
-func generateDockerConfig(item model.Secret) []byte {
-
-	return []byte("")
 }

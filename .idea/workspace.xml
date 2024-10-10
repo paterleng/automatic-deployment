@@ -5,28 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ac29538-e467-4f74-a26b-fb916aa09c6a" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/secret.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/node.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/api/kubernetes_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/kubernetes_api.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/kubernetes_deploy.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/kubernetes_deploy.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/secret.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/secret.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/dao/kubernetes_deploy.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/dao/kubernetes_deploy.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/model/kubernetes.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/model/kubernetes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/rpcservice/kubernetes-service/kubernetes.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/rpcservice/kubernetes-service/kubernetes.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/rpcservice/kubernetes-service/kubernetes.pb.micro.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/rpcservice/kubernetes-service/kubernetes.pb.micro.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/rpcservice/kubernetes-service/kubernetes.proto" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/rpcservice/kubernetes-service/kubernetes.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/utils/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/init.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/api/rpc_realize.go" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/api/rpc_realize.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/common.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api/api_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/api_interface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/controller/resource.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/resource.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/deploy.go" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/deploy.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/service_handle.go" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/service_handle.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/kubernetes-deploy.log" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/kubernetes-deploy.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/model/kubernetes.go" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/model/kubernetes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/rpc/kubernetes.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/rpc/kubernetes.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/rpc/kubernetes.pb.micro.go" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/rpc/kubernetes.pb.micro.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/rpc/kubernetes.proto" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/rpc/kubernetes.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/utils/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/utils/init.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/job_handle.go" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/job_handle.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
