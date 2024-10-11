@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"database/sql"
 	"fmt"
 	"github.com/fsnotify/fsnotify"
 	_ "github.com/go-sql-driver/mysql"
@@ -81,8 +82,30 @@ func init() {
 }
 
 func MysqlInit() (err error) {
+	//判断库是否存在不存在就创建
+	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/", Conf.MySQLConfig.User, Conf.MySQLConfig.Password, Conf.MySQLConfig.Host, Conf.MySQLConfig.Port)
+	db, err := sql.Open("mysql", dsn)
+	if err != nil {
+		return
+	}
+	defer db.Close()
+	query := fmt.Sprintf("SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '%s'", Conf.MySQLConfig.DB)
+	var name string
+	err = db.QueryRow(query).Scan(&name)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			//数据库不存在创建数据库
+			err = nil
+			_, err = db.Exec("CREATE DATABASE " + Conf.MySQLConfig.DB)
+			if err != nil {
+				return err
+			}
+		}
+		return
+	}
+
 	// "user:password@tcp(host:port)/dbname"
-	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?parseTime=true&loc=Local", Conf.MySQLConfig.User, Conf.MySQLConfig.Password, Conf.MySQLConfig.Host, Conf.MySQLConfig.Port, Conf.MySQLConfig.DB)
+	dsn = fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?parseTime=true&loc=Local", Conf.MySQLConfig.User, Conf.MySQLConfig.Password, Conf.MySQLConfig.Host, Conf.MySQLConfig.Port, Conf.MySQLConfig.DB)
 	mysqlConfig := mysql.Config{
 		DSN:                       dsn,
 		DefaultStringSize:         191,

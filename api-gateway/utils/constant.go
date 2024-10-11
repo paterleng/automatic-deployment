@@ -30,3 +30,9 @@ const POSFILENAME = "pos.txt"
 const UPDATE = "update"
 const INSERT = "insert"
 const DELETE = "delete"
+
+const (
+	DeploymentResource = "deployment"
+	JobResource        = "job"
+	JobCornResource    = "jobcorn"
+)

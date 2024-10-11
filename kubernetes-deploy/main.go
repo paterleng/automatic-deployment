@@ -5,7 +5,7 @@ import (
 	"github.com/micro/go-micro/v2/registry"
 	"github.com/micro/go-micro/v2/registry/etcd"
 	"go.uber.org/zap"
-	"kubernetes-deploy/handle"
+	"kubernetes-deploy/api"
 	"kubernetes-deploy/utils"
 )
 
@@ -16,8 +16,9 @@ func main() {
 		micro.Version("latest"),
 		micro.Registry(reg),
 	)
+
 	service.Init()
-	if err := handle.Register(service); err != nil {
+	if err := api.Register(service); err != nil {
 		utils.Tools.LG.Error("服务注册失败：", zap.Error(err))
 		return
 	}

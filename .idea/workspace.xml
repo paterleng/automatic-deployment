@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ac29538-e467-4f74-a26b-fb916aa09c6a" name="更改" comment="add: 为仓库添加yml文件">
-      <change afterPath="$PROJECT_DIR$/code-package/rpc.go" afterDir="false" />
+    <list default="true" id="3ac29538-e467-4f74-a26b-fb916aa09c6a" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/node.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api/api_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/api_interface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/controller/resource.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/resource.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/deploy.go" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/deploy.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/job_handle.go" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/job_handle.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +51,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
-    &quot;keyToString&quot;: {
+
+  &quot;keyToString&quot;: {
     &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
     &quot;Go 构建.go build api-gateway.executor&quot;: &quot;Run&quot;,
     &quot;Go 构建.go build automatic.executor&quot;: &quot;Run&quot;,
@@ -63,8 +70,8 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.goide.configuration.GoLibrariesConfigurableProvider&quot;
-    }
-    }</component>
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\GoCode\automatic-deployment\api-gateway\rpcservice\kubernetes-service" />
@@ -156,7 +163,8 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="dev_wen" />
+
+                        <option value="liangjunhao" />
                       </list>
                     </value>
                   </entry>

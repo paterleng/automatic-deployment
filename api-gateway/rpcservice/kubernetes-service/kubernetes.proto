@@ -5,6 +5,69 @@ option go_package="/rpc";
 service KubernetesDeploy {
   rpc CheckStatus(KsRequest) returns (KsResponse) {}
   rpc GetKubernetesConfig(ConfigRequest) returns (ConfigResponse) {}
+  rpc CreateResource(CreateResourceRequest) returns(CreateResourceResponse){}
+  rpc CreateSecret(SecretRequest) returns(SecretResponse){}
+}
+
+message SecretRequest{
+
+}
+
+message SecretResponse{
+
+}
+
+message CreateResourceRequest{
+  string ResourceType = 1;
+  string  UserId =2;
+  Deployment DeploymentResource = 3;
+  Service ServiceResource = 4;
+  Job JobResource = 5;
+  CornJob CornJobResource = 6;
+}
+
+message Deployment{
+  string NameSpace = 1;
+  string Name = 2;
+  string ContainerName = 3;
+  string ImageName = 4;
+  map<string,string> Labels = 5;
+  map<string,string>  MatchLabels = 6;
+  int32 Replicas = 7;
+}
+
+message Service{
+  string NameSpace = 1;
+  string Name = 2;
+  map<string,string> Selector = 3;
+  int32 Port = 4;
+  int32 TargetPort = 5;
+  string Protocol = 6;
+  int32 NodePort = 7;
+}
+
+message Job{
+  string NameSpace = 1;
+  string Name = 2;
+  string ContainerName = 3;
+  string  ImagesName = 4;
+  repeated string Command = 5;
+}
+
+message CornJob{
+  string NameSpace = 1;
+  string Name = 2;
+  string ContainerName = 3;
+  string ImagesName = 4;
+  string RestartPolicy= 5;
+  string Schedule = 6;
+  repeated string Args = 7;
+
+}
+
+
+message CreateResourceResponse{
+
 }
 
 message ConfigRequest{}

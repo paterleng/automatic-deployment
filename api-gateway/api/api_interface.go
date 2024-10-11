@@ -8,5 +8,10 @@ type UserInterface interface {
 
 type KubernetesApiInterface interface {
 	GetConfig(c *gin.Context)
-	Create(c *gin.Context)
+	CreateResource(c *gin.Context)
+	GetSecret(c *gin.Context)
+	CreateSecret(c *gin.Context)
+	UpdateSecret(c *gin.Context)
+	DeleteSecret(c *gin.Context)
+	GetNodeInfo(c *gin.Context)
 }

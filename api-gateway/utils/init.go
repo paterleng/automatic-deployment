@@ -1,6 +1,8 @@
 package utils
 
 import (
+	"api-gateway/model"
+	"database/sql"
 	"fmt"
 	"github.com/fsnotify/fsnotify"
 	_ "github.com/go-sql-driver/mysql"
@@ -74,19 +76,48 @@ func init() {
 	}
 	Tools.LG.Info("初始化logger成功")
 
-	//if err := MysqlInit(); err != nil {
-	//	Tools.LG.Error("初始化MySQL失败：", zap.Error(err))
-	//	return
-	//}
+	if err := MysqlInit(); err != nil {
+		Tools.LG.Error("初始化MySQL失败：", zap.Error(err))
+		panic(err)
+	}
 	Tools.LG.Info("初始化mysql成功")
+	//创建表
+	TableInit()
 	DiscoveryService()
 }
 func NewTools() {
 	Tools.PB = &Pb{}
 }
 
+func TableInit() (err error) {
+	err = Tools.DB.AutoMigrate(&model.Secret{})
+	return
+}
+
 func MysqlInit() (err error) {
-	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?parseTime=true&loc=Local", Conf.MySQLConfig.User, Conf.MySQLConfig.Password, Conf.MySQLConfig.Host, Conf.MySQLConfig.Port, Conf.MySQLConfig.DB)
+	//判断库是否存在不存在就创建
+	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/", Conf.MySQLConfig.User, Conf.MySQLConfig.Password, Conf.MySQLConfig.Host, Conf.MySQLConfig.Port)
+	db, err := sql.Open("mysql", dsn)
+	if err != nil {
+		return
+	}
+	defer db.Close()
+	query := fmt.Sprintf("SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '%s'", Conf.MySQLConfig.DB)
+	var name string
+	err = db.QueryRow(query).Scan(&name)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			//数据库不存在创建数据库
+			err = nil
+			_, err = db.Exec("CREATE DATABASE " + Conf.MySQLConfig.DB)
+			if err != nil {
+				return
+			}
+		}
+		return
+	}
+
+	dsn = fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?parseTime=true&loc=Local", Conf.MySQLConfig.User, Conf.MySQLConfig.Password, Conf.MySQLConfig.Host, Conf.MySQLConfig.Port, Conf.MySQLConfig.DB)
 	mysqlConfig := mysql.Config{
 		DSN:                       dsn,
 		DefaultStringSize:         191,

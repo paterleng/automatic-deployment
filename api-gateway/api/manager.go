@@ -1,6 +1,9 @@
 package api
 
-import "api-gateway/controller"
+import (
+	"api-gateway/controller"
+	"api-gateway/utils"
+)
 
 var apiManager ApiManager
 
@@ -15,8 +18,11 @@ func CreateApiManager() {
 
 func NewManager() *controller.Routes {
 	var router controller.Routes
+	router.KubernetesController.LG = utils.Tools.LG
+	router.KubernetesController.PB = utils.Tools.PB
+	router.SecretController.LG = utils.Tools.LG
+	router.SecretController.PB = utils.Tools.PB
 	return &router
-
 }
 
 func GetManager() ApiManager {
