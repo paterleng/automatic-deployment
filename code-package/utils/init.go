@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"code-package/model"
 	"fmt"
 	"github.com/fsnotify/fsnotify"
 	_ "github.com/go-sql-driver/mysql"
@@ -104,6 +105,9 @@ func MysqlInit() (err error) {
 	Tools.DB, err = gorm.Open(mysql.New(mysqlConfig), &gorm.Config{
 		DisableForeignKeyConstraintWhenMigrating: true,
 	})
+	// 根据结构体自动迁移（创建表）
+	Tools.DB.AutoMigrate(&model.GetAndPushPlan{})
+
 	if err != nil {
 		return
 	} else {

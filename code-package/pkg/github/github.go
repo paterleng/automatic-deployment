@@ -7,6 +7,7 @@ import (
 	"encoding/base64"
 	"fmt"
 	"github.com/go-git/go-git/v5"
+	"github.com/go-git/go-git/v5/plumbing/transport/http"
 	"github.com/google/go-github/v65/github"
 	"golang.org/x/crypto/nacl/box"
 	"golang.org/x/oauth2"
@@ -143,14 +144,14 @@ func uploadFile(client *github.Client, owner, repo, filePath, commitMessage, fil
 }
 
 // 拉取代码到指定地址
-func CloneCode(url, dir string) error {
+func CloneCode(url, dir, auth string) error {
 	_, err := git.PlainClone(dir, false, &git.CloneOptions{
 		URL:      url,       // 仓库的URL
 		Progress: os.Stdout, // 显示克隆进度
 		// 如果需要凭据来克隆私有仓库，可以使用 Auth 来传递认证信息
-		//Auth: &http.BasicAuth{
-		//	Password: auth, // 使用 GitHub Token 作为密码，或其他凭据
-		//},
+		Auth: &http.BasicAuth{
+			Password: auth, // 使用 GitHub Token 作为密码，或其他凭据
+		},
 	})
 	return err
 }

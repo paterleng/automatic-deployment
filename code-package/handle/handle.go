@@ -1,6 +1,7 @@
 package handle
 
 import (
+	"code-package/pkg/cmd"
 	"code-package/pkg/github"
 	"code-package/rpc"
 	"code-package/utils"
@@ -49,29 +50,29 @@ func (h *CodePackage) CloneCodes(ctx context.Context, req *rpc.CloneCodesRequest
 // GoGitCode 获取代码 打包镜像，推送到私有镜像仓库
 func (h *CodePackage) GoGitCode(ctx context.Context, req *rpc.GoGitCodeRequest, rsp *rpc.GoGitCodeResponse) error {
 
-	go func() {
+	// 生成目录，地址,将信息保存到数据库中
+	dir := "../1234"
+
+	go func(getUrl, url string) {
 		// 修改任务状态为：拉代码
 
 		// 拉代码
-		err := github.CloneCode(req.GetUrl(), utils.Conf.ProjectConfig.Dir)
+		//err := github.CloneCode(req.GetUrl(), url, utils.Conf.GitHub.Auth)
+		//if err != nil {
+		//	utils.Tools.LG.Error("Error while cloning repository:" + err.Error())
+		//	return
+		//}
+		// 修改任务状态为：生成镜像
+
+		// 生成镜像
+		err := cmd.PackagingImage("imageName", getUrl, url)
 		if err != nil {
-			utils.Tools.LG.Error("Error while cloning repository:" + err.Error())
+			utils.Tools.LG.Error("Error while Packaging image:" + err.Error())
 			return
 		}
-		// 修改任务状态为：
-	}()
+	}(req.Url, dir)
 
 	// 生成镜像
-	//imageName := "test01"
-	//cmd := exec.Command("docker", "build", "-t", imageName, destinationPath)
-	//cmd.Stdout = os.Stdout
-	//cmd.Stderr = os.Stderr
-	//err = cmd.Run()
-	//if err != nil {
-	//	utils.Tools.LG.Error("Error building Docker image: " + err.Error())
-	//	return nil
-	//}
-	//utils.Tools.LG.Info("Docker image built successfully")
 
 	// 标记镜像
 	//cmd = exec.Command("docker", "tag", imageName, privateRepo+"/"+imageName)
