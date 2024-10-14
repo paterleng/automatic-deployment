@@ -52,6 +52,7 @@ func (h *CodePackage) GoGitCode(ctx context.Context, req *rpc.GoGitCodeRequest, 
 
 	// 生成目录，地址,将信息保存到数据库中
 	dir := "../1234"
+	hubUrl := "aaaa"
 
 	go func(getUrl, url string) {
 		// 修改任务状态为：拉代码
@@ -70,31 +71,20 @@ func (h *CodePackage) GoGitCode(ctx context.Context, req *rpc.GoGitCodeRequest, 
 			utils.Tools.LG.Error("Error while Packaging image:" + err.Error())
 			return
 		}
+		// 标记镜像
+		err = cmd.MarkImage("imageName", hubUrl)
+		if err != nil {
+			utils.Tools.LG.Error("Error while Mark image:" + err.Error())
+			return
+		}
+
+		err = cmd.PushImage("imageName", hubUrl)
+		if err != nil {
+			utils.Tools.LG.Error("Error while Push image:" + err.Error())
+			return
+		}
+
 	}(req.Url, dir)
-
-	// 生成镜像
-
-	// 标记镜像
-	//cmd = exec.Command("docker", "tag", imageName, privateRepo+"/"+imageName)
-	//cmd.Stdout = os.Stdout
-	//cmd.Stderr = os.Stderr
-	//err = cmd.Run()
-	//if err != nil {
-	//	utils.Tools.LG.Error("Error tagging Docker image:" + err.Error())
-	//	return nil
-	//}
-	//utils.Tools.LG.Info("Docker image tagged successfully")
-
-	// 推送
-	//cmd = exec.Command("docker", "push", privateRepo+"/"+imageName)
-	//cmd.Stdout = os.Stdout
-	//cmd.Stderr = os.Stderr
-	//err = cmd.Run()
-	//if err != nil {
-	//	utils.Tools.LG.Error("Error pushing Docker image:" + err.Error())
-	//	return nil
-	//}
-	//utils.Tools.LG.Info("Docker image pushed to private registry successfully")
 	return nil
 
 }

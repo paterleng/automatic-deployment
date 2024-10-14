@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ac29538-e467-4f74-a26b-fb916aa09c6a" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/code-package/dao/code_package.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code-package/model/code_package.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code-package/pkg/cmd/cmd.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/code-package/rpc.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code-package/handle/handle.go" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/handle/handle.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/pkg/github/github.go" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/pkg/github/github.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/utils/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/utils/init.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-package/pkg/cmd/cmd.go" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/pkg/cmd/cmd.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +24,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file://$PROJECT_DIR$/../../Go语言/gopackage/pkg/mod/golang.org/toolchain@v0.0.1-go1.22.7.windows-amd64" />
+  <component name="GOROOT" url="file://W:/Go/go1.22.0" />
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -65,13 +60,15 @@
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "WebServerToolWindowFactoryState": "false",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "D:/桌面/project/automatic-deployment/1234",
+    "last_opened_file_path": "C:/Users/zbw",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.goide.configuration.GoLibrariesConfigurableProvider"
+    "settings.editor.selected.configurable": "com.goide.configuration.GoLibrariesConfigurableProvider",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -134,7 +131,6 @@
       <list>
         <item itemvalue="Go 构建.go build code-package" />
         <item itemvalue="Go 构建.go build main.go" />
-        <item itemvalue="Go 构建.go build api-gateway" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +171,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add: 为仓库添加yml文件" />
     <MESSAGE value="add: 添加git操作" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: 添加git操作" />
+    <MESSAGE value="add: 添加打包镜像" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: 添加打包镜像" />
   </component>
   <component name="VgoProject">
     <environment>
