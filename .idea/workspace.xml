@@ -14,26 +14,8 @@
       <change afterPath="$PROJECT_DIR$/api-gateway/utils/cors.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/api/api_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/api_interface.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/api/user_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/user_api.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/controller/user_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/user_service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/model/user_service.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/rpcservice/user-service/user.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/rpcservice/user-service/user.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/rpcservice/user-service/user.pb.micro.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/rpcservice/user-service/user.pb.micro.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/rpcservice/user-service/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/rpcservice/user-service/user.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/utils/code.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/code.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/utils/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/init.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/api/rpc_realize.go" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/api/rpc_realize.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/code.log" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/code.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/middleware/middle_jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/middleware/middle_jwt.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/model/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/rpc/user.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/rpc/user.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/rpc/user.pb.micro.go" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/rpc/user.pb.micro.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/rpc/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/rpc/user.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/node.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/node.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/model/user.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,47 +73,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultGoTemplateProperty" value="Go File" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="configurable..is.expanded" value="false" />
-    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
-    <property name="go.format.on.save.advertiser.fired" value="true" />
-    <property name="go.formatter.settings.were.checked" value="true" />
-    <property name="go.import.settings.migrated" value="true" />
-    <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
-    <property name="go.sdk.automatically.set" value="true" />
-    <property name="go.watchers.conflict.with.on.save.actions.check.performed" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultGoTemplateProperty": "Go File",
+    "Go 构建.go build api-gateway.executor": "Debug",
+    "Go 构建.go build automatic.executor": "Run",
+    "Go 构建.go build code-package.executor": "Run",
+    "Go 构建.go build kubernetes-deploy.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "D:/GoCode/automatic-deployment/api-gateway/rpcservice/kubernetes-service",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.goide.configuration.GoLibrariesConfigurableProvider",
+    "ts.external.directory.path": "D:\\Go语言\\GoLand编译器\\GoLand 2023.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="ReaderModeSettings">
     <option name="enabled" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;Go 构建.go build api-gateway.executor&quot;: &quot;Debug&quot;,
-    &quot;Go 构建.go build automatic.executor&quot;: &quot;Run&quot;,
-    &quot;Go 构建.go build code-package.executor&quot;: &quot;Run&quot;,
-    &quot;Go 构建.go build kubernetes-deploy.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/GoCode/automatic-deployment/api-gateway/rpcservice/kubernetes-service&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.goide.configuration.GoLibrariesConfigurableProvider&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Go语言\\GoLand编译器\\GoLand 2023.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\ago-k8s\automatic-deployment\api-gateway\rpcservice\user-service" />
@@ -231,9 +199,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="修正提交" />
+    <MESSAGE value="处理冲突" />
+    <option name="LAST_COMMIT_MESSAGE" value="处理冲突" />
   </component>
   <component name="VgoProject">
-    <integration-enabled>true</integration-enabled>
     <environment>
       <map>
         <entry key="GOPROXY" value="https://goproxy.cn,direct" />
@@ -250,9 +220,19 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/api-gateway/utils/kubernetes.go</url>
-          <line>17</line>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/node.go</url>
+          <line>68</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/node.go</url>
+          <line>60</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/node.go</url>
+          <line>58</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -291,3 +291,23 @@
 {"level":"INFO","time":"2024-10-14T17:34:10.690+0800","caller":"utils/init.go:83","msg":"初始化mysql成功"}
 {"level":"INFO","time":"2024-10-14T17:34:11.003+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
 {"level":"ERROR","time":"2024-10-14T17:35:04.887+0800","caller":"kubernetes_deploy/node.go:60","msg":"获取节点信息失败"}
+{"level":"INFO","time":"2024-10-15T17:21:21.517+0800","caller":"utils/init.go:185","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-15T17:21:21.527+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-15T17:21:21.617+0800","caller":"utils/init.go:87","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-15T17:21:21.725+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"INFO","time":"2024-10-15T17:35:15.204+0800","caller":"utils/init.go:185","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-15T17:35:15.206+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-15T17:35:15.278+0800","caller":"utils/init.go:87","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-15T17:35:15.383+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-10-15T17:35:40.649+0800","caller":"kubernetes_deploy/node.go:60","msg":"获取节点信息失败"}
+{"level":"ERROR","time":"2024-10-15T17:37:19.984+0800","caller":"kubernetes_deploy/node.go:60","msg":"获取节点信息失败"}
+{"level":"INFO","time":"2024-10-15T17:37:37.534+0800","caller":"utils/init.go:185","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-15T17:37:37.535+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-15T17:37:37.640+0800","caller":"utils/init.go:87","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-15T17:37:37.726+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-10-15T17:39:04.275+0800","caller":"kubernetes_deploy/node.go:60","msg":"获取节点信息失败"}
+{"level":"INFO","time":"2024-10-15T17:39:26.260+0800","caller":"utils/init.go:185","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-15T17:39:26.269+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-15T17:39:26.375+0800","caller":"utils/init.go:87","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-15T17:39:26.503+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"ERROR","time":"2024-10-15T17:40:07.942+0800","caller":"kubernetes_deploy/node.go:62","msg":"获取节点信息失败"}
