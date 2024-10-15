@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ac29538-e467-4f74-a26b-fb916aa09c6a" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/api-gateway/internal/kubenetes/kube_config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/utils/file.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/utils/kubernetes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/api/api_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/api_interface.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/api/kubernetes_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/kubernetes_api.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/api/manager.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/manager.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/node.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/node.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/model/kubernetes.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/model/kubernetes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/utils/constant.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/constant.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/utils/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/init.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/config" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/kubernetes-deploy.log" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/kubernetes-deploy.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scui/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/scui/.env.development" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scui/.env.production" beforeDir="false" afterPath="$PROJECT_DIR$/scui/.env.production" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scui/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scui/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
