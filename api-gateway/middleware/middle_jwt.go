@@ -1,12 +1,14 @@
 package middleware
 
 import (
+	"api-gateway/dao"
+	"api-gateway/model"
+	"api-gateway/pkg"
+	"api-gateway/utils"
 	"errors"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 	"strings"
-	"user-service/pkg"
-	"user-service/utils"
 )
 
 // 基于jwt的中间件验证
@@ -33,8 +35,43 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 			c.Abort()
 			return
 		}
+
 		//id是唯一标识 这里获取id就可以
 		c.Set("userid", mc.UserID)
+		// 使用userid查出用户信息
+		var user model.User
+		user, err = dao.SelectIdUser(mc.UserID)
+		if err != nil {
+			utils.Tools.LG.Error("中间件使用id查找数据库出错")
+			utils.ResponseError(c, utils.CodeServerBusy)
+			c.Abort()
+			return
+		}
+
+		// 检查该用户是否可以访问此接口
+		b := false
+		//fmt.Println(c.Request.URL.Path + "test path")
+		//fmt.Println(user.Role.ApiRouter)
+		for _, route := range user.Role.ApiRouter {
+			//if strings.HasPrefix(c.Request.URL.Path, route) {
+			if c.Request.URL.Path == route {
+				b = true
+				break
+			}
+		}
+		if !b {
+			utils.Tools.LG.Error("用户无权限")
+			utils.ResponseError(c, utils.CodeNoPer)
+			c.Abort()
+			return
+		}
+		// 检查使用token请求信息的设备是否改变（登录的设备）
+		deviceIdentifier := c.ClientIP() + c.Request.UserAgent()
+		if user.LastLoginDevice != deviceIdentifier {
+			utils.Tools.LG.Error("登录设备不同出错")
+			c.Abort()
+			return
+		}
 		c.Next()
 	}
 }

@@ -1,27 +1,5 @@
-{"level":"INFO","time":"2024-09-23T15:35:46.920+0800","caller":"utils/init.go:117","msg":"init logger success"}
-{"level":"INFO","time":"2024-09-23T15:35:46.971+0800","caller":"code-package/main.go:6","msg":"初始化成功"}
-{"level":"INFO","time":"2024-10-01T22:19:09.868+0800","caller":"utils/init.go:147","msg":"init logger success"}
-{"level":"INFO","time":"2024-10-01T22:19:09.868+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
-{"level":"ERROR","time":"2024-10-01T22:19:09.890+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"Error 1045 (28000): Access denied for user 'root'@'192.168.21.39' (using password: YES)"}
-{"level":"INFO","time":"2024-10-01T22:19:09.894+0800","caller":"user-service/main.go:25","msg":"kubernetes-deploy服务注册成功"}
-{"level":"INFO","time":"2024-10-01T22:21:24.144+0800","caller":"user-service/main.go:30","msg":"kubernetes-deploy服务启动成功"}
-{"level":"INFO","time":"2024-10-01T22:21:33.170+0800","caller":"utils/init.go:147","msg":"init logger success"}
-{"level":"INFO","time":"2024-10-01T22:21:33.172+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
-{"level":"ERROR","time":"2024-10-01T22:21:33.194+0800","caller":"utils/init.go:76","msg":"初始化MySQL失败：","error":"Error 1045 (28000): Access denied for user 'root'@'192.168.21.39' (using password: YES)"}
-{"level":"INFO","time":"2024-10-01T22:21:33.197+0800","caller":"user-service/main.go:25","msg":"kubernetes-deploy服务注册成功"}
-{"level":"INFO","time":"2024-10-01T22:22:27.614+0800","caller":"user-service/main.go:30","msg":"kubernetes-deploy服务启动成功"}
-{"level":"INFO","time":"2024-10-02T08:14:04.892+0800","caller":"utils/init.go:147","msg":"init logger success"}
-{"level":"INFO","time":"2024-10-02T08:14:04.930+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
-{"level":"INFO","time":"2024-10-02T08:14:05.016+0800","caller":"utils/init.go:79","msg":"初始化mysql成功"}
-{"level":"INFO","time":"2024-10-02T08:14:05.020+0800","caller":"user-service/main.go:25","msg":"kubernetes-deploy服务注册成功"}
-{"level":"INFO","time":"2024-10-02T08:50:20.758+0800","caller":"user-service/main.go:30","msg":"kubernetes-deploy服务启动成功"}
-{"level":"INFO","time":"2024-10-02T08:50:32.130+0800","caller":"utils/init.go:147","msg":"init logger success"}
-{"level":"INFO","time":"2024-10-02T08:50:32.131+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
-{"level":"INFO","time":"2024-10-02T08:50:32.156+0800","caller":"utils/init.go:79","msg":"初始化mysql成功"}
-{"level":"INFO","time":"2024-10-02T08:50:32.158+0800","caller":"user-service/main.go:25","msg":"user-service服务注册成功"}
-{"level":"INFO","time":"2024-10-02T08:51:14.814+0800","caller":"user-service/main.go:30","msg":"user-service服务启动成功"}
-{"level":"INFO","time":"2024-10-02T08:51:24.595+0800","caller":"utils/init.go:147","msg":"init logger success"}
-{"level":"INFO","time":"2024-10-02T08:51:24.596+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
-{"level":"INFO","time":"2024-10-02T08:51:24.615+0800","caller":"utils/init.go:79","msg":"初始化mysql成功"}
-{"level":"INFO","time":"2024-10-02T08:51:24.620+0800","caller":"user-service/main.go:25","msg":"user-service服务注册成功"}
-{"level":"INFO","time":"2024-10-02T08:51:39.002+0800","caller":"user-service/main.go:30","msg":"user-service服务启动成功"}
+{"level":"INFO","time":"2024-10-02T20:45:39.332+0800","caller":"utils/init.go:147","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T20:45:39.403+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T20:45:39.457+0800","caller":"utils/init.go:79","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T20:45:39.461+0800","caller":"user-service/main.go:25","msg":"user-service服务注册成功"}
+{"level":"INFO","time":"2024-10-02T20:46:35.318+0800","caller":"user-service/main.go:30","msg":"user-service服务启动成功"}

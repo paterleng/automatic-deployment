@@ -74,10 +74,10 @@ func init() {
 	}
 	Tools.LG.Info("初始化logger成功")
 
-	//if err := MysqlInit(); err != nil {
-	//	Tools.LG.Error("初始化MySQL失败：", zap.Error(err))
-	//	return
-	//}
+	if err := MysqlInit(); err != nil {
+		Tools.LG.Error("初始化MySQL失败：", zap.Error(err))
+		return
+	}
 	Tools.LG.Info("初始化mysql成功")
 	DiscoveryService()
 }
@@ -102,6 +102,10 @@ func MysqlInit() (err error) {
 		sqlDB.SetMaxOpenConns(Conf.MySQLConfig.MaxOpenConns)
 		sqlDB.SetMaxIdleConns(Conf.MySQLConfig.MaxIdleConns)
 	}
+	//err = Tools.DB.AutoMigrate(&model.User{})
+	//if err != nil {
+	//	return
+	//}
 	return
 }
 

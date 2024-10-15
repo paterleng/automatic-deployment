@@ -35,6 +35,7 @@ var _ server.Option
 
 type UserService interface {
 	CheckStatus(ctx context.Context, in *UserRequest, opts ...client.CallOption) (*UserResponse, error)
+	UserCheckMail(ctx context.Context, in *UserCheckMailRequest, opts ...client.CallOption) (*UserCheckMailResponse, error)
 	UserLogin(ctx context.Context, in *LoginRequest, opts ...client.CallOption) (*LoginResponse, error)
 }
 
@@ -60,6 +61,16 @@ func (c *userService) CheckStatus(ctx context.Context, in *UserRequest, opts ...
 	return out, nil
 }
 
+func (c *userService) UserCheckMail(ctx context.Context, in *UserCheckMailRequest, opts ...client.CallOption) (*UserCheckMailResponse, error) {
+	req := c.c.NewRequest(c.name, "UserService.UserCheckMail", in)
+	out := new(UserCheckMailResponse)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *userService) UserLogin(ctx context.Context, in *LoginRequest, opts ...client.CallOption) (*LoginResponse, error) {
 	req := c.c.NewRequest(c.name, "UserService.UserLogin", in)
 	out := new(LoginResponse)
@@ -74,12 +85,14 @@ func (c *userService) UserLogin(ctx context.Context, in *LoginRequest, opts ...c
 
 type UserServiceHandler interface {
 	CheckStatus(context.Context, *UserRequest, *UserResponse) error
+	UserCheckMail(context.Context, *UserCheckMailRequest, *UserCheckMailResponse) error
 	UserLogin(context.Context, *LoginRequest, *LoginResponse) error
 }
 
 func RegisterUserServiceHandler(s server.Server, hdlr UserServiceHandler, opts ...server.HandlerOption) error {
 	type userService interface {
 		CheckStatus(ctx context.Context, in *UserRequest, out *UserResponse) error
+		UserCheckMail(ctx context.Context, in *UserCheckMailRequest, out *UserCheckMailResponse) error
 		UserLogin(ctx context.Context, in *LoginRequest, out *LoginResponse) error
 	}
 	type UserService struct {
@@ -95,6 +108,10 @@ type userServiceHandler struct {
 
 func (h *userServiceHandler) CheckStatus(ctx context.Context, in *UserRequest, out *UserResponse) error {
 	return h.UserServiceHandler.CheckStatus(ctx, in, out)
+}
+
+func (h *userServiceHandler) UserCheckMail(ctx context.Context, in *UserCheckMailRequest, out *UserCheckMailResponse) error {
+	return h.UserServiceHandler.UserCheckMail(ctx, in, out)
 }
 
 func (h *userServiceHandler) UserLogin(ctx context.Context, in *LoginRequest, out *LoginResponse) error {

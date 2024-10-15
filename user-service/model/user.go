@@ -14,6 +14,7 @@ type User struct {
 	Atoken     string `json:"column:atoken"`
 	Rtoken     string `json:"column:rtoken"`
 	Role       string `json:"column:role" binding:"required"`
+	Captcha    string `json:"column:captcha"`
 }
 
 const (
