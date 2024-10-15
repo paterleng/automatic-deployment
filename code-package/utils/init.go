@@ -1,7 +1,8 @@
 package utils
 
 import (
-	"code-package/model"
+	"code-package/data/schema"
+	"code-package/pkg/cmd"
 	"fmt"
 	"github.com/fsnotify/fsnotify"
 	_ "github.com/go-sql-driver/mysql"
@@ -26,6 +27,14 @@ type Config struct {
 	*Etcd          `mapstructure:"etcd"`
 	*GitHub        `mapstructure:"github"`
 	*DockerHub     `mapstructure:"dockerhub"`
+	*ImagesHub     `mapstructure:"imageshub"`
+}
+
+type ImagesHub struct {
+	UserName  string
+	Password  string
+	Repo      string
+	NameSpace string
 }
 
 type DockerHub struct {
@@ -91,6 +100,10 @@ func init() {
 		Tools.LG.Error("初始化MySQL失败：", zap.Error(err))
 		return
 	}
+	if err := cmd.DockerLogin(); err != nil {
+		Tools.LG.Error("docker登录：", zap.Error(err))
+		return
+	}
 	Tools.LG.Info("初始化mysql成功")
 }
 
@@ -106,7 +119,7 @@ func MysqlInit() (err error) {
 		DisableForeignKeyConstraintWhenMigrating: true,
 	})
 	// 根据结构体自动迁移（创建表）
-	Tools.DB.AutoMigrate(&model.GetAndPushPlan{})
+	Tools.DB.AutoMigrate(&schema.GetAndPushPlan{})
 
 	if err != nil {
 		return

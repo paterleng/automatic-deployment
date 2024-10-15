@@ -32,3 +32,8 @@ github:
 dockerhub:
   user_name: ""
   password: ""
+imagesHub:
+  username: ""
+  password: ""
+  repo: ""
+  namespace: ""

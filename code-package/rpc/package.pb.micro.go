@@ -44,7 +44,8 @@ func NewCodePackageEndpoints() []*api.Endpoint {
 type CodePackageService interface {
 	CheckStatus(ctx context.Context, in *CpRequest, opts ...client.CallOption) (*CpResponse, error)
 	CloneCodes(ctx context.Context, in *CloneCodesRequest, opts ...client.CallOption) (*CloneCodesResponse, error)
-	GoGitCode(ctx context.Context, in *GoGitCodeRequest, opts ...client.CallOption) (*GoGitCodeResponse, error)
+	StartPlan(ctx context.Context, in *StartPlanRequest, opts ...client.CallOption) (*StartPlanResponse, error)
+	GetPlanStatus(ctx context.Context, in *GetPlanStatusRequest, opts ...client.CallOption) (*GetPlanStatusResponse, error)
 	ConfigureCI(ctx context.Context, in *ConfigureCIRequest, opts ...client.CallOption) (*ConfigureCIResponse, error)
 }
 
@@ -80,9 +81,19 @@ func (c *codePackageService) CloneCodes(ctx context.Context, in *CloneCodesReque
 	return out, nil
 }
 
-func (c *codePackageService) GoGitCode(ctx context.Context, in *GoGitCodeRequest, opts ...client.CallOption) (*GoGitCodeResponse, error) {
-	req := c.c.NewRequest(c.name, "CodePackage.GoGitCode", in)
-	out := new(GoGitCodeResponse)
+func (c *codePackageService) StartPlan(ctx context.Context, in *StartPlanRequest, opts ...client.CallOption) (*StartPlanResponse, error) {
+	req := c.c.NewRequest(c.name, "CodePackage.StartPlan", in)
+	out := new(StartPlanResponse)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *codePackageService) GetPlanStatus(ctx context.Context, in *GetPlanStatusRequest, opts ...client.CallOption) (*GetPlanStatusResponse, error) {
+	req := c.c.NewRequest(c.name, "CodePackage.GetPlanStatus", in)
+	out := new(GetPlanStatusResponse)
 	err := c.c.Call(ctx, req, out, opts...)
 	if err != nil {
 		return nil, err
@@ -105,7 +116,8 @@ func (c *codePackageService) ConfigureCI(ctx context.Context, in *ConfigureCIReq
 type CodePackageHandler interface {
 	CheckStatus(context.Context, *CpRequest, *CpResponse) error
 	CloneCodes(context.Context, *CloneCodesRequest, *CloneCodesResponse) error
-	GoGitCode(context.Context, *GoGitCodeRequest, *GoGitCodeResponse) error
+	StartPlan(context.Context, *StartPlanRequest, *StartPlanResponse) error
+	GetPlanStatus(context.Context, *GetPlanStatusRequest, *GetPlanStatusResponse) error
 	ConfigureCI(context.Context, *ConfigureCIRequest, *ConfigureCIResponse) error
 }
 
@@ -113,7 +125,8 @@ func RegisterCodePackageHandler(s server.Server, hdlr CodePackageHandler, opts .
 	type codePackage interface {
 		CheckStatus(ctx context.Context, in *CpRequest, out *CpResponse) error
 		CloneCodes(ctx context.Context, in *CloneCodesRequest, out *CloneCodesResponse) error
-		GoGitCode(ctx context.Context, in *GoGitCodeRequest, out *GoGitCodeResponse) error
+		StartPlan(ctx context.Context, in *StartPlanRequest, out *StartPlanResponse) error
+		GetPlanStatus(ctx context.Context, in *GetPlanStatusRequest, out *GetPlanStatusResponse) error
 		ConfigureCI(ctx context.Context, in *ConfigureCIRequest, out *ConfigureCIResponse) error
 	}
 	type CodePackage struct {
@@ -135,8 +148,12 @@ func (h *codePackageHandler) CloneCodes(ctx context.Context, in *CloneCodesReque
 	return h.CodePackageHandler.CloneCodes(ctx, in, out)
 }
 
-func (h *codePackageHandler) GoGitCode(ctx context.Context, in *GoGitCodeRequest, out *GoGitCodeResponse) error {
-	return h.CodePackageHandler.GoGitCode(ctx, in, out)
+func (h *codePackageHandler) StartPlan(ctx context.Context, in *StartPlanRequest, out *StartPlanResponse) error {
+	return h.CodePackageHandler.StartPlan(ctx, in, out)
+}
+
+func (h *codePackageHandler) GetPlanStatus(ctx context.Context, in *GetPlanStatusRequest, out *GetPlanStatusResponse) error {
+	return h.CodePackageHandler.GetPlanStatus(ctx, in, out)
 }
 
 func (h *codePackageHandler) ConfigureCI(ctx context.Context, in *ConfigureCIRequest, out *ConfigureCIResponse) error {

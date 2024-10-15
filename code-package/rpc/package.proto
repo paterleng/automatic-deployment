@@ -5,10 +5,10 @@ option go_package="/rpc";
 service CodePackage {
   rpc CheckStatus(CpRequest) returns (CpResponse) {}
   rpc CloneCodes(CloneCodesRequest) returns (CloneCodesResponse) {}
-  rpc GoGitCode(GoGitCodeRequest) returns (GoGitCodeResponse) {}
+  rpc StartPlan(StartPlanRequest) returns (StartPlanResponse) {}
+  rpc GetPlanStatus(GetPlanStatusRequest) returns (GetPlanStatusResponse) {}
   rpc ConfigureCI(ConfigureCIRequest) returns (ConfigureCIResponse) {}
 }
-
 
 message CpRequest {
 
@@ -26,12 +26,33 @@ message CloneCodesResponse {
 
 }
 
-message GoGitCodeRequest {
-  string url = 1;
+message StartPlanRequest {
+  string name = 1;
+  string url = 2;
+  bool is_fail_plan = 3;
+  int64 id = 4;
+  string version = 5;
 }
 
-message GoGitCodeResponse {
+message StartPlanResponse {
+  int64 id =1;
+  string name = 2;
+  string url = 3;
+  int64 status = 4;
+  bool is_Success = 5;
 
+}
+
+message GetPlanStatusRequest {
+  int64 id = 1 ;
+}
+
+message GetPlanStatusResponse{
+  int64 id =1;
+  string name = 2;
+  string url = 3;
+  int64 status = 4;
+  bool is_Success = 5;
 }
 
 message ConfigureCIRequest {

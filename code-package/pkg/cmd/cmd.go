@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"code-package/utils"
 	"os"
 	"os/exec"
 )
@@ -21,16 +22,32 @@ func PackagingImage(name, destinationPath, tempDir string) error {
 
 }
 
-func MarkImage(name, privateRepo string) error {
-	cmd := exec.Command("docker", "tag", name, privateRepo+"/"+name)
+func MarkImage(name, version string) error {
+	cmd := exec.Command("docker", "tag", name, utils.Conf.ImagesHub.Repo+"/"+utils.Conf.ImagesHub.NameSpace+"/"+name+":"+version)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	err := cmd.Run()
 	return err
 }
 
-func PushImage(name, privateRepo string) error {
-	cmd := exec.Command("docker", "push", privateRepo+"/"+name)
+func PushImage(name, version string) error {
+	cmd := exec.Command("docker", "push", utils.Conf.ImagesHub.Repo+"/"+utils.Conf.ImagesHub.NameSpace+"/"+name+":"+version)
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	err := cmd.Run()
+	return err
+}
+
+func DockerLogin() error {
+	cmd := exec.Command("docker", "login", "-u", utils.Conf.ImagesHub.UserName, "-p", utils.Conf.ImagesHub.Password)
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	err := cmd.Run()
+	return err
+}
+
+func DockerOut() error {
+	cmd := exec.Command("docker", "logout")
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	err := cmd.Run()

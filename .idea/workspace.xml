@@ -5,11 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ac29538-e467-4f74-a26b-fb916aa09c6a" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/code-package/data/code_package.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-package/data/data.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-package/handle/job.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/code-package/rpc.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-package/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-package/dao/code_package.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/code-package/handle/handle.go" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/handle/handle.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-package/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-package/model/code_package.go" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/data/schema/get_and_push_plan.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code-package/pkg/cmd/cmd.go" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/pkg/cmd/cmd.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-package/rpc/package.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/rpc/package.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-package/rpc/package.pb.micro.go" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/rpc/package.pb.micro.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-package/rpc/package.proto" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/rpc/package.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-package/utils/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/utils/init.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,29 +58,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "Go 构建.go build api-gateway.executor": "Run",
-    "Go 构建.go build automatic.executor": "Run",
-    "Go 构建.go build code-package.executor": "Run",
-    "Go 构建.go build kubernetes-deploy.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "C:/Users/zbw",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.goide.configuration.GoLibrariesConfigurableProvider",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;Go 构建.go build api-gateway.executor&quot;: &quot;Run&quot;,
+    &quot;Go 构建.go build automatic.executor&quot;: &quot;Run&quot;,
+    &quot;Go 构建.go build code-package.executor&quot;: &quot;Run&quot;,
+    &quot;Go 构建.go build kubernetes-deploy.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/zbw&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.goide.configuration.GoLibrariesConfigurableProvider&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\桌面\project\automatic-deployment\1234" />
@@ -80,22 +90,14 @@
       <recent name="D:\GoCode\automatic-deployment\api-gateway\rpcservice\code-service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\桌面\project\automatic-deployment\code-package\handle" />
+      <recent name="D:\桌面\project\automatic-deployment\code-package\data" />
       <recent name="D:\桌面\project\automatic-deployment\code-package\pkg\cmd" />
       <recent name="D:\GoCode\automatic-deployment\api-gateway\controller\kubernetes_deploy" />
       <recent name="D:\GoCode\automatic-deployment\kubernetes-deploy\rpc" />
-      <recent name="D:\GoCode\automatic-deployment\kubernetes-deploy\api" />
-      <recent name="D:\GoCode\automatic-deployment\kubernetes-deploy\controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 构建.go build code-package">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="automatic-deployment" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go 构建.go build main.go">
     <configuration name="go build code-package" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="automatic-deployment" />
       <working_directory value="$PROJECT_DIR$/code-package" />
@@ -114,23 +116,14 @@
       <filePath value="$PROJECT_DIR$/code-package/main.go" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="automatic-deployment" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="DIRECTORY" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Go 构建.go build code-package" />
       <item itemvalue="Go 构建.go build main.go" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go 构建.go build code-package" />
         <item itemvalue="Go 构建.go build main.go" />
+        <item itemvalue="Go 构建.go build code-package" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +165,8 @@
     <MESSAGE value="add: 为仓库添加yml文件" />
     <MESSAGE value="add: 添加git操作" />
     <MESSAGE value="add: 添加打包镜像" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: 添加打包镜像" />
+    <MESSAGE value="add: 添加推送镜像" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: 添加推送镜像" />
   </component>
   <component name="VgoProject">
     <environment>

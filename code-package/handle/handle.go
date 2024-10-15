@@ -1,7 +1,8 @@
 package handle
 
 import (
-	"code-package/pkg/cmd"
+	"code-package/data"
+	"code-package/data/schema"
 	"code-package/pkg/github"
 	"code-package/rpc"
 	"code-package/utils"
@@ -10,15 +11,23 @@ import (
 	"github.com/micro/go-micro/v2"
 	"io/ioutil"
 	"log"
+	"math/rand"
 	"os"
 	"os/exec"
+	"strconv"
 	"strings"
+	"time"
 )
 
-type CodePackage struct{}
+type CodePackage struct {
+	repo data.CodePackageRepo
+}
 
 func Register(service micro.Service) error {
-	err := rpc.RegisterCodePackageHandler(service.Server(), &CodePackage{})
+	repo := data.NewCodePackageRepo(data.NewData(utils.Tools.DB))
+	cp := &CodePackage{repo: repo}
+	go cp.Start()
+	err := rpc.RegisterCodePackageHandler(service.Server(), cp)
 	return err
 }
 
@@ -48,43 +57,41 @@ func (h *CodePackage) CloneCodes(ctx context.Context, req *rpc.CloneCodesRequest
 }
 
 // GoGitCode 获取代码 打包镜像，推送到私有镜像仓库
-func (h *CodePackage) GoGitCode(ctx context.Context, req *rpc.GoGitCodeRequest, rsp *rpc.GoGitCodeResponse) error {
+func (h *CodePackage) StartPlan(ctx context.Context, req *rpc.StartPlanRequest, rsp *rpc.StartPlanResponse) error {
 
-	// 生成目录，地址,将信息保存到数据库中
-	dir := "../1234"
-	hubUrl := "aaaa"
-
-	go func(getUrl, url string) {
-		// 修改任务状态为：拉代码
-
-		// 拉代码
-		//err := github.CloneCode(req.GetUrl(), url, utils.Conf.GitHub.Auth)
-		//if err != nil {
-		//	utils.Tools.LG.Error("Error while cloning repository:" + err.Error())
-		//	return
-		//}
-		// 修改任务状态为：生成镜像
-
-		// 生成镜像
-		err := cmd.PackagingImage("imageName", getUrl, url)
-		if err != nil {
-			utils.Tools.LG.Error("Error while Packaging image:" + err.Error())
-			return
+	// 区分这个请求是创建还是任务继续
+	if req.IsFailPlan {
+		// 查询数据库，获取任务
+		d, err1 := h.repo.SelectPlanById(ctx, req.Id)
+		if err1 != nil {
+			utils.Tools.LG.Error("Error SelectPlanById:" + err1.Error())
+			return nil
 		}
-		// 标记镜像
-		err = cmd.MarkImage("imageName", hubUrl)
-		if err != nil {
-			utils.Tools.LG.Error("Error while Mark image:" + err.Error())
-			return
+		SC <- d
+	} else {
+		// 设置随机种子
+		rand.Seed(time.Now().UnixNano())
+
+		// 生成随机的 5 位数
+		randomNum := rand.Intn(90000) + 10000 // 生成范围在 10000 到 99999 之间的数
+		gapp := schema.GetAndPushPlan{
+			GetUrl:      req.Url,
+			ImageName:   req.Name,
+			Status:      int(schema.PlanStatus_CloneCode),
+			DownloadDir: strconv.Itoa(randomNum),
+			Version:     req.Version,
+			IsSuccess:   false,
 		}
 
-		err = cmd.PushImage("imageName", hubUrl)
+		err := h.repo.Create(ctx, gapp)
 		if err != nil {
-			utils.Tools.LG.Error("Error while Push image:" + err.Error())
-			return
+			utils.Tools.LG.Error("Error Create:" + err.Error())
+			return nil
 		}
+		// 发送消息
+		SC <- gapp
+	}
 
-	}(req.Url, dir)
 	return nil
 
 }
@@ -92,6 +99,20 @@ func (h *CodePackage) GoGitCode(ctx context.Context, req *rpc.GoGitCodeRequest, 
 // 获取用户生成的dockerfile文件
 func (h *CodePackage) GetDockerFile() {
 
+}
+
+// 获取任务状态
+func (h *CodePackage) GetPlanStatus(ctx context.Context, req *rpc.GetPlanStatusRequest, rsp *rpc.GetPlanStatusResponse) error {
+	// 查询id计划的执行状态
+	gapp, err := h.repo.SelectPlanById(ctx, req.Id)
+	if err != nil {
+		utils.Tools.LG.Error("SelectPlanById err" + err.Error())
+		return err
+	}
+	rsp.Status = int64(gapp.Status)
+	rsp.Url = gapp.GetUrl
+	rsp.Id = gapp.Id
+	return err
 }
 
 // 用户一键配置
@@ -107,13 +128,13 @@ func (h *CodePackage) ConfigureCI(ctx context.Context, req *rpc.ConfigureCIReque
 			return err
 		}
 	}
-	data, err := ioutil.ReadFile("ci.yml")
+	d, err := ioutil.ReadFile("ci.yml")
 	if err != nil {
 		log.Fatalf("error: %v", err)
 	}
 
 	// 将内容转换为字符串
-	fileContent := string(data)
+	fileContent := string(d)
 
 	// 输出文件内容
 	strings.ReplaceAll(fileContent, "version", req.Version)

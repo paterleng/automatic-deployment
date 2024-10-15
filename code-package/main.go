@@ -2,6 +2,7 @@ package main
 
 import (
 	"code-package/handle"
+	"code-package/pkg/cmd"
 	"code-package/utils"
 	"github.com/micro/go-micro/v2"
 	"github.com/micro/go-micro/v2/registry"
@@ -29,5 +30,11 @@ func main() {
 		utils.Tools.LG.Error("服务运行失败：", zap.Error(err))
 		return
 	}
+	defer func() {
+		if err := cmd.DockerOut(); err != nil {
+			utils.Tools.LG.Error("docker登出：", zap.Error(err))
+			return
+		}
+	}()
 	utils.Tools.LG.Info("服务启动成功")
 }
