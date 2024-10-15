@@ -25,6 +25,7 @@ func NewManager() *controller.Routes {
 	router.NodeController.LG = utils.Tools.LG
 	router.NodeController.PB = utils.Tools.PB
 	return &router
+
 }
 
 func GetManager() ApiManager {

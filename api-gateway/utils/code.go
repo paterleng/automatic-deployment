@@ -14,6 +14,12 @@ const (
 	CodeCreateError
 	CodeNotNil
 	CodeParamError
+	COdeCaptcha
+	CodeCaptchaExpire
+	CodeUserRes
+	CodeResetLogin
+	CodeNoPer
+	CodeEmpowerUser
 )
 
 var codeMsgMap = map[ResCode]string{
@@ -28,6 +34,12 @@ var codeMsgMap = map[ResCode]string{
 	CodeCreateError:     "创建失败",
 	CodeNotNil:          "选择不能为空",
 	CodeParamError:      "参数错误",
+	COdeCaptcha:         "验证码错误",
+	CodeCaptchaExpire:   "创建验证码结构体实例失败",
+	CodeUserRes:         "用户注册数据库失败",
+	CodeResetLogin:      "用户重新登录",
+	CodeNoPer:           "用户无权限",
+	CodeEmpowerUser:     "用户赋权失败",
 }
 
 func (c ResCode) Msg() string {

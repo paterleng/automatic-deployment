@@ -1,2 +1,5 @@
-{"level":"INFO","time":"2024-09-23T15:35:46.920+0800","caller":"utils/init.go:117","msg":"init logger success"}
-{"level":"INFO","time":"2024-09-23T15:35:46.971+0800","caller":"code-package/main.go:6","msg":"初始化成功"}
+{"level":"INFO","time":"2024-10-02T20:45:39.332+0800","caller":"utils/init.go:147","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-02T20:45:39.403+0800","caller":"utils/init.go:73","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-02T20:45:39.457+0800","caller":"utils/init.go:79","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-02T20:45:39.461+0800","caller":"user-service/main.go:25","msg":"user-service服务注册成功"}
+{"level":"INFO","time":"2024-10-02T20:46:35.318+0800","caller":"user-service/main.go:30","msg":"user-service服务启动成功"}

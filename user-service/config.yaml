@@ -15,8 +15,8 @@ mysql:
   host: "192.168.10.8"
   port: 3306
   user: "root"
-  password: "123456"
-  dbname: "redmine"
+  password: "ljh011215"
+  dbname: "automatic_deployment"
   max_open_conns: 200
   max_idle_conns: 50
 

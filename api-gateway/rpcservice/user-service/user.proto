@@ -4,6 +4,8 @@ option go_package="/rpc";
 
 service UserService {
   rpc CheckStatus(UserRequest) returns (UserResponse) {}
+  rpc UserCheckMail(UserCheckMailRequest) returns (UserCheckMailResponse) {}
+  rpc UserLogin(LoginRequest) returns (LoginResponse) {}
 }
 
 
@@ -13,4 +15,28 @@ message UserRequest {
 
 message UserResponse {
   string msg = 1;
+}
+
+
+message UserCheckMailRequest {
+  string mailbox = 1;
+}
+
+message UserCheckMailResponse {
+  bool msg = 1;
+}
+
+message LoginRequest {
+  string mailbox = 1;
+  string mailPasswd = 2;
+  string captcha = 3;
+}
+message LoginResponse {
+  string userid = 1;
+  string username = 2;
+  string mailbox = 3;
+  string mailPasswd = 4;
+  string aToken = 5;
+  string rToken = 6;
+  string role = 7;
 }

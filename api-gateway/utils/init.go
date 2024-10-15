@@ -80,6 +80,10 @@ func init() {
 		Tools.LG.Error("初始化MySQL失败：", zap.Error(err))
 		panic(err)
 	}
+	if err := MysqlInit(); err != nil {
+		Tools.LG.Error("初始化MySQL失败：", zap.Error(err))
+		return
+	}
 	Tools.LG.Info("初始化mysql成功")
 	//创建表
 	TableInit()
