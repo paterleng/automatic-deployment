@@ -24,3 +24,16 @@ type Secret struct {
 type SecretReq struct {
 	Ids []int `json:"ids"`
 }
+
+type ClusterResquest struct {
+	Name       string `json:"name"`
+	ClusterAdr string `json:"cluster_adr"`
+}
+
+type Cluster struct {
+	gorm.Model
+	Name       string `json:"name"`
+	ClusterAdr string `json:"cluster_adr"`
+	Version    string `json:"version"`
+	Config     string `json:"config"`
+}

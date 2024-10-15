@@ -22,6 +22,8 @@ func NewManager() *controller.Routes {
 	router.KubernetesController.PB = utils.Tools.PB
 	router.SecretController.LG = utils.Tools.LG
 	router.SecretController.PB = utils.Tools.PB
+	router.NodeController.LG = utils.Tools.LG
+	router.NodeController.PB = utils.Tools.PB
 	return &router
 }
 

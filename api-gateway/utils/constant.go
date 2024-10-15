@@ -36,3 +36,11 @@ const (
 	JobResource        = "job"
 	JobCornResource    = "jobcorn"
 )
+
+const KubeConfigFile = "~/.kube/config"
+
+const (
+	CertificateAuthorityData = "/etc/kubernetes/ssl/kube-ca.pem"
+	ClientCertificateData    = "/etc/kubernetes/ssl/kube-apiserver.pem"
+	ClientKeyData            = "/etc/kubernetes/ssl/kube-apiserver-key.pem"
+)

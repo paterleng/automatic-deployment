@@ -10,4 +10,5 @@ func KubernetesApi(r *gin.Engine) {
 	ks.POST("/create/secret", GetManager().CreateSecret)
 	ks.PUT("/put/secret", GetManager().UpdateSecret)
 	ks.DELETE("/delete/secret", GetManager().DeleteSecret)
+	ks.POST("/docking", GetManager().ClusterDocking)
 }

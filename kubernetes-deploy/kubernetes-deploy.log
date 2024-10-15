@@ -304,3 +304,25 @@
 {"level":"ERROR","time":"2024-10-10T15:07:17.619+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"deployments.apps \"testsecret\" already exists"}
 {"level":"ERROR","time":"2024-10-10T15:07:17.768+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"deployments.apps \"testsecret\" already exists"}
 {"level":"INFO","time":"2024-10-10T15:28:16.485+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-11T10:08:56.613+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-11T10:08:56.622+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-11T10:08:56.655+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-11T10:08:56.675+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"ERROR","time":"2024-10-11T10:16:19.421+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"deployments.apps \"testsecret\" already exists"}
+{"level":"ERROR","time":"2024-10-11T10:16:19.556+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"deployments.apps \"testsecret\" already exists"}
+{"level":"INFO","time":"2024-10-11T10:17:53.309+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-11T10:19:29.577+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-11T10:19:29.578+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-11T10:19:29.670+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-11T10:19:29.690+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"ERROR","time":"2024-10-11T10:20:23.833+0800","caller":"api/rpc_realize.go:48","msg":"创建deployment资源失败","error":"deployments.apps \"testsecret\" already exists"}
+{"level":"INFO","time":"2024-10-11T10:20:24.259+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-11T10:20:31.933+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-11T10:20:31.933+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-11T10:20:31.974+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-11T10:20:31.984+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}
+{"level":"INFO","time":"2024-10-11T10:52:40.292+0800","caller":"kubernetes-deploy/main.go:30","msg":"kubernetes-deploy服务启动成功"}
+{"level":"INFO","time":"2024-10-14T11:21:24.096+0800","caller":"utils/init.go:170","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-14T11:21:24.192+0800","caller":"utils/init.go:74","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-14T11:21:24.252+0800","caller":"utils/init.go:80","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-14T11:22:02.185+0800","caller":"kubernetes-deploy/main.go:25","msg":"kubernetes-deploy服务注册成功"}

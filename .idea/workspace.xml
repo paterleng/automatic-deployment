@@ -5,13 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ac29538-e467-4f74-a26b-fb916aa09c6a" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/node.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/internal/kubenetes/kube_config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/utils/file.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/utils/kubernetes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/api/api_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/api_interface.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/controller/resource.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/resource.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/deploy.go" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/deploy.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/job_handle.go" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/controller/handle/job_handle.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api/kubernetes_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/kubernetes_api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api/manager.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/manager.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/node.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/node.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/model/kubernetes.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/model/kubernetes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/utils/constant.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/constant.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/utils/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/init.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/config" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/kubernetes-deploy.log" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/kubernetes-deploy.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/scui/.env.development" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.env.production" beforeDir="false" afterPath="$PROJECT_DIR$/scui/.env.production" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scui/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +45,7 @@
         <entry key="$PROJECT_DIR$" value="6bdf1da3033d1e5516d902130de6093d6c58a01e" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/scui" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -52,8 +64,9 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;Go 构建.go build api-gateway.executor&quot;: &quot;Run&quot;,
+    &quot;Go 构建.go build api-gateway.executor&quot;: &quot;Debug&quot;,
     &quot;Go 构建.go build automatic.executor&quot;: &quot;Run&quot;,
     &quot;Go 构建.go build code-package.executor&quot;: &quot;Run&quot;,
     &quot;Go 构建.go build kubernetes-deploy.executor&quot;: &quot;Debug&quot;,
@@ -68,7 +81,9 @@
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.goide.configuration.GoLibrariesConfigurableProvider&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.goide.configuration.GoLibrariesConfigurableProvider&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Go语言\\GoLand编译器\\GoLand 2023.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -168,6 +183,9 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="VgoProject">
     <environment>
       <map>
@@ -183,6 +201,16 @@
           <url>file://$PROJECT_DIR$/kubernetes-deploy/utils/init.go</url>
           <line>85</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/node.go</url>
+          <line>58</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/api-gateway/utils/kubernetes.go</url>
+          <line>17</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

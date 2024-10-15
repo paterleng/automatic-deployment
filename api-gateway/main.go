@@ -12,5 +12,4 @@ func main() {
 	dao.CreateSecretManager()
 	api.ApiRoutes(engine)
 	engine.Run(":8080")
-
 }

@@ -91,6 +91,7 @@ func NewTools() {
 
 func TableInit() (err error) {
 	err = Tools.DB.AutoMigrate(&model.Secret{})
+	err = Tools.DB.AutoMigrate(&model.Cluster{})
 	return
 }
 
