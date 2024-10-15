@@ -33,9 +33,9 @@ func (h *KubernetesDeploy) CreateResource(ctx context.Context, req *rpc.CreateRe
 	case utils.DeploymentResource:
 		err = handle.GetDeployManager().CreateResources(req.DeploymentResource)
 	case utils.JobResource:
-		err = handle.GetJobManager().CreateResources(req)
+		err = handle.GetJobManager().CreateResources(req.JobResource)
 	case utils.CornJobResource:
-		handle.GetCornJobManager().CreateResources(req)
+		handle.GetCornJobManager().CreateResources(req.CornJobResource)
 	case utils.ServiceResource:
 		handle.GetServiceManager().CreateResources(req.ServiceResource)
 	case utils.PodResource:
@@ -49,4 +49,10 @@ func (h *KubernetesDeploy) CreateResource(ctx context.Context, req *rpc.CreateRe
 		return err
 	}
 	return nil
+}
+
+func (h *KubernetesDeploy) CreateSecret(ctx context.Context, req *rpc.SecretRequest, resp *rpc.SecretResponse) error {
+
+	return nil
+
 }

@@ -3,6 +3,7 @@ package main
 import (
 	"api-gateway/api"
 	"api-gateway/controller"
+	"api-gateway/dao"
 	"api-gateway/model"
 	"api-gateway/utils"
 	"fmt"
@@ -13,6 +14,7 @@ import (
 func main() {
 	engine := gin.Default()
 	api.CreateApiManager()
+	dao.CreateSecretManager()
 	api.ApiRoutes(engine)
 	//utils.Tools.DB.SingularTable(true)
 	err := utils.Tools.DB.AutoMigrate(&model.Role{})

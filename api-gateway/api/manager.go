@@ -20,9 +20,12 @@ func NewManager() *controller.Routes {
 	var router controller.Routes
 	router.KubernetesController.LG = utils.Tools.LG
 	router.KubernetesController.PB = utils.Tools.PB
-	router.UserServiceController.LG = utils.Tools.LG
-	router.UserServiceController.PB = utils.Tools.PB
+	router.SecretController.LG = utils.Tools.LG
+	router.SecretController.PB = utils.Tools.PB
+	router.NodeController.LG = utils.Tools.LG
+	router.NodeController.PB = utils.Tools.PB
 	return &router
+
 }
 
 func GetManager() ApiManager {
