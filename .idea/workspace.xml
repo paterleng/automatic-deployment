@@ -45,7 +45,7 @@
         <entry key="$PROJECT_DIR$" value="6bdf1da3033d1e5516d902130de6093d6c58a01e" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/scui" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -201,11 +201,6 @@
           <url>file://$PROJECT_DIR$/kubernetes-deploy/utils/init.go</url>
           <line>85</line>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/node.go</url>
-          <line>58</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/api-gateway/utils/kubernetes.go</url>
