@@ -1,11 +1,9 @@
 package model
 
 import (
-	"api-gateway/utils"
 	"database/sql/driver"
 	"encoding/json"
 	"errors"
-	"go.uber.org/zap"
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 	"time"
@@ -74,7 +72,6 @@ const (
 func (user *User) SetPassword(password string) error {
 	bytes, err := bcrypt.GenerateFromPassword([]byte(password), PassWordCost)
 	if err != nil {
-		utils.Tools.LG.Error("用户密码加密失败", zap.Error(err))
 		return err
 	}
 	user.MailPassWD = string(bytes)
@@ -84,7 +81,6 @@ func (user *User) SetPassword(password string) error {
 func SetPasswords(password string) string {
 	bytes, err := bcrypt.GenerateFromPassword([]byte(password), PassWordCost)
 	if err != nil {
-		utils.Tools.LG.Error("用户密码加密失败", zap.Error(err))
 		return ""
 	}
 	return string(bytes)
