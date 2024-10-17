@@ -33,7 +33,10 @@ type ClusterResquest struct {
 type Cluster struct {
 	gorm.Model
 	Name       string `json:"name"`
-	ClusterAdr string `json:"cluster_adr"`
+	ClusterAdr string `json:"cluster_adr"` //集群地址
 	Version    string `json:"version"`
+	Status     string `json:"status"`   //状态
+	OsImage    string `json:"os_image"` //系统镜像版本
+	Arm        string `json:"arm"`      //架构
 	Config     string `json:"config"`
 }

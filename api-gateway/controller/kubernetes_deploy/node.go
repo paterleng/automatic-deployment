@@ -1,11 +1,11 @@
 package controller
 
 import (
+	"api-gateway/dao"
 	internal "api-gateway/internal/kubenetes"
 	"api-gateway/model"
 	"api-gateway/utils"
 	"context"
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -61,7 +61,11 @@ func (m *NodeController) ClusterDocking(c *gin.Context) {
 		utils.ResponseError(c, utils.CodeServerBusy)
 		return
 	}
-	fmt.Println(nodeList)
+	for _, item := range nodeList.Items {
+		cluster.Arm = item.Status.NodeInfo.Architecture
+		cluster.OsImage = item.Status.NodeInfo.OSImage
+		cluster.Version = item.Status.NodeInfo.KubeletVersion
+	}
 
 	versionInfo, err := discovery.NewDiscoveryClient(clientSet.RESTClient()).ServerVersion()
 	if err != nil {
@@ -70,9 +74,21 @@ func (m *NodeController) ClusterDocking(c *gin.Context) {
 		return
 	}
 	cluster.Version = versionInfo.String()
-
+	err = dao.GetNodeManager().Create(cluster)
+	if err != nil {
+		m.LG.Error("对接集群失败")
+		utils.ResponseError(c, utils.CodeServerBusy)
+		return
+	}
+	utils.ResponseSuccess(c, utils.CodeSuccess)
 }
 
 func (m *NodeController) GetNodeInfo(c *gin.Context) {
-
+	clusters, err := dao.GetNodeManager().Get()
+	if err != nil {
+		m.LG.Error("获取集群节点失败")
+		utils.ResponseError(c, utils.CodeServerBusy)
+		return
+	}
+	utils.ResponseSuccess(c, clusters)
 }

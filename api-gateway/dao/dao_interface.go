@@ -6,7 +6,6 @@ import (
 )
 
 type KubernetesDao interface {
-	Get(interface{}) ([]model.Secret, error)
 	Create(interface{}) error
 	Update(interface{}) error
 	Delete([]int) error
@@ -16,6 +15,7 @@ var secretManager SecretManager
 
 type SecretManager interface {
 	KubernetesDao
+	Get(interface{}) ([]model.Secret, error)
 }
 
 func CreateSecretManager() {
