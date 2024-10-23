@@ -3,6 +3,7 @@ package controller
 import (
 	"api-gateway/dao"
 	"api-gateway/pkg"
+	"net/http"
 
 	//"api-gateway/dao"
 	"api-gateway/model"
@@ -30,7 +31,7 @@ const (
 var CodeStore sync.Map
 
 // 邮箱账号发送验证码接口
-func (u *UserServiceController) LoginMail(c *gin.Context) {
+func (u *UserServiceController) SendMail(c *gin.Context) {
 	var user model.User
 	err := c.ShouldBindJSON(&user)
 	if err != nil {
@@ -53,20 +54,12 @@ func (u *UserServiceController) LoginMail(c *gin.Context) {
 			return
 		}
 		captchaExpire, err := model.GenerateCaptchaExpire(captcha, expireTime)
-		//fmt.Println(*captchaExpire)
 		if err != nil {
 			utils.ResponseError(c, utils.CodeCaptchaExpire)
 			return
 		}
 		// 在内存中存储验证码
-		//fmt.Println(CodeStore)
 		CodeStore.Store(user.MailBox, captchaExpire)
-		//fmt.Println(CodeStore)
-		//遍历一遍 看里面的数据有什么
-		//CodeStore.Range(func(key, value interface{}) bool {
-		//	fmt.Printf("Key: %v, Value: %v\n", key, value)
-		//	return true
-		//})
 		mail := &pkg.Email{
 			To:       user.MailBox,
 			Subject:  "登录验证码",
@@ -79,10 +72,6 @@ func (u *UserServiceController) LoginMail(c *gin.Context) {
 			return
 		}
 	}
-	//} else {
-	//	utils.ResponseError(c, utils.CodeUserNotExist)
-	//	return
-	//}
 	utils.ResponseSuccess(c, "发送成功")
 }
 
@@ -183,23 +172,6 @@ func (u *UserServiceController) Login(c *gin.Context) {
 		return
 	}
 	utils.ResponseSuccess(c, user)
-	//req := &rpc.LoginRequest{
-	//	Mailbox:    user.MailBox,
-	//	MailPasswd: user.MailPassWD,
-	//	Captcha:    user.Captcha,
-	//}
-	//// 转到user-service进行处理
-	//resp, err := u.PB.UserService.UserLogin(c, req)
-	//if err != nil {
-	//	utils.ResponseError(c, 1004)
-	//	return
-	//}
-	//utils.ResponseSuccess(c, resp)
-}
-
-// test接口
-func (u *UserServiceController) Test(c *gin.Context) {
-	utils.ResponseSuccess(c, "test 接口测试 success")
 }
 
 // 超级管理员赋权接口
@@ -254,4 +226,62 @@ func VerifyCode(mailbox, inputCode string) bool {
 		}
 	}
 	return false
+}
+
+func (u *UserServiceController) GetRouters(c *gin.Context) {
+	var route model.Route
+	child := make([]model.Children, 3)
+	child[0].Name = "dashboard"
+	child[0].Path = "/dashboard"
+	child[0].Component = "home"
+	child[0].Meta.Title = "控制台"
+	child[0].Meta.Icon = "el-icon-menu"
+	child[0].Meta.Affix = true
+
+	child[1].Name = "newPage"
+	child[1].Path = "/newPage"
+	child[1].Component = "newPage"
+	child[1].Meta.Title = "新的页面"
+
+	child[2].Name = "userCenter"
+	child[2].Path = "/userCenter"
+	child[2].Component = "userCenter"
+	child[2].Meta.Title = "账号信息"
+	child[2].Meta.Icon = "el-icon-user"
+	child[2].Meta.Tag = "NEW"
+	menus := make([]model.Menu, 1)
+	menus[0].Name = "home"
+	menus[0].Path = "/home"
+	menus[0].Meta.Title = "首页"
+	menus[0].Meta.Icon = "el-icon-eleme-filled"
+	menus[0].Meta.Type = "menu"
+	menus[0].Children = child
+	route.Menu = menus
+	permissions := []string{
+		"list.add",
+		"list.edit",
+		"list.delete",
+		"user.add",
+		"user.edit",
+		"user.delete",
+	}
+	dashboardGrid := []string{
+		"welcome",
+		"time",
+		"progress",
+		"echarts",
+	}
+	route.DashboardGrid = dashboardGrid
+	route.Permissions = permissions
+
+	data := struct {
+		Code    int         `json:"code"`
+		Data    model.Route `json:"data"`
+		Message string      `json:"message"`
+	}{
+		Code:    200,
+		Data:    route,
+		Message: "",
+	}
+	c.JSON(http.StatusOK, data)
 }

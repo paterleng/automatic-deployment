@@ -17,17 +17,14 @@ type NodeInterface interface {
 	Get() ([]model.Cluster, error)
 }
 
-type NodeManager struct {
-}
-
 func GetNodeManager() NodeInterface {
 	return nodeManager
 }
 
 func NewNodeManager() {
-	var dao *NodeDao
+	var dao NodeDao
 	dao.DB = utils.Tools.DB
-	nodeManager = dao
+	nodeManager = &dao
 }
 
 func (d *NodeDao) Get() (cluster []model.Cluster, err error) {

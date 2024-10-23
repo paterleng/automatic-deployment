@@ -5,17 +5,80 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ac29538-e467-4f74-a26b-fb916aa09c6a" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/api-gateway/config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/dao/node.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/node.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/node.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/dao/dao_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/dao/dao_interface.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/dao/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/dao/init.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/internal/kubenetes/kube_config.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/internal/kubenetes/kube_config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api/api_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/api_interface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api/code_package_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/code_package_api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api/kubernetes_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/kubernetes_api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api/user_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/user_api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/controller/user_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/user_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/dao/node.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/dao/node.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/dao/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/dao/user.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/model/kubernetes.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/model/kubernetes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes-deploy/config" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-deploy/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/model/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pkg/mail-captcha.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pkg/mail-captcha.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/scui/.env.development" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.env.production" beforeDir="false" afterPath="$PROJECT_DIR$/scui/.env.production" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/api/model/user_20241015151559.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/api/model/user_20241015151914.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/locales/lang/zh-cn_20241014165019.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/locales/lang/zh-cn_20241015152904.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/locales/lang/zh-cn_20241015152906.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/locales/lang/zh-cn_20241015152910.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/locales/lang/zh-cn_20241015152915.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/locales/lang/zh-cn_20241015152919.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/locales/lang/zh-cn_20241015152931.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/locales/lang/zh-cn_20241015152933.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/locales/lang/zh-cn_20241015152940.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/locales/lang/zh-cn_20241015152943.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/locales/lang/zh-cn_20241015152950.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/locales/lang/zh-cn_20241015153001.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241014165019.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015092206.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015145644.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015145646.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015145733.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015145739.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015145741.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015150057.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015150100.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015150153.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015150156.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015150208.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015150312.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015150326.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015151406.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015151411.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015151414.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015151416.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015151422.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015151429.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015151431.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015151435.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015151452.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/index_20241015152132.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/staticRouter_20241015150654.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/router/staticRouter_20241015150736.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/views/login/index_20241014165019.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/views/login/index_20241015153340.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/views/login/index_20241015153417.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/views/login/index_20241015153419.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/views/login/index_20241015153423.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/views/newPage_20241015151953.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/.history/src/views/newPage_20241015152010.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/src/api/model/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/scui/src/api/model/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/src/api/model/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/scui/src/api/model/demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/src/api/model/system.js" beforeDir="false" afterPath="$PROJECT_DIR$/scui/src/api/model/system.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/src/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scui/src/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/src/layout/components/NavMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/scui/src/layout/components/NavMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/src/layout/components/userbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/scui/src/layout/components/userbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/src/layout/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/scui/src/layout/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scui/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/src/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/scui/src/utils/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/src/views/home/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/scui/src/views/home/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/src/views/login/components/passwordForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/scui/src/views/login/components/passwordForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/src/views/newPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/scui/src/views/newPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/scui/vue.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +143,7 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;Go 构建.go build api-gateway.executor&quot;: &quot;Debug&quot;,
+    &quot;Go 构建.go build api-gateway.executor&quot;: &quot;Run&quot;,
     &quot;Go 构建.go build automatic.executor&quot;: &quot;Run&quot;,
     &quot;Go 构建.go build code-package.executor&quot;: &quot;Run&quot;,
     &quot;Go 构建.go build kubernetes-deploy.executor&quot;: &quot;Debug&quot;,

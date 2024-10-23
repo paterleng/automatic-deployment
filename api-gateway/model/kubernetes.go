@@ -38,5 +38,5 @@ type Cluster struct {
 	Status     string `json:"status"`   //状态
 	OsImage    string `json:"os_image"` //系统镜像版本
 	Arm        string `json:"arm"`      //架构
-	Config     string `json:"config"`
+	Config     string `json:"config" gorm:"type:text"`
 }

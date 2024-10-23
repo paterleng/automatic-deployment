@@ -9,7 +9,7 @@ import (
 // 检查用户邮箱是否注册 注册返回true
 func UserCheckMail(mailbox string) bool {
 	var sum int64
-	err := utils.Tools.DB.Table("users").Select("mailbox = ?", mailbox).Count(&sum).Error
+	err := utils.Tools.DB.Table("users").Where("mailbox = ?", mailbox).Count(&sum).Error
 	if err != nil {
 		return false
 	}

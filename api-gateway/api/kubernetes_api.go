@@ -3,7 +3,7 @@ package api
 import "github.com/gin-gonic/gin"
 
 func KubernetesApi(r *gin.Engine) {
-	ks := r.Group("/kubernetes")
+	ks := r.Group("/api/kubernetes")
 	ks.GET("/config", GetManager().GetConfig)
 	ks.POST("/create/resource", GetManager().CreateResource)
 	ks.GET("/get/secret", GetManager().GetSecret)

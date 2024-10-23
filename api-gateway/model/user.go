@@ -22,6 +22,33 @@ type User struct {
 	LastLoginDevice string `json:"lastlogindevice" gorm:"column:lastlogindevice; type:varchar(255)"`
 }
 
+type Route struct {
+	Menu          []Menu   `json:"menu"`
+	Permissions   []string `json:"permissions"`
+	DashboardGrid []string `json:"dashboardGrid"`
+}
+type Menu struct {
+	Name     string     `json:"name"`
+	Path     string     `json:"path"`
+	Meta     Meta       `json:"meta"`
+	Children []Children `json:"children"`
+}
+
+type Meta struct {
+	Title string `json:"title"`
+	Icon  string `json:"icon"`
+	Type  string `json:"type"`
+	Affix bool   `json:"affix"`
+	Tag   string `json:"tag"`
+}
+
+type Children struct {
+	Name      string `json:"name"`
+	Path      string `json:"path"`
+	Meta      Meta   `json:"meta"`
+	Component string `json:"component"`
+}
+
 // 角色表
 type Role struct {
 	gorm.Model
