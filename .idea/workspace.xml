@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ac29538-e467-4f74-a26b-fb916aa09c6a" name="更改" comment="">
+    <list default="true" id="3ac29538-e467-4f74-a26b-fb916aa09c6a" name="更改" comment="处理冲突">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/api/api_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/api_interface.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/api/code_package_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/code_package_api.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/api/kubernetes_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/kubernetes_api.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/api/user_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/user_api.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/controller/user_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/user_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/node.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/kubernetes_deploy/node.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/dao/node.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/dao/node.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/dao/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/dao/user.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/model/kubernetes.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/model/kubernetes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/model/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pkg/mail-captcha.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pkg/mail-captcha.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/utils/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/utils/init.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scui" beforeDir="false" afterPath="$PROJECT_DIR$/scui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scui/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/scui/.env.development" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scui/.env.production" beforeDir="false" afterPath="$PROJECT_DIR$/scui/.env.production" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scui/.history/src/api/model/user_20241015151559.js" beforeDir="false" />
