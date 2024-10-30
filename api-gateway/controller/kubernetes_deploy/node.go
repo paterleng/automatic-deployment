@@ -49,6 +49,8 @@ func (m *NodeController) ClusterDocking(c *gin.Context) {
 	}
 	cluster.ClusterAdr = req.ClusterAdr
 	cluster.Name = req.Name
+	//在对接前先看一下是否已经对接过
+
 	clientSet, err := utils.CreateClientSet(cluster.Config)
 	if err != nil {
 		m.LG.Error("创建客户端失败")
@@ -62,6 +64,7 @@ func (m *NodeController) ClusterDocking(c *gin.Context) {
 		return
 	}
 	for _, item := range nodeList.Items {
+		cluster.Status = "Activing"
 		cluster.Arm = item.Status.NodeInfo.Architecture
 		cluster.OsImage = item.Status.NodeInfo.OSImage
 		cluster.Version = item.Status.NodeInfo.KubeletVersion
@@ -73,6 +76,7 @@ func (m *NodeController) ClusterDocking(c *gin.Context) {
 		utils.ResponseError(c, utils.CodeServerBusy)
 		return
 	}
+
 	cluster.Version = versionInfo.String()
 	err = dao.GetNodeManager().Create(cluster)
 	if err != nil {

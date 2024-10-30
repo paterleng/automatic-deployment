@@ -28,7 +28,7 @@ func NewNodeManager() {
 }
 
 func (d *NodeDao) Get() (cluster []model.Cluster, err error) {
-	err = d.DB.Find(&cluster).Error
+	err = d.DB.Preload("nodes").Find(&cluster).Error
 	return
 }
 

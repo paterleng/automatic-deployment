@@ -39,4 +39,13 @@ type Cluster struct {
 	OsImage    string `json:"os_image"` //系统镜像版本
 	Arm        string `json:"arm"`      //架构
 	Config     string `json:"config" gorm:"type:text"`
+	Nodes      []Node `json:"nodes" gorm:"foreignKey:ClusterId"`
+}
+
+type Node struct {
+	gorm.Model
+	Name      string `json:"name"`       //节点名
+	Status    string `json:"status"`     //节点状态
+	Address   string `json:"address"`    //节点地址
+	ClusterId uint   `json:"cluster_id"` //主节点id
 }
