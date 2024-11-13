@@ -11,6 +11,10 @@ type UserInterface interface {
 	GetRouters(c *gin.Context)
 }
 
+type CodePackage interface {
+	PullCode(c *gin.Context)
+}
+
 type KubernetesApiInterface interface {
 	GetConfig(c *gin.Context)
 	CreateResource(c *gin.Context)

@@ -43,6 +43,7 @@ func NewCodePackageEndpoints() []*api.Endpoint {
 
 type CodePackageService interface {
 	CheckStatus(ctx context.Context, in *CpRequest, opts ...client.CallOption) (*CpResponse, error)
+	PullCode(ctx context.Context, in *PullCodeRequest, opts ...client.CallOption) (*PullCodeResponse, error)
 }
 
 type codePackageService struct {
@@ -67,15 +68,27 @@ func (c *codePackageService) CheckStatus(ctx context.Context, in *CpRequest, opt
 	return out, nil
 }
 
+func (c *codePackageService) PullCode(ctx context.Context, in *PullCodeRequest, opts ...client.CallOption) (*PullCodeResponse, error) {
+	req := c.c.NewRequest(c.name, "CodePackage.PullCode", in)
+	out := new(PullCodeResponse)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // Server API for CodePackage service
 
 type CodePackageHandler interface {
 	CheckStatus(context.Context, *CpRequest, *CpResponse) error
+	PullCode(context.Context, *PullCodeRequest, *PullCodeResponse) error
 }
 
 func RegisterCodePackageHandler(s server.Server, hdlr CodePackageHandler, opts ...server.HandlerOption) error {
 	type codePackage interface {
 		CheckStatus(ctx context.Context, in *CpRequest, out *CpResponse) error
+		PullCode(ctx context.Context, in *PullCodeRequest, out *PullCodeResponse) error
 	}
 	type CodePackage struct {
 		codePackage
@@ -90,4 +103,8 @@ type codePackageHandler struct {
 
 func (h *codePackageHandler) CheckStatus(ctx context.Context, in *CpRequest, out *CpResponse) error {
 	return h.CodePackageHandler.CheckStatus(ctx, in, out)
+}
+
+func (h *codePackageHandler) PullCode(ctx context.Context, in *PullCodeRequest, out *PullCodeResponse) error {
+	return h.CodePackageHandler.PullCode(ctx, in, out)
 }
