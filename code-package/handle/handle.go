@@ -35,6 +35,7 @@ func (h *CodePackage) PullCode(ctx context.Context, req *rpc.PullCodeRequest, rs
 			Password: req.Password, // 密码或访问令牌
 		},
 	})
+	fmt.Println(r)
 	if err != nil {
 
 	}

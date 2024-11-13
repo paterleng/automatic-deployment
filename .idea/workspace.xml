@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ac29538-e467-4f74-a26b-fb916aa09c6a" name="更改" comment="处理冲突">
-      <change afterPath="$PROJECT_DIR$/api-gateway/model/code_package.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/api/api_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/api_interface.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/api/code_package_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/code_package_api.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/api/manager.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api/manager.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/controller/code_package.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/code_package.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/controller/resource.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/controller/resource.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/rpcservice/code-service/package.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/rpcservice/code-service/package.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/rpcservice/code-service/package.pb.micro.go" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/rpcservice/code-service/package.pb.micro.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/rpcservice/code-service/package.proto" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/rpcservice/code-service/package.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code-package/handle/handle.go" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/handle/handle.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/rpc/package.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/rpc/package.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/rpc/package.pb.micro.go" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/rpc/package.pb.micro.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-package/rpc/package.proto" beforeDir="false" afterPath="$PROJECT_DIR$/code-package/rpc/package.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
