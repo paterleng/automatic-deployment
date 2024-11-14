@@ -4,6 +4,7 @@ option go_package="/rpc";
 
 service CodePackage {
   rpc CheckStatus(CpRequest) returns (CpResponse) {}
+  rpc PullCode(PullCodeRequest) returns(PullCodeResponse){}
 }
 
 
@@ -12,5 +13,16 @@ message CpRequest {
 }
 
 message CpResponse {
+  string msg = 1;
+}
+
+
+message PullCodeRequest{
+  string url = 1;
+  string branch = 2;
+  string account = 3;
+  string password = 4;
+}
+message PullCodeResponse{
   string msg = 1;
 }

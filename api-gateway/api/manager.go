@@ -9,6 +9,7 @@ var apiManager ApiManager
 
 type ApiManager interface {
 	UserInterface
+	CodePackage
 	KubernetesApiInterface
 }
 

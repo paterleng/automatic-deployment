@@ -5,6 +5,8 @@ import (
 	"context"
 	"fmt"
 	"github.com/go-git/go-git/v5"
+	"github.com/go-git/go-git/v5/plumbing"
+	"github.com/go-git/go-git/v5/plumbing/transport/http"
 	"github.com/micro/go-micro/v2"
 	"log"
 	"os"
@@ -19,6 +21,34 @@ func Register(service micro.Service) error {
 }
 
 func (h *CodePackage) CheckStatus(ctx context.Context, req *rpc.CpRequest, rsp *rpc.CpResponse) error {
+	return nil
+}
+
+func (h *CodePackage) PullCode(ctx context.Context, req *rpc.PullCodeRequest, rsp *rpc.PullCodeResponse) error {
+	//走拉取代码的逻辑
+	// 定义目标目录
+	targetDir := "./code"
+
+	// 检查目录是否存在，如果存在则删除
+	if _, err := os.Stat(targetDir); !os.IsNotExist(err) {
+		fmt.Printf("Directory %s already exists. Deleting...\n", targetDir)
+		if err := os.RemoveAll(targetDir); err != nil {
+			log.Fatal(err)
+		}
+	}
+	//把克隆的代码放到内存中管理，所以不需要创建额外的目录保存代码
+	r, err := git.PlainClone(targetDir, false, &git.CloneOptions{
+		URL:           req.Url,
+		ReferenceName: plumbing.ReferenceName(req.Branch), // 替换为你要拉取的分支名
+		Auth: &http.BasicAuth{
+			Username: req.Account,  // 通常是 Git 平台的用户名
+			Password: req.Password, // 密码或访问令牌
+		},
+	})
+	fmt.Println(r)
+	if err != nil {
+
+	}
 	return nil
 }
 
