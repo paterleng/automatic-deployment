@@ -93,7 +93,6 @@ func init() {
 }
 
 func MysqlInit() (err error) {
-	// "user:password@tcp(host:port)/dbname"
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?parseTime=true&loc=Local", Conf.MySQLConfig.User, Conf.MySQLConfig.Password, Conf.MySQLConfig.Host, Conf.MySQLConfig.Port, Conf.MySQLConfig.DB)
 	mysqlConfig := mysql.Config{
 		DSN:                       dsn,
