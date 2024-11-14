@@ -12,11 +12,11 @@ log:
   max_age: 30
   max_backups: 7
 mysql:
-  host: "192.168.10.8"
+  host: "47.120.75.179"
   port: 3306
   user: "root"
-  password: "123456"
-  dbname: "redmine"
+  password: "ljh011215"
+  dbname: "automatic_deployment"
   max_open_conns: 200
   max_idle_conns: 50
 

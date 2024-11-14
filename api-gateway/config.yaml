@@ -12,7 +12,7 @@ log:
   max_age: 30
   max_backups: 7
 mysql:
-  host: "192.168.10.8"
+  host: "47.120.75.179"
   port: 3306
   user: "root"
   password: "ljh011215"
@@ -21,5 +21,5 @@ mysql:
   max_idle_conns: 50
 
 etcd:
-  host: "127.0.0.1"
+  host: "47.120.75.179"
   port: "2379"
