@@ -4,6 +4,7 @@ import (
 	"api-gateway/model"
 	rpc "api-gateway/rpcservice/code-service"
 	"api-gateway/utils"
+	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
@@ -29,7 +30,8 @@ func (p *CodePackageController) PullCode(c *gin.Context) {
 		Account:  code.Account,
 		Password: code.Password,
 	}
-	codeResponse, err := p.PB.CodeService.PullCode(c, &codeRequest)
+	codeResponse, err := p.PB.CodeService.PullCode(context.Background(), &codeRequest)
+	fmt.Println(err)
 	if err != nil {
 		p.LG.Error("拉取代码失败", zap.Error(err))
 		utils.ResponseErrorWithMsg(c, utils.CodeServerBusy, err)

@@ -75,3 +75,38 @@
 {"level":"INFO","time":"2024-11-14T11:51:23.473+0800","caller":"utils/init.go:86","msg":"初始化logger成功"}
 {"level":"INFO","time":"2024-11-14T11:51:23.719+0800","caller":"utils/init.go:92","msg":"初始化mysql成功"}
 {"level":"INFO","time":"2024-11-14T12:04:00.722+0800","caller":"code-package/main.go:32","msg":"服务启动成功"}
+{"level":"INFO","time":"2024-11-14T12:24:52.180+0800","caller":"utils/init.go:158","msg":"init logger success"}
+{"level":"INFO","time":"2024-11-14T12:24:52.180+0800","caller":"utils/init.go:86","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-11-14T12:24:52.449+0800","caller":"utils/init.go:92","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-11-14T12:25:07.317+0800","caller":"code-package/main.go:32","msg":"服务启动成功"}
+{"level":"INFO","time":"2024-11-14T17:37:52.024+0800","caller":"utils/init.go:158","msg":"init logger success"}
+{"level":"INFO","time":"2024-11-14T17:37:52.024+0800","caller":"utils/init.go:86","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-11-14T17:37:52.289+0800","caller":"utils/init.go:92","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-11-14T17:38:44.667+0800","caller":"code-package/main.go:32","msg":"服务启动成功"}
+{"level":"INFO","time":"2024-11-14T17:38:48.728+0800","caller":"utils/init.go:158","msg":"init logger success"}
+{"level":"INFO","time":"2024-11-14T17:38:48.729+0800","caller":"utils/init.go:86","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-11-14T17:38:48.986+0800","caller":"utils/init.go:92","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-11-14T18:08:02.312+0800","caller":"utils/init.go:158","msg":"init logger success"}
+{"level":"INFO","time":"2024-11-14T18:08:02.312+0800","caller":"utils/init.go:86","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-11-14T18:08:02.562+0800","caller":"utils/init.go:92","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-11-14T18:10:04.405+0800","caller":"code-package/main.go:32","msg":"服务启动成功"}
+{"level":"INFO","time":"2024-11-14T18:10:08.026+0800","caller":"utils/init.go:158","msg":"init logger success"}
+{"level":"INFO","time":"2024-11-14T18:10:08.026+0800","caller":"utils/init.go:86","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-11-14T18:10:08.263+0800","caller":"utils/init.go:92","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-11-14T18:12:12.106+0800","caller":"code-package/main.go:32","msg":"服务启动成功"}
+{"level":"INFO","time":"2024-11-14T18:12:15.833+0800","caller":"utils/init.go:158","msg":"init logger success"}
+{"level":"INFO","time":"2024-11-14T18:12:15.833+0800","caller":"utils/init.go:86","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-11-14T18:12:16.068+0800","caller":"utils/init.go:92","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-11-14T18:15:26.411+0800","caller":"code-package/main.go:32","msg":"服务启动成功"}
+{"level":"INFO","time":"2024-11-14T18:15:29.954+0800","caller":"utils/init.go:158","msg":"init logger success"}
+{"level":"INFO","time":"2024-11-14T18:15:29.954+0800","caller":"utils/init.go:86","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-11-14T18:15:30.183+0800","caller":"utils/init.go:92","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-11-14T18:17:52.850+0800","caller":"code-package/main.go:32","msg":"服务启动成功"}
+{"level":"INFO","time":"2024-11-14T18:17:56.424+0800","caller":"utils/init.go:158","msg":"init logger success"}
+{"level":"INFO","time":"2024-11-14T18:17:56.424+0800","caller":"utils/init.go:86","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-11-14T18:17:56.672+0800","caller":"utils/init.go:92","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-11-14T18:18:40.280+0800","caller":"code-package/main.go:32","msg":"服务启动成功"}
+{"level":"INFO","time":"2024-11-14T18:18:43.912+0800","caller":"utils/init.go:158","msg":"init logger success"}
+{"level":"INFO","time":"2024-11-14T18:18:43.912+0800","caller":"utils/init.go:86","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-11-14T18:18:44.164+0800","caller":"utils/init.go:92","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-11-14T18:19:09.853+0800","caller":"code-package/main.go:32","msg":"服务启动成功"}

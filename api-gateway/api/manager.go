@@ -25,6 +25,8 @@ func NewManager() *controller.Routes {
 	router.SecretController.PB = utils.Tools.PB
 	router.NodeController.LG = utils.Tools.LG
 	router.NodeController.PB = utils.Tools.PB
+	router.CodePackageController.LG = utils.Tools.LG
+	router.CodePackageController.PB = utils.Tools.PB
 	return &router
 
 }
