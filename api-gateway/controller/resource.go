@@ -7,4 +7,5 @@ type Routes struct {
 	controller.KubernetesController
 	controller.SecretController
 	controller.NodeController
+	CodePackageController
 }

@@ -1,6 +1,7 @@
 package api
 
 import (
+	"api-gateway/middleware"
 	"api-gateway/utils"
 	"github.com/gin-gonic/gin"
 )
@@ -17,7 +18,7 @@ func UserApi(r *gin.Engine) {
 	user.GET("/router", GetManager().GetRouters)
 	// 登录之后的操作  请求都需要使用atoken
 	userLogin := r.Group("/user/login")
-	//userLogin.Use(middleware.JWTAuthMiddleware())
+	userLogin.Use(middleware.JWTAuthMiddleware())
 	{
 		// 赋权和创建角色接口 （超级管理员）
 		userLogin.POST("/empt", GetManager().Empowerment)

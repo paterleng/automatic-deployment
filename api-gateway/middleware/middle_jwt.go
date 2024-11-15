@@ -50,10 +50,7 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 
 		// 检查该用户是否可以访问此接口
 		b := false
-		//fmt.Println(c.Request.URL.Path + "test path")
-		//fmt.Println(user.Role.ApiRouter)
 		for _, route := range user.Role.ApiRouter {
-			//if strings.HasPrefix(c.Request.URL.Path, route) {
 			if c.Request.URL.Path == route {
 				b = true
 				break

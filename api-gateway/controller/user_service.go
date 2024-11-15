@@ -217,9 +217,8 @@ func VerifyCode(mailbox, inputCode string) bool {
 	if value, ok := CodeStore.Load(mailbox); ok {
 		captchCode := value.(model.CaptchaExpire)
 		if time.Now().After(captchCode.ExpiresAt) {
-			return false
-			// 过期之后执行删除功能
 			CodeStore.Delete(mailbox)
+			return false
 		}
 		if captchCode.Code == inputCode {
 			return true

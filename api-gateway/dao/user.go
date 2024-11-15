@@ -37,7 +37,6 @@ func UserCheckPW(mailbox, password string) (user *model.User, err error) {
 		utils.Tools.LG.Error("密码验证失败")
 		return nil, err
 	}
-	//fmt.Printf("%+v", user)
 	atoken, rtoken, err := pkg.GenToken(user.UserID, password)
 	if err != nil {
 		utils.Tools.LG.Error("生成token失败")
@@ -66,8 +65,6 @@ func SelectUser(mailbox string) (user *model.User, err error) {
 // 用户id 查用户信息 加载关联的角色表信息
 func SelectIdUser(id string) (user model.User, err error) {
 	err = utils.Tools.DB.Preload("Role").Where("userid = ?", id).First(&user).Error
-	//err = utils.Tools.DB.Table("users").Where("userid = ?", id).Find(&u).Error
-	//err = utils.Tools.DB.Preload("roles").Where("name = ?", u.RoleName).First(&u).Error
 	return
 }
 

@@ -7,6 +7,7 @@ import (
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	v1 "k8s.io/api/core/v1"
+	"k8s.io/apimachinery/pkg/api/resource"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
 	"kubernetes-deploy/model"
@@ -126,6 +127,16 @@ func (d *DeployHandle) CreateResources(r interface{}) error {
 					Containers: []corev1.Container{{
 						Name:  req.Name,
 						Image: req.ImageName,
+						Resources: v1.ResourceRequirements{
+							Requests: v1.ResourceList{
+								v1.ResourceMemory: resource.MustParse("64Mi"),
+								v1.ResourceCPU:    resource.MustParse("250m"),
+							},
+							Limits: v1.ResourceList{
+								v1.ResourceMemory: resource.MustParse("128Mi"),
+								v1.ResourceCPU:    resource.MustParse("500m"),
+							},
+						},
 					}},
 					RestartPolicy: corev1.RestartPolicyAlways,
 				},
@@ -135,6 +146,7 @@ func (d *DeployHandle) CreateResources(r interface{}) error {
 
 	deploymentsClient := d.client.AppsV1().Deployments(req.NameSpace)
 	result, err := deploymentsClient.Create(context.TODO(), deployment, metav1.CreateOptions{})
+	deploymentsClient.Update(context.TODO(), deployment, metav1.UpdateOptions{})
 	if err != nil {
 		return err
 	}

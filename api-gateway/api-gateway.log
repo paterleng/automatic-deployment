@@ -471,3 +471,7 @@
 {"level":"INFO","time":"2024-10-23T16:46:35.922+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
 {"level":"INFO","time":"2024-10-23T16:46:36.128+0800","caller":"utils/init.go:87","msg":"初始化mysql成功"}
 {"level":"INFO","time":"2024-10-23T16:46:36.681+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
+{"level":"INFO","time":"2024-10-30T09:23:18.938+0800","caller":"utils/init.go:186","msg":"init logger success"}
+{"level":"INFO","time":"2024-10-30T09:23:18.939+0800","caller":"utils/init.go:77","msg":"初始化logger成功"}
+{"level":"INFO","time":"2024-10-30T09:23:19.156+0800","caller":"utils/init.go:87","msg":"初始化mysql成功"}
+{"level":"INFO","time":"2024-10-30T09:23:19.423+0800","caller":"utils/discovery.go:24","msg":"客户端创建成功"}
